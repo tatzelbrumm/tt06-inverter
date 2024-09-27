@@ -1,27 +1,35 @@
 PROJECT_NAME ?= tt_um_mattvenn_inverter
 MAGIC_RC := $(PDK_ROOT)/sky130A/libs.tech/magic/sky130A.magicrc
+TEMPLATE_FILE := tt_analog_1x2.def
+#TEMPLATE_FILE := tt_analog_1x2_3v3.def
 
 .PHONY: lvs magic start
 
 magic:
 	magic -rcfile $(MAGIC_RC) $(PROJECT_NAME).mag
 
-tt_block_1x2_pg_ana.def:
-	# https://github.com/TinyTapeout/tt-support-tools/blob/tt06/def/analog/tt_block_1x2_pg_ana.def
-	wget https://raw.githubusercontent.com/TinyTapeout/tt-support-tools/tt06/def/analog/tt_block_1x2_pg_ana.def
+tt_analog_1x2.def:
+	wget https://raw.githubusercontent.com/TinyTapeout/tt-support-tools/tt08/def/analog/tt_analog_1x2.def
 
-start: tt_block_1x2_pg_ana.def
-	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/tt-analog-draw.tcl $(PROJECT_NAME)
+tt_analog_1x2_3v3.def:
+	wget https://raw.githubusercontent.com/TinyTapeout/tt-support-tools/tt08/def/analog/tt_analog_1x2_3v3.def
+
+start: $(TEMPLATE_FILE)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/tt-analog-draw.tcl $(TEMPLATE_FILE) $(PROJECT_NAME)
 
 $(PROJECT_NAME).lvs.spice: $(PROJECT_NAME).mag
-	magic -noconsole -dnull tcl/extract_for_lvs.tcl $(PROJECT_NAME)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/extract_for_lvs.tcl $(PROJECT_NAME)
+	rm -f *.ext
+
+antenna:
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/antenna.tcl $(PROJECT_NAME)
 	rm -f *.ext
 
 drc:
-	magic -noconsole -dnull tcl/drc.tcl $(PROJECT_NAME)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/drc.tcl $(PROJECT_NAME)
 	
 $(PROJECT_NAME).sim.spice: $(PROJECT_NAME).mag
-	magic -noconsole -dnull tcl/extract_for_sim.tcl $(PROJECT_NAME)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/extract_for_sim.tcl $(PROJECT_NAME)
 	rm -f *.ext
 
 lvs.report: $(PROJECT_NAME).lvs.spice ../src/project.v
@@ -57,7 +65,7 @@ lvs: lvs.report
 
 update_gds:
 	mkdir -p ../gds ../lef
-	magic -noconsole -dnull tcl/update_gds_lef.tcl $(PROJECT_NAME)
+	magic -rcfile $(MAGIC_RC) -noconsole -dnull tcl/update_gds_lef.tcl $(PROJECT_NAME)
 
 clean:
 	rm -f lvs.report *.lvs.spice *.nodes
