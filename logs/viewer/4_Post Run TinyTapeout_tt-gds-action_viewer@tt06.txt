@@ -1,0 +1,17 @@
+﻿2025-02-17T01:12:38.1643097Z Post job cleanup.
+2025-02-17T01:12:38.1670549Z Post job cleanup.
+2025-02-17T01:12:38.3374301Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/tt06-inverter/tt06-inverter --files-from manifest.txt --use-compress-program zstdmt
+2025-02-17T01:12:39.3141677Z Sent 66221711 of 66221711 (100.0%), 80.9 MBs/sec
+2025-02-17T01:12:39.3918768Z Cache saved with the key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip-088d5d93dcabc482ecb2e7aabe1e7c8856a70aa3794133b97dbb31a9e269b090
+2025-02-17T01:12:39.4056506Z Post job cleanup.
+2025-02-17T01:12:39.5006394Z [command]/usr/bin/git version
+2025-02-17T01:12:39.5047725Z git version 2.48.1
+2025-02-17T01:12:39.5091903Z Temporarily overriding HOME='/home/runner/work/_temp/2cc8bfcc-52ed-4a51-a7f8-478ae27d4fa0' before making global git config changes
+2025-02-17T01:12:39.5093444Z Adding repository directory to the temporary git global config as a safe directory
+2025-02-17T01:12:39.5106540Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tt06-inverter/tt06-inverter
+2025-02-17T01:12:39.5144180Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-02-17T01:12:39.5179753Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-02-17T01:12:39.5438575Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-02-17T01:12:39.5462210Z http.https://github.com/.extraheader
+2025-02-17T01:12:39.5479389Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-02-17T01:12:39.5515295Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"

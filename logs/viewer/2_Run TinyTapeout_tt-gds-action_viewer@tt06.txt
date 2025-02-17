@@ -1,0 +1,398 @@
+﻿2025-02-17T01:12:16.7081401Z ##[group]Run TinyTapeout/tt-gds-action/viewer@tt06
+2025-02-17T01:12:16.7083479Z ##[endgroup]
+2025-02-17T01:12:16.7312338Z ##[group]Run actions/checkout@v4
+2025-02-17T01:12:16.7313497Z with:
+2025-02-17T01:12:16.7314262Z   repository: mbalestrini/GDS2glTF
+2025-02-17T01:12:16.7316208Z   token: ***
+2025-02-17T01:12:16.7317511Z   ssh-strict: true
+2025-02-17T01:12:16.7319034Z   ssh-user: git
+2025-02-17T01:12:16.7320351Z   persist-credentials: true
+2025-02-17T01:12:16.7321510Z   clean: true
+2025-02-17T01:12:16.7322333Z   sparse-checkout-cone-mode: true
+2025-02-17T01:12:16.7323610Z   fetch-depth: 1
+2025-02-17T01:12:16.7324398Z   fetch-tags: false
+2025-02-17T01:12:16.7325211Z   show-progress: true
+2025-02-17T01:12:16.7326050Z   lfs: false
+2025-02-17T01:12:16.7326797Z   submodules: false
+2025-02-17T01:12:16.7327615Z   set-safe-directory: true
+2025-02-17T01:12:16.7328507Z ##[endgroup]
+2025-02-17T01:12:16.8990680Z Syncing repository: mbalestrini/GDS2glTF
+2025-02-17T01:12:16.8994778Z ##[group]Getting Git version info
+2025-02-17T01:12:16.8997158Z Working directory is '/home/runner/work/tt06-inverter/tt06-inverter'
+2025-02-17T01:12:16.9000470Z [command]/usr/bin/git version
+2025-02-17T01:12:16.9029404Z git version 2.48.1
+2025-02-17T01:12:16.9059098Z ##[endgroup]
+2025-02-17T01:12:16.9075512Z Temporarily overriding HOME='/home/runner/work/_temp/5aeb8324-bfff-4472-986e-996156e3ad96' before making global git config changes
+2025-02-17T01:12:16.9085804Z Adding repository directory to the temporary git global config as a safe directory
+2025-02-17T01:12:16.9090845Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tt06-inverter/tt06-inverter
+2025-02-17T01:12:16.9128526Z Deleting the contents of '/home/runner/work/tt06-inverter/tt06-inverter'
+2025-02-17T01:12:16.9133449Z ##[group]Initializing the repository
+2025-02-17T01:12:16.9139742Z [command]/usr/bin/git init /home/runner/work/tt06-inverter/tt06-inverter
+2025-02-17T01:12:16.9203237Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-02-17T01:12:16.9206345Z hint: is subject to change. To configure the initial branch name to use in all
+2025-02-17T01:12:16.9208795Z hint: of your new repositories, which will suppress this warning, call:
+2025-02-17T01:12:16.9211068Z hint:
+2025-02-17T01:12:16.9212544Z hint: 	git config --global init.defaultBranch <name>
+2025-02-17T01:12:16.9214372Z hint:
+2025-02-17T01:12:16.9215448Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-02-17T01:12:16.9217173Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-02-17T01:12:16.9218512Z hint:
+2025-02-17T01:12:16.9219254Z hint: 	git branch -m <name>
+2025-02-17T01:12:16.9220697Z Initialized empty Git repository in /home/runner/work/tt06-inverter/tt06-inverter/.git/
+2025-02-17T01:12:16.9233361Z [command]/usr/bin/git remote add origin https://github.com/mbalestrini/GDS2glTF
+2025-02-17T01:12:16.9271713Z ##[endgroup]
+2025-02-17T01:12:16.9274687Z ##[group]Disabling automatic garbage collection
+2025-02-17T01:12:16.9276923Z [command]/usr/bin/git config --local gc.auto 0
+2025-02-17T01:12:16.9310855Z ##[endgroup]
+2025-02-17T01:12:16.9313282Z ##[group]Setting up auth
+2025-02-17T01:12:16.9318098Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-02-17T01:12:16.9353967Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-02-17T01:12:16.9664232Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-02-17T01:12:16.9694005Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-02-17T01:12:16.9932342Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-02-17T01:12:16.9980537Z ##[endgroup]
+2025-02-17T01:12:16.9983677Z ##[group]Determining the default branch
+2025-02-17T01:12:16.9985655Z Retrieving the default branch name
+2025-02-17T01:12:17.1808966Z Default branch 'main'
+2025-02-17T01:12:17.1811618Z ##[endgroup]
+2025-02-17T01:12:17.1814181Z ##[group]Fetching the repository
+2025-02-17T01:12:17.1819716Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+2025-02-17T01:12:17.4253946Z From https://github.com/mbalestrini/GDS2glTF
+2025-02-17T01:12:17.4254819Z  * [new branch]      main       -> origin/main
+2025-02-17T01:12:17.4281038Z ##[endgroup]
+2025-02-17T01:12:17.4281897Z ##[group]Determining the checkout info
+2025-02-17T01:12:17.4282927Z ##[endgroup]
+2025-02-17T01:12:17.4288161Z [command]/usr/bin/git sparse-checkout disable
+2025-02-17T01:12:17.4325919Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-02-17T01:12:17.4352451Z ##[group]Checking out the ref
+2025-02-17T01:12:17.4356489Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-02-17T01:12:17.4402635Z Switched to a new branch 'main'
+2025-02-17T01:12:17.4406156Z branch 'main' set up to track 'origin/main'.
+2025-02-17T01:12:17.4411600Z ##[endgroup]
+2025-02-17T01:12:17.4447515Z [command]/usr/bin/git log -1 --format=%H
+2025-02-17T01:12:17.4469933Z 43b444e69b9b1e9e117560c48eac45d5437bdf15
+2025-02-17T01:12:17.4671196Z ##[group]Run actions/setup-python@v5
+2025-02-17T01:12:17.4671571Z with:
+2025-02-17T01:12:17.4671846Z   python-version: 3.11
+2025-02-17T01:12:17.4672145Z   cache: pip
+2025-02-17T01:12:17.4672418Z   check-latest: false
+2025-02-17T01:12:17.4673255Z   token: ***
+2025-02-17T01:12:17.4673540Z   update-environment: true
+2025-02-17T01:12:17.4673875Z   allow-prereleases: false
+2025-02-17T01:12:17.4674185Z ##[endgroup]
+2025-02-17T01:12:17.6363781Z ##[group]Installed versions
+2025-02-17T01:12:17.6426154Z Successfully set up CPython (3.11.11)
+2025-02-17T01:12:17.6427172Z ##[endgroup]
+2025-02-17T01:12:17.6793751Z [command]/opt/hostedtoolcache/Python/3.11.11/x64/bin/pip cache dir
+2025-02-17T01:12:17.9008514Z /home/runner/.cache/pip
+2025-02-17T01:12:18.0137184Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip-088d5d93dcabc482ecb2e7aabe1e7c8856a70aa3794133b97dbb31a9e269b090
+2025-02-17T01:12:18.3425318Z Received 45113343 of 45113343 (100.0%), 146.8 MBs/sec
+2025-02-17T01:12:18.3426910Z Cache Size: ~43 MB (45113343 B)
+2025-02-17T01:12:18.3458909Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2b7b0552-32d0-4b94-9e19-737320be1ada/cache.tzst -P -C /home/runner/work/tt06-inverter/tt06-inverter --use-compress-program unzstd
+2025-02-17T01:12:18.4444782Z Cache restored successfully
+2025-02-17T01:12:18.4584582Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip-b53d2406990fca66e4d9719ad3f30c32758897e746380b0fb3161134de927dbb
+2025-02-17T01:12:18.4774146Z ##[group]Run actions/download-artifact@v4
+2025-02-17T01:12:18.4774490Z with:
+2025-02-17T01:12:18.4774733Z   name: tt_submission
+2025-02-17T01:12:18.4774983Z   merge-multiple: false
+2025-02-17T01:12:18.4775265Z   repository: tatzelbrumm/tt06-inverter
+2025-02-17T01:12:18.4775570Z   run-id: 13360778850
+2025-02-17T01:12:18.4775799Z env:
+2025-02-17T01:12:18.4776089Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:18.4776569Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:18.4777039Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:18.4777484Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:18.4777901Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:18.4778333Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:18.4778680Z ##[endgroup]
+2025-02-17T01:12:18.6800023Z Downloading single artifact
+2025-02-17T01:12:18.7783815Z Preparing to download the following artifacts:
+2025-02-17T01:12:18.7784579Z - tt_submission (ID: 2600387986, Size: 220315)
+2025-02-17T01:12:18.8476931Z Redirecting to blob download url: https://productionresultssa1.blob.core.windows.net/actions-results/b0d9fe53-504c-46ba-96af-266e124f482d/workflow-job-run-a140390c-4366-5f1d-569c-f6dc0df674fd/artifacts/a6af0e44e710fc652ee9cedf71e70f3e4b8573b2544ca1bf1bfd1d234fbf113f.zip
+2025-02-17T01:12:18.8479348Z Starting download of artifact to: /home/runner/work/tt06-inverter/tt06-inverter
+2025-02-17T01:12:18.8905244Z (node:1905) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-02-17T01:12:18.8906920Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-02-17T01:12:18.9146616Z Artifact download completed successfully.
+2025-02-17T01:12:18.9147867Z Total of 1 artifact(s) downloaded
+2025-02-17T01:12:18.9153356Z Download artifact has finished successfully
+2025-02-17T01:12:18.9262917Z ##[group]Run actions/download-artifact@v4
+2025-02-17T01:12:18.9263240Z with:
+2025-02-17T01:12:18.9263413Z   name: gds_render
+2025-02-17T01:12:18.9263620Z   path: gh-pages
+2025-02-17T01:12:18.9263848Z   merge-multiple: false
+2025-02-17T01:12:18.9264075Z   repository: tatzelbrumm/tt06-inverter
+2025-02-17T01:12:18.9264328Z   run-id: 13360778850
+2025-02-17T01:12:18.9264506Z env:
+2025-02-17T01:12:18.9264742Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:18.9265143Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:18.9265533Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:18.9265885Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:18.9266428Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:18.9266772Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:18.9267065Z ##[endgroup]
+2025-02-17T01:12:19.1211405Z Downloading single artifact
+2025-02-17T01:12:19.2158262Z Preparing to download the following artifacts:
+2025-02-17T01:12:19.2158933Z - gds_render (ID: 2600388447, Size: 3674)
+2025-02-17T01:12:19.2667965Z Redirecting to blob download url: https://productionresultssa1.blob.core.windows.net/actions-results/b0d9fe53-504c-46ba-96af-266e124f482d/workflow-job-run-a140390c-4366-5f1d-569c-f6dc0df674fd/artifacts/0e1a954b7b3f8d2236a31cdc1b2300f4a72eac2eb8cf449a0d14714be17507f8.zip
+2025-02-17T01:12:19.2670268Z Starting download of artifact to: /home/runner/work/tt06-inverter/tt06-inverter/gh-pages
+2025-02-17T01:12:19.3070800Z (node:1916) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-02-17T01:12:19.3072383Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-02-17T01:12:19.3121512Z Artifact download completed successfully.
+2025-02-17T01:12:19.3122008Z Total of 1 artifact(s) downloaded
+2025-02-17T01:12:19.3127779Z Download artifact has finished successfully
+2025-02-17T01:12:19.3223206Z ##[group]Run python -m pip install numpy gdspy triangle pygltflib
+2025-02-17T01:12:19.3223756Z [36;1mpython -m pip install numpy gdspy triangle pygltflib[0m
+2025-02-17T01:12:19.3224108Z [36;1mcp tt_submission/*.gds tinytapeout.gds[0m
+2025-02-17T01:12:19.3224399Z [36;1mpython3 gds2gltf.py tinytapeout.gds[0m
+2025-02-17T01:12:19.3251716Z [36;1mcp tinytapeout.gds.gltf gh-pages/tinytapeout.gds.gltf[0m
+2025-02-17T01:12:19.3397076Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:12:19.3397411Z env:
+2025-02-17T01:12:19.3397649Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:19.3398065Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:19.3398465Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:19.3398823Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:19.3399174Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:19.3399723Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:19.3400006Z ##[endgroup]
+2025-02-17T01:12:19.9698639Z Collecting numpy
+2025-02-17T01:12:20.0296995Z   Downloading numpy-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2025-02-17T01:12:20.0667670Z Collecting gdspy
+2025-02-17T01:12:20.0823133Z   Downloading gdspy-1.6.13.zip (157 kB)
+2025-02-17T01:12:20.1079325Z   Installing build dependencies: started
+2025-02-17T01:12:21.4779451Z   Installing build dependencies: finished with status 'done'
+2025-02-17T01:12:21.4785962Z   Getting requirements to build wheel: started
+2025-02-17T01:12:21.6715233Z   Getting requirements to build wheel: finished with status 'done'
+2025-02-17T01:12:21.6723159Z   Preparing metadata (pyproject.toml): started
+2025-02-17T01:12:21.8337681Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2025-02-17T01:12:21.8565519Z Collecting triangle
+2025-02-17T01:12:21.8651677Z   Downloading triangle-20250106-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+2025-02-17T01:12:21.8806268Z Collecting pygltflib
+2025-02-17T01:12:21.8895602Z   Downloading pygltflib-1.16.3.tar.gz (42 kB)
+2025-02-17T01:12:21.9015415Z   Installing build dependencies: started
+2025-02-17T01:12:23.1377080Z   Installing build dependencies: finished with status 'done'
+2025-02-17T01:12:23.1382517Z   Getting requirements to build wheel: started
+2025-02-17T01:12:23.2838186Z   Getting requirements to build wheel: finished with status 'done'
+2025-02-17T01:12:23.2847284Z   Preparing metadata (pyproject.toml): started
+2025-02-17T01:12:23.4332072Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2025-02-17T01:12:23.4607237Z Collecting dataclasses-json>=0.0.25 (from pygltflib)
+2025-02-17T01:12:23.4688999Z   Downloading dataclasses_json-0.6.7-py3-none-any.whl.metadata (25 kB)
+2025-02-17T01:12:23.4866264Z Collecting deprecated (from pygltflib)
+2025-02-17T01:12:23.4938524Z   Downloading Deprecated-1.2.18-py2.py3-none-any.whl.metadata (5.7 kB)
+2025-02-17T01:12:23.5348929Z Collecting marshmallow<4.0.0,>=3.18.0 (from dataclasses-json>=0.0.25->pygltflib)
+2025-02-17T01:12:23.5421551Z   Downloading marshmallow-3.26.1-py3-none-any.whl.metadata (7.3 kB)
+2025-02-17T01:12:23.5585634Z Collecting typing-inspect<1,>=0.4.0 (from dataclasses-json>=0.0.25->pygltflib)
+2025-02-17T01:12:23.5658040Z   Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+2025-02-17T01:12:23.6337603Z Collecting wrapt<2,>=1.10 (from deprecated->pygltflib)
+2025-02-17T01:12:23.6413768Z   Downloading wrapt-1.17.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+2025-02-17T01:12:23.6653015Z Collecting packaging>=17.0 (from marshmallow<4.0.0,>=3.18.0->dataclasses-json>=0.0.25->pygltflib)
+2025-02-17T01:12:23.6725075Z   Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+2025-02-17T01:12:23.6870061Z Collecting mypy-extensions>=0.3.0 (from typing-inspect<1,>=0.4.0->dataclasses-json>=0.0.25->pygltflib)
+2025-02-17T01:12:23.6943425Z   Downloading mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+2025-02-17T01:12:23.7133774Z Collecting typing-extensions>=3.7.4 (from typing-inspect<1,>=0.4.0->dataclasses-json>=0.0.25->pygltflib)
+2025-02-17T01:12:23.7204909Z   Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+2025-02-17T01:12:23.7333179Z Downloading numpy-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.4 MB)
+2025-02-17T01:12:24.0856496Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.4/16.4 MB 48.4 MB/s eta 0:00:00
+2025-02-17T01:12:24.0963245Z Downloading triangle-20250106-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+2025-02-17T01:12:24.1182038Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 97.0 MB/s eta 0:00:00
+2025-02-17T01:12:24.1263274Z Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
+2025-02-17T01:12:24.1362420Z Downloading Deprecated-1.2.18-py2.py3-none-any.whl (10.0 kB)
+2025-02-17T01:12:24.1460700Z Downloading marshmallow-3.26.1-py3-none-any.whl (50 kB)
+2025-02-17T01:12:24.1555074Z Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+2025-02-17T01:12:24.1647582Z Downloading wrapt-1.17.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (83 kB)
+2025-02-17T01:12:24.1751071Z Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+2025-02-17T01:12:24.1844884Z Downloading packaging-24.2-py3-none-any.whl (65 kB)
+2025-02-17T01:12:24.1943891Z Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+2025-02-17T01:12:24.2224757Z Building wheels for collected packages: gdspy, pygltflib
+2025-02-17T01:12:24.2232499Z   Building wheel for gdspy (pyproject.toml): started
+2025-02-17T01:12:28.6394672Z   Building wheel for gdspy (pyproject.toml): finished with status 'done'
+2025-02-17T01:12:28.6405027Z   Created wheel for gdspy: filename=gdspy-1.6.13-cp311-cp311-linux_x86_64.whl size=606687 sha256=5b463b74cca9e293a78cd2ce73a5f0868050ab7c6da708c7846f36e83b1d88bf
+2025-02-17T01:12:28.6406686Z   Stored in directory: /home/runner/.cache/pip/wheels/f0/7b/06/6515cfd23876a3b41fb7db9bba74e818f18f0db7f991d63e6d
+2025-02-17T01:12:28.6437656Z   Building wheel for pygltflib (pyproject.toml): started
+2025-02-17T01:12:28.8189219Z   Building wheel for pygltflib (pyproject.toml): finished with status 'done'
+2025-02-17T01:12:28.8195282Z   Created wheel for pygltflib: filename=pygltflib-1.16.3-py3-none-any.whl size=27457 sha256=db76688d5c741088c516be6833e964aba355a942703357f08cca505e8fd68d2e
+2025-02-17T01:12:28.8196899Z   Stored in directory: /home/runner/.cache/pip/wheels/1e/75/a7/661db79759f1de86850bbbc3112020f4d18436bad637ea5673
+2025-02-17T01:12:28.8225488Z Successfully built gdspy pygltflib
+2025-02-17T01:12:28.8527357Z Installing collected packages: wrapt, typing-extensions, packaging, numpy, mypy-extensions, typing-inspect, triangle, marshmallow, gdspy, deprecated, dataclasses-json, pygltflib
+2025-02-17T01:12:30.9672268Z Successfully installed dataclasses-json-0.6.7 deprecated-1.2.18 gdspy-1.6.13 marshmallow-3.26.1 mypy-extensions-1.0.0 numpy-2.2.3 packaging-24.2 pygltflib-1.16.3 triangle-20250106 typing-extensions-4.12.2 typing-inspect-0.9.0 wrapt-1.17.2
+2025-02-17T01:12:31.7825302Z Reading GDSII file tinytapeout.gds...
+2025-02-17T01:12:31.7825911Z Extracting polygons...
+2025-02-17T01:12:31.7826191Z 
+2025-02-17T01:12:31.7826423Z Processing cell:  sky130_fd_pr__nfet_01v8_648S5X
+2025-02-17T01:12:31.7826981Z 	paths loop. total paths: 0
+2025-02-17T01:12:31.7827440Z 	polygons loop. total polygons: 56
+2025-02-17T01:12:31.7827918Z 	Triangulating polygons...
+2025-02-17T01:12:31.7828192Z 
+2025-02-17T01:12:31.7828451Z Processing cell:  sky130_fd_pr__pfet_01v8_XGS3BL
+2025-02-17T01:12:31.7829085Z 	paths loop. total paths: 0
+2025-02-17T01:12:31.7829590Z 	polygons loop. total polygons: 59
+2025-02-17T01:12:31.7830040Z 	Triangulating polygons...
+2025-02-17T01:12:31.7830221Z 
+2025-02-17T01:12:31.7830368Z Processing cell:  sky130_fd_pr__nfet_01v8_YTLFGX
+2025-02-17T01:12:31.7830729Z 	paths loop. total paths: 0
+2025-02-17T01:12:31.7831017Z 	polygons loop. total polygons: 370
+2025-02-17T01:12:31.7831339Z 	Triangulating polygons...
+2025-02-17T01:12:31.7831505Z 
+2025-02-17T01:12:31.7831647Z Processing cell:  sky130_fd_pr__pfet_01v8_8DVCWJ
+2025-02-17T01:12:31.7831983Z 	paths loop. total paths: 0
+2025-02-17T01:12:31.7832250Z 	polygons loop. total polygons: 373
+2025-02-17T01:12:31.7832547Z 	Triangulating polygons...
+2025-02-17T01:12:31.7833016Z 
+2025-02-17T01:12:31.7833127Z Processing cell:  inverter
+2025-02-17T01:12:31.7833411Z 	paths loop. total paths: 0
+2025-02-17T01:12:31.7833646Z 	polygons loop. total polygons: 267
+2025-02-17T01:12:31.7833894Z 	Triangulating polygons...
+2025-02-17T01:12:31.7834041Z 
+2025-02-17T01:12:31.7834140Z Processing cell:  tt_um_mattvenn_inverter
+2025-02-17T01:12:31.7834408Z 	paths loop. total paths: 0
+2025-02-17T01:12:31.7834640Z 	polygons loop. total polygons: 224
+2025-02-17T01:12:31.7834889Z 	Triangulating polygons...
+2025-02-17T01:12:31.7835301Z 
+2025-02-17T01:12:31.7835392Z Building Scenegraph:
+2025-02-17T01:12:31.7835613Z tt_um_mattvenn_inverter
+2025-02-17T01:12:31.7835833Z 	 inverter_0 ( inverter)
+2025-02-17T01:12:31.7836064Z 		 XM4 ( sky130_fd_pr__nfet_01v8_648S5X)
+2025-02-17T01:12:31.7836332Z 		 XM3 ( sky130_fd_pr__pfet_01v8_XGS3BL)
+2025-02-17T01:12:31.7836589Z 		 XM2 ( sky130_fd_pr__nfet_01v8_YTLFGX)
+2025-02-17T01:12:31.7836908Z 		 sky130_fd_pr__pfet_01v8_8DVCWJ_0 ( sky130_fd_pr__pfet_01v8_8DVCWJ)
+2025-02-17T01:12:31.7837168Z 
+2025-02-17T01:12:31.7837245Z Writing glTF file:
+2025-02-17T01:12:31.7837432Z Done.
+2025-02-17T01:12:31.8172643Z ##[group]Run cat << EOF >> gh-pages/index.html
+2025-02-17T01:12:31.8173273Z [36;1mcat << EOF >> gh-pages/index.html[0m
+2025-02-17T01:12:31.8173535Z [36;1m  <!DOCTYPE html>[0m
+2025-02-17T01:12:31.8173744Z [36;1m  <html lang="en">[0m
+2025-02-17T01:12:31.8173948Z [36;1m  <head>[0m
+2025-02-17T01:12:31.8174140Z [36;1m    <meta charset="UTF-8">[0m
+2025-02-17T01:12:31.8174456Z [36;1m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[0m
+2025-02-17T01:12:31.8174878Z [36;1m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[0m
+2025-02-17T01:12:31.8175264Z [36;1m    <title>Redirecting to GDS Viewer...</title>[0m
+2025-02-17T01:12:31.8175525Z [36;1m  </head>[0m
+2025-02-17T01:12:31.8175711Z [36;1m  <body>[0m
+2025-02-17T01:12:31.8175891Z [36;1m    <script>[0m
+2025-02-17T01:12:31.8176415Z [36;1m      location.href = "https://gds-viewer.tinytapeout.com/?model=" + encodeURIComponent(location.href + '/tinytapeout.gds.gltf');[0m
+2025-02-17T01:12:31.8176970Z [36;1m    </script>[0m
+2025-02-17T01:12:31.8177156Z [36;1m  </body>[0m
+2025-02-17T01:12:31.8177524Z [36;1m  </html>[0m
+2025-02-17T01:12:31.8177699Z [36;1mEOF[0m
+2025-02-17T01:12:31.8233687Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:12:31.8233996Z env:
+2025-02-17T01:12:31.8234240Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8234625Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:31.8235027Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8235370Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8235714Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8236056Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:31.8236343Z ##[endgroup]
+2025-02-17T01:12:31.8378024Z ##[group]Run actions/upload-pages-artifact@v3
+2025-02-17T01:12:31.8378309Z with:
+2025-02-17T01:12:31.8378477Z   path: gh-pages
+2025-02-17T01:12:31.8378663Z   name: github-pages
+2025-02-17T01:12:31.8378897Z   retention-days: 1
+2025-02-17T01:12:31.8379103Z env:
+2025-02-17T01:12:31.8379336Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8379727Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:31.8380109Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8380462Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8380795Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8381149Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:31.8381482Z ##[endgroup]
+2025-02-17T01:12:31.8400355Z ##[group]Run echo ::group::Archive artifact
+2025-02-17T01:12:31.8400663Z [36;1mecho ::group::Archive artifact[0m
+2025-02-17T01:12:31.8400904Z [36;1mtar \[0m
+2025-02-17T01:12:31.8401117Z [36;1m  --dereference --hard-dereference \[0m
+2025-02-17T01:12:31.8401396Z [36;1m  --directory "$INPUT_PATH" \[0m
+2025-02-17T01:12:31.8401669Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2025-02-17T01:12:31.8401945Z [36;1m  --exclude=.git \[0m
+2025-02-17T01:12:31.8402161Z [36;1m  --exclude=.github \[0m
+2025-02-17T01:12:31.8402374Z [36;1m  .[0m
+2025-02-17T01:12:31.8402553Z [36;1mecho ::endgroup::[0m
+2025-02-17T01:12:31.8448403Z shell: /usr/bin/sh -e {0}
+2025-02-17T01:12:31.8448784Z env:
+2025-02-17T01:12:31.8449024Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8449430Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:31.8449823Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8450168Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8450501Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8450846Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:31.8451146Z   INPUT_PATH: gh-pages
+2025-02-17T01:12:31.8451349Z ##[endgroup]
+2025-02-17T01:12:31.8510406Z ##[group]Archive artifact
+2025-02-17T01:12:31.8523628Z ./
+2025-02-17T01:12:31.8523934Z ./gds_render.png
+2025-02-17T01:12:31.8524245Z ./index.html
+2025-02-17T01:12:31.8524551Z ./tinytapeout.gds.gltf
+2025-02-17T01:12:31.8530370Z ##[endgroup]
+2025-02-17T01:12:31.8585498Z ##[group]Run actions/upload-artifact@v4
+2025-02-17T01:12:31.8585763Z with:
+2025-02-17T01:12:31.8585935Z   name: github-pages
+2025-02-17T01:12:31.8586163Z   path: /home/runner/work/_temp/artifact.tar
+2025-02-17T01:12:31.8586410Z   retention-days: 1
+2025-02-17T01:12:31.8586607Z   if-no-files-found: error
+2025-02-17T01:12:31.8586820Z   compression-level: 6
+2025-02-17T01:12:31.8587019Z   overwrite: false
+2025-02-17T01:12:31.8587218Z   include-hidden-files: false
+2025-02-17T01:12:31.8587421Z env:
+2025-02-17T01:12:31.8587648Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8588061Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:31.8588457Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8588979Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8589333Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:31.8589675Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:31.8589970Z ##[endgroup]
+2025-02-17T01:12:32.0709635Z With the provided path, there will be 1 file uploaded
+2025-02-17T01:12:32.0715497Z Artifact name is valid!
+2025-02-17T01:12:32.0716883Z Root directory input is valid!
+2025-02-17T01:12:32.1903318Z Beginning upload of artifact content to blob storage
+2025-02-17T01:12:32.2884405Z Uploaded bytes 72192
+2025-02-17T01:12:32.3064014Z Finished uploading artifact content to blob storage!
+2025-02-17T01:12:32.3067581Z SHA256 hash of uploaded artifact zip is 8381a184ada59a188c364eb6ad53fd607868bb91905a7969c60fb660cca2bf83
+2025-02-17T01:12:32.3069837Z Finalizing artifact upload
+2025-02-17T01:12:32.3903797Z Artifact github-pages.zip successfully finalized. Artifact ID 2600389559
+2025-02-17T01:12:32.3904838Z Artifact github-pages has been successfully uploaded! Final size is 72192 bytes. Artifact ID is 2600389559
+2025-02-17T01:12:32.3914865Z Artifact download URL: https://github.com/tatzelbrumm/tt06-inverter/actions/runs/13360778850/artifacts/2600389559
+2025-02-17T01:12:32.4079484Z ##[group]Run actions/deploy-pages@v4
+2025-02-17T01:12:32.4079741Z with:
+2025-02-17T01:12:32.4079994Z   token: ***
+2025-02-17T01:12:32.4080165Z   timeout: 600000
+2025-02-17T01:12:32.4080343Z   error_count: 10
+2025-02-17T01:12:32.4080527Z   reporting_interval: 5000
+2025-02-17T01:12:32.4080748Z   artifact_name: github-pages
+2025-02-17T01:12:32.4080957Z   preview: false
+2025-02-17T01:12:32.4081134Z env:
+2025-02-17T01:12:32.4081358Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:32.4081749Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:32.4082140Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:32.4082496Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:32.4083413Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:32.4083763Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:32.4084050Z ##[endgroup]
+2025-02-17T01:12:32.7424623Z Fetching artifact metadata for "github-pages" in this workflow run
+2025-02-17T01:12:32.8080299Z Found 3 artifact(s)
+2025-02-17T01:12:32.8094783Z Creating Pages deployment with payload:
+2025-02-17T01:12:32.8095303Z {
+2025-02-17T01:12:32.8095612Z 	"artifact_id": 2600389559,
+2025-02-17T01:12:32.8096164Z 	"pages_build_version": "8f191b975acd6de9bd3e5f9140d13c7a6b8f785d",
+2025-02-17T01:12:32.8153923Z 	"oidc_token": "***"
+2025-02-17T01:12:32.8154337Z }
+2025-02-17T01:12:33.0510909Z Created deployment for 8f191b975acd6de9bd3e5f9140d13c7a6b8f785d, ID: 8f191b975acd6de9bd3e5f9140d13c7a6b8f785d
+2025-02-17T01:12:38.0520624Z Getting Pages deployment status...
+2025-02-17T01:12:38.1229575Z Reported success!
+2025-02-17T01:12:38.1389250Z ##[group]Run PAGE_URL=https://tatzelbrumm.github.io/tt06-inverter/
+2025-02-17T01:12:38.1389722Z [36;1mPAGE_URL=https://tatzelbrumm.github.io/tt06-inverter/[0m
+2025-02-17T01:12:38.1390089Z [36;1mPAGE_URL=$(echo "$PAGE_URL" | sed -e 's/\/$//')[0m
+2025-02-17T01:12:38.1390403Z [36;1mcat << EOF >> $GITHUB_STEP_SUMMARY[0m
+2025-02-17T01:12:38.1390670Z [36;1m# 3D Viewer[0m
+2025-02-17T01:12:38.1391053Z [36;1m[open 3D viewer](https://gds-viewer.tinytapeout.com/?model=$PAGE_URL/tinytapeout.gds.gltf)[0m
+2025-02-17T01:12:38.1391462Z [36;1m[0m
+2025-02-17T01:12:38.1391634Z [36;1m# 2D Preview[0m
+2025-02-17T01:12:38.1391849Z [36;1m![png]($PAGE_URL/gds_render.png)[0m
+2025-02-17T01:12:38.1392091Z [36;1mEOF[0m
+2025-02-17T01:12:38.1448007Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:12:38.1448326Z env:
+2025-02-17T01:12:38.1448917Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:38.1449442Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:38.1450168Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:38.1450705Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:38.1451120Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:38.1451546Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:38.1452020Z ##[endgroup]

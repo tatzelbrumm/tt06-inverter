@@ -1,0 +1,18 @@
+﻿2025-02-17T01:13:21.8170878Z Post job cleanup.
+2025-02-17T01:13:21.8202979Z Post job cleanup.
+2025-02-17T01:13:21.8228678Z Post job cleanup.
+2025-02-17T01:13:21.9508274Z Cache hit occurred on the primary key Linux-pdk-sky130-cd1748bb197f9b7af62a54507de6624e30363943, not saving cache.
+2025-02-17T01:13:21.9590817Z Post job cleanup.
+2025-02-17T01:13:22.1128875Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip-b53d2406990fca66e4d9719ad3f30c32758897e746380b0fb3161134de927dbb, not saving cache.
+2025-02-17T01:13:22.1213153Z Post job cleanup.
+2025-02-17T01:13:22.2169250Z [command]/usr/bin/git version
+2025-02-17T01:13:22.2207962Z git version 2.48.1
+2025-02-17T01:13:22.2250146Z Temporarily overriding HOME='/home/runner/work/_temp/5ee41079-f16c-4ff7-bd75-29e77339791c' before making global git config changes
+2025-02-17T01:13:22.2251007Z Adding repository directory to the temporary git global config as a safe directory
+2025-02-17T01:13:22.2263431Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tt06-inverter/tt06-inverter/tt
+2025-02-17T01:13:22.2298056Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-02-17T01:13:22.2330499Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-02-17T01:13:22.2569340Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-02-17T01:13:22.2590326Z http.https://github.com/.extraheader
+2025-02-17T01:13:22.2602851Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-02-17T01:13:22.2638240Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
