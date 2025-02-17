@@ -1,0 +1,67 @@
+﻿2025-02-17T01:11:50.0372292Z ##[group]Run TinyTapeout/volare-action@v1
+2025-02-17T01:11:50.0373633Z with:
+2025-02-17T01:11:50.0374351Z   pdk_name: sky130
+2025-02-17T01:11:50.0375296Z   pdk_version: 78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc
+2025-02-17T01:11:50.0376453Z   pdk_root: /home/runner/pdk
+2025-02-17T01:11:50.0377327Z env:
+2025-02-17T01:11:50.0378052Z   PDK_ROOT: /home/runner/pdk
+2025-02-17T01:11:50.0378942Z   PDK: sky130A
+2025-02-17T01:11:50.0379701Z   MAGIC_VERSION: master
+2025-02-17T01:11:50.0380537Z   NETGEN_VERSION: master
+2025-02-17T01:11:50.0381381Z ##[endgroup]
+2025-02-17T01:11:50.0540641Z ##[group]Run actions/cache@v3
+2025-02-17T01:11:50.0541630Z with:
+2025-02-17T01:11:50.0542396Z   path: /home/runner/pdk
+2025-02-17T01:11:50.0543766Z   key: Linux-pdk-sky130-78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc
+2025-02-17T01:11:50.0545108Z   enableCrossOsArchive: false
+2025-02-17T01:11:50.0546091Z   fail-on-cache-miss: false
+2025-02-17T01:11:50.0547015Z   lookup-only: false
+2025-02-17T01:11:50.0547839Z env:
+2025-02-17T01:11:50.0548598Z   PDK_ROOT: /home/runner/pdk
+2025-02-17T01:11:50.0549592Z   PDK: sky130A
+2025-02-17T01:11:50.0550388Z   MAGIC_VERSION: master
+2025-02-17T01:11:50.0551262Z   NETGEN_VERSION: master
+2025-02-17T01:11:50.0552139Z ##[endgroup]
+2025-02-17T01:11:50.3273389Z ##[warning]Cache not found for keys: Linux-pdk-sky130-78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc
+2025-02-17T01:11:50.3275832Z Cache not found for input keys: Linux-pdk-sky130-78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc
+2025-02-17T01:11:50.3381430Z ##[group]Run pip3 install volare==0.8.0
+2025-02-17T01:11:50.3382537Z [36;1mpip3 install volare==0.8.0[0m
+2025-02-17T01:11:50.3384244Z [36;1mvolare enable --pdk "sky130" "78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc"[0m
+2025-02-17T01:11:50.3447432Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:11:50.3448648Z env:
+2025-02-17T01:11:50.3449386Z   PDK_ROOT: /home/runner/pdk
+2025-02-17T01:11:50.3450287Z   PDK: sky130A
+2025-02-17T01:11:50.3451053Z   MAGIC_VERSION: master
+2025-02-17T01:11:50.3451909Z   NETGEN_VERSION: master
+2025-02-17T01:11:50.3453154Z ##[endgroup]
+2025-02-17T01:11:51.6250748Z Defaulting to user installation because normal site-packages is not writeable
+2025-02-17T01:11:52.3895263Z Collecting volare==0.8.0
+2025-02-17T01:11:52.4996409Z   Downloading volare-0.8.0-py3-none-any.whl.metadata (7.7 kB)
+2025-02-17T01:11:52.5085390Z Requirement already satisfied: click<9,>=8.0.0 in /usr/lib/python3/dist-packages (from volare==0.8.0) (8.1.6)
+2025-02-17T01:11:52.5095353Z Requirement already satisfied: pyyaml<7,>=5 in /usr/lib/python3/dist-packages (from volare==0.8.0) (6.0.1)
+2025-02-17T01:11:52.5928570Z Collecting rich<13,>=12 (from volare==0.8.0)
+2025-02-17T01:11:52.6120506Z   Downloading rich-12.6.0-py3-none-any.whl.metadata (18 kB)
+2025-02-17T01:11:52.6234117Z Requirement already satisfied: requests<3,>=2.27.0 in /usr/lib/python3/dist-packages (from volare==0.8.0) (2.31.0)
+2025-02-17T01:11:52.6550043Z Collecting pcpp<2,>=1.2 (from volare==0.8.0)
+2025-02-17T01:11:52.6740552Z   Downloading pcpp-1.30-py2.py3-none-any.whl.metadata (23 kB)
+2025-02-17T01:11:52.6843791Z Requirement already satisfied: zstandard<1,>=0.19.0 in /usr/lib/python3/dist-packages (from volare==0.8.0) (0.22.0)
+2025-02-17T01:11:52.7111552Z Collecting commonmark<0.10.0,>=0.9.0 (from rich<13,>=12->volare==0.8.0)
+2025-02-17T01:11:52.7303568Z   Downloading commonmark-0.9.1-py2.py3-none-any.whl.metadata (5.7 kB)
+2025-02-17T01:11:52.7350198Z Requirement already satisfied: pygments<3.0.0,>=2.6.0 in /usr/lib/python3/dist-packages (from rich<13,>=12->volare==0.8.0) (2.17.2)
+2025-02-17T01:11:52.7625121Z Downloading volare-0.8.0-py3-none-any.whl (31 kB)
+2025-02-17T01:11:52.7887065Z Downloading pcpp-1.30-py2.py3-none-any.whl (91 kB)
+2025-02-17T01:11:52.8112695Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 4.1 MB/s eta 0:00:00
+2025-02-17T01:11:52.8304291Z Downloading rich-12.6.0-py3-none-any.whl (237 kB)
+2025-02-17T01:11:52.8552636Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 237.5/237.5 kB 10.0 MB/s eta 0:00:00
+2025-02-17T01:11:52.8746274Z Downloading commonmark-0.9.1-py2.py3-none-any.whl (51 kB)
+2025-02-17T01:11:52.8793893Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.1/51.1 kB 13.7 MB/s eta 0:00:00
+2025-02-17T01:11:53.1550892Z Installing collected packages: pcpp, commonmark, rich, volare
+2025-02-17T01:11:53.4269543Z Successfully installed commonmark-0.9.1 pcpp-1.30 rich-12.6.0 volare-0.8.0
+2025-02-17T01:11:54.1451661Z Downloading common.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+2025-02-17T01:11:55.6205725Z Downloading sky130_fd_io.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+2025-02-17T01:11:57.1077312Z Downloading sky130_fd_pr.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+2025-02-17T01:11:58.9913245Z Downloading sky130_fd_sc_hd.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+2025-02-17T01:12:01.3488587Z Downloading sky130_fd_sc_hvl.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+2025-02-17T01:12:02.2083671Z Downloading sky130_ml_xx_hd.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+2025-02-17T01:12:02.6802441Z Downloading sky130_sram_macros.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+2025-02-17T01:12:02.9178587Z Version 78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc enabled for the sky130 PDK.

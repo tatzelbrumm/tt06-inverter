@@ -1,0 +1,328 @@
+﻿2025-02-17T01:12:45.0250267Z ##[group]Run cd mag
+2025-02-17T01:12:45.0250711Z [36;1mcd mag[0m
+2025-02-17T01:12:45.0251041Z [36;1mmake lvs[0m
+2025-02-17T01:12:45.0330488Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:12:45.0331030Z env:
+2025-02-17T01:12:45.0331355Z   PDK_ROOT: /home/runner/pdk
+2025-02-17T01:12:45.0331750Z   PDK: sky130A
+2025-02-17T01:12:45.0332108Z   MAGIC_VERSION: master
+2025-02-17T01:12:45.0332470Z   NETGEN_VERSION: master
+2025-02-17T01:12:45.0332830Z ##[endgroup]
+2025-02-17T01:12:45.0422270Z magic -noconsole -dnull tcl/extract_for_lvs.tcl tt_um_mattvenn_inverter
+2025-02-17T01:12:45.2097757Z 
+2025-02-17T01:12:45.2098534Z Magic 8.3 revision 520 - Compiled on Mon Feb 17 01:12:39 UTC 2025.
+2025-02-17T01:12:45.2099161Z Starting magic under Tcl interpreter
+2025-02-17T01:12:45.2099659Z Using the terminal as the console.
+2025-02-17T01:12:45.2100294Z Using NULL graphics device.
+2025-02-17T01:12:45.2314006Z Processing system .magicrc file
+2025-02-17T01:12:45.2511385Z Loading "tcl/extract_for_lvs.tcl" from command line.
+2025-02-17T01:12:45.2512175Z Root cell box:
+2025-02-17T01:12:45.2512637Z            width x height  (   llx,  lly  ), (   urx,  ury  )
+2025-02-17T01:12:45.2513436Z 
+2025-02-17T01:12:45.2513656Z microns:   0.000 x 0.000   ( 0.000,  0.000), ( 0.000,  0.000)
+2025-02-17T01:12:45.2514082Z lambda:        0 x 0       (     0,  0    ), (     0,  0    )
+2025-02-17T01:12:45.2515185Z Cell tt_um_mattvenn_inverter read from current working directory
+2025-02-17T01:12:45.2515892Z Cell tt_um_mattvenn_inverter has technology "sky130A", but current technology is "minimum"
+2025-02-17T01:12:45.2522350Z Sourcing design .magicrc for technology sky130A ...
+2025-02-17T01:12:45.2527863Z 2 Magic internal units = 1 Lambda
+2025-02-17T01:12:45.2766274Z Input style sky130(): scaleFactor=2, multiplier=2
+2025-02-17T01:12:45.4137095Z The following types are not handled by extraction and will be treated as non-electrical types:
+2025-02-17T01:12:45.4137884Z     ubm 
+2025-02-17T01:12:45.4219170Z Scaled tech values by 2 / 1 to match internal grid scaling
+2025-02-17T01:12:45.4242006Z Loading sky130A Device Generator Menu ...
+2025-02-17T01:12:45.4255465Z Loading technology sky130A
+2025-02-17T01:12:45.4541853Z Input style sky130(): scaleFactor=2, multiplier=2
+2025-02-17T01:12:45.5899293Z The following types are not handled by extraction and will be treated as non-electrical types:
+2025-02-17T01:12:45.5900076Z     ubm 
+2025-02-17T01:12:45.6089119Z Scaled tech values by 2 / 1 to match internal grid scaling
+2025-02-17T01:12:45.6095739Z Cell inverter read from current working directory
+2025-02-17T01:12:45.6103649Z Cell sky130_fd_pr__nfet_01v8_648S5X read from current working directory
+2025-02-17T01:12:45.6106396Z Cell sky130_fd_pr__pfet_01v8_XGS3BL read from current working directory
+2025-02-17T01:12:45.6108859Z Cell sky130_fd_pr__nfet_01v8_YTLFGX read from current working directory
+2025-02-17T01:12:45.6120444Z Cell sky130_fd_pr__pfet_01v8_8DVCWJ read from current working directory
+2025-02-17T01:12:45.6132335Z Extracting sky130_fd_pr__nfet_01v8_648S5X into sky130_fd_pr__nfet_01v8_648S5X.ext:
+2025-02-17T01:12:45.6136421Z Extracting sky130_fd_pr__pfet_01v8_XGS3BL into sky130_fd_pr__pfet_01v8_XGS3BL.ext:
+2025-02-17T01:12:45.6140328Z Extracting sky130_fd_pr__nfet_01v8_YTLFGX into sky130_fd_pr__nfet_01v8_YTLFGX.ext:
+2025-02-17T01:12:45.6162231Z Extracting sky130_fd_pr__pfet_01v8_8DVCWJ into sky130_fd_pr__pfet_01v8_8DVCWJ.ext:
+2025-02-17T01:12:45.6186878Z Extracting inverter into inverter.ext:
+2025-02-17T01:12:45.6720260Z Extracting tt_um_mattvenn_inverter into tt_um_mattvenn_inverter.ext:
+2025-02-17T01:12:45.6726146Z Warning:  Ports "VGND" and "uo_out[7]" are electrically shorted.
+2025-02-17T01:12:45.6726963Z Warning:  Ports "VGND" and "uo_out[6]" are electrically shorted.
+2025-02-17T01:12:45.6727780Z Warning:  Ports "VGND" and "uo_out[5]" are electrically shorted.
+2025-02-17T01:12:45.6728530Z Warning:  Ports "VGND" and "uo_out[4]" are electrically shorted.
+2025-02-17T01:12:45.6729011Z Warning:  Ports "VGND" and "uo_out[3]" are electrically shorted.
+2025-02-17T01:12:45.6729772Z Warning:  Ports "VGND" and "uo_out[2]" are electrically shorted.
+2025-02-17T01:12:45.6730253Z Warning:  Ports "VGND" and "uo_out[1]" are electrically shorted.
+2025-02-17T01:12:45.6730735Z Warning:  Ports "VGND" and "uo_out[0]" are electrically shorted.
+2025-02-17T01:12:45.6731221Z Warning:  Ports "VGND" and "uio_out[7]" are electrically shorted.
+2025-02-17T01:12:45.6731733Z Warning:  Ports "VGND" and "uio_out[6]" are electrically shorted.
+2025-02-17T01:12:45.6732224Z Warning:  Ports "VGND" and "uio_out[5]" are electrically shorted.
+2025-02-17T01:12:45.6732709Z Warning:  Ports "VGND" and "uio_out[4]" are electrically shorted.
+2025-02-17T01:12:45.6733336Z Warning:  Ports "VGND" and "uio_out[3]" are electrically shorted.
+2025-02-17T01:12:45.6733817Z Warning:  Ports "VGND" and "uio_out[2]" are electrically shorted.
+2025-02-17T01:12:45.6734301Z Warning:  Ports "VGND" and "uio_out[1]" are electrically shorted.
+2025-02-17T01:12:45.6734782Z Warning:  Ports "VGND" and "uio_out[0]" are electrically shorted.
+2025-02-17T01:12:45.6735273Z Warning:  Ports "VGND" and "uio_oe[7]" are electrically shorted.
+2025-02-17T01:12:45.6735764Z Warning:  Ports "VGND" and "uio_oe[6]" are electrically shorted.
+2025-02-17T01:12:45.6736243Z Warning:  Ports "VGND" and "uio_oe[5]" are electrically shorted.
+2025-02-17T01:12:45.6736720Z Warning:  Ports "VGND" and "uio_oe[4]" are electrically shorted.
+2025-02-17T01:12:45.6737376Z Warning:  Ports "VGND" and "uio_oe[3]" are electrically shorted.
+2025-02-17T01:12:45.6737858Z Warning:  Ports "VGND" and "uio_oe[2]" are electrically shorted.
+2025-02-17T01:12:45.6738337Z Warning:  Ports "VGND" and "uio_oe[1]" are electrically shorted.
+2025-02-17T01:12:45.6738811Z Warning:  Ports "VGND" and "uio_oe[0]" are electrically shorted.
+2025-02-17T01:12:45.7638853Z exttospice finished.
+2025-02-17T01:12:45.7693906Z rm -f *.ext
+2025-02-17T01:12:45.7715183Z netgen -batch eval "set project tt_um_mattvenn_inverter ; source tcl/lvs_netgen.tcl"
+2025-02-17T01:12:45.7762263Z Netgen 1.5.292 compiled on Mon Feb 17 01:12:44 UTC 2025
+2025-02-17T01:12:45.7779225Z Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+2025-02-17T01:12:45.7780007Z Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+2025-02-17T01:12:45.7786199Z Call to undefined subcircuit sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:45.7786747Z Creating placeholder cell definition.
+2025-02-17T01:12:45.7797297Z Call to undefined subcircuit sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:45.7797847Z Creating placeholder cell definition.
+2025-02-17T01:12:45.7847788Z Call to undefined subcircuit sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:45.7848384Z Creating placeholder cell definition.
+2025-02-17T01:12:45.7852333Z Call to undefined subcircuit sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:45.7852890Z Creating placeholder cell definition.
+2025-02-17T01:12:45.9166289Z Call to undefined subcircuit sky130_fd_sc_hd__nand2_2
+2025-02-17T01:12:45.9167043Z Creating placeholder cell definition.
+2025-02-17T01:12:45.9170535Z Call to undefined subcircuit sky130_fd_sc_hd__nor2_2
+2025-02-17T01:12:45.9171165Z Creating placeholder cell definition.
+2025-02-17T01:12:46.0278341Z Call to undefined subcircuit sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0279175Z Creating placeholder cell definition.
+2025-02-17T01:12:46.0318253Z Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+2025-02-17T01:12:46.0338116Z Treating empty subcircuits as black-box cells
+2025-02-17T01:12:46.0341254Z 
+2025-02-17T01:12:46.0341723Z Reading setup file /home/runner/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
+2025-02-17T01:12:46.0342339Z 
+2025-02-17T01:12:46.0342553Z No property w found for device r
+2025-02-17T01:12:46.0343279Z No property l found for device r
+2025-02-17T01:12:46.0357121Z Model sky130_fd_pr__res_generic_po pin end_a == end_b
+2025-02-17T01:12:46.0357889Z No property mult found for device sky130_fd_pr__res_generic_po
+2025-02-17T01:12:46.0363495Z Model sky130_fd_pr__nfet_01v8 pin 1 == 3
+2025-02-17T01:12:46.0364482Z No property mult found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0365204Z No property sa found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0365875Z No property sb found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0366550Z No property sd found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0367234Z No property nf found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0367910Z No property nrd found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0368618Z No property nrs found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0369311Z No property area found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0370026Z No property perim found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0370793Z No property topography found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0371506Z Model sky130_fd_pr__nfet_01v8 pin 1 == 3
+2025-02-17T01:12:46.0372101Z No property as found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0372784Z No property ad found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0373623Z No property ps found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0374297Z No property pd found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0374986Z No property mult found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0375885Z No property sa found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0376482Z No property sb found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0376905Z No property sd found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0377333Z No property nrd found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0377765Z No property nrs found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0378200Z No property area found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0378640Z No property perim found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0379121Z No property topography found for device sky130_fd_pr__nfet_01v8
+2025-02-17T01:12:46.0379492Z Model sky130_fd_pr__pfet_01v8 pin 1 == 3
+2025-02-17T01:12:46.0379803Z No property mult found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0380152Z No property sa found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0380471Z No property sb found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0380788Z No property sd found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0381104Z No property nf found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0381425Z No property nrd found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0381753Z No property nrs found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0382079Z No property area found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0382420Z No property perim found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0382783Z No property topography found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0383294Z Model sky130_fd_pr__pfet_01v8 pin 1 == 3
+2025-02-17T01:12:46.0383597Z No property as found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0383916Z No property ad found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0384374Z No property ps found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0384918Z No property pd found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0385436Z No property mult found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0385987Z No property sa found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0386541Z No property sb found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0387064Z No property sd found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0387605Z No property nrd found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0388151Z No property nrs found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0388723Z No property area found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0389320Z No property perim found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0390183Z No property topography found for device sky130_fd_pr__pfet_01v8
+2025-02-17T01:12:46.0390759Z Model sky130_fd_pr__pfet_01v8_hvt pin 1 == 3
+2025-02-17T01:12:46.0391256Z No property as found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0391885Z No property ad found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0392315Z No property ps found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0392664Z No property pd found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0393255Z No property mult found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0393691Z No property sa found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0394034Z No property sb found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0394374Z No property sd found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0394712Z No property nf found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0395057Z No property nrd found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0395411Z No property nrs found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0395766Z No property area found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0396137Z No property perim found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0396531Z No property topography found for device sky130_fd_pr__pfet_01v8_hvt
+2025-02-17T01:12:46.0397114Z No property value found for device sky130_fd_pr__diode_pw2nd_05v5
+2025-02-17T01:12:46.0397519Z No property mult found for device sky130_fd_pr__diode_pw2nd_05v5
+2025-02-17T01:12:46.0397911Z No property perim found for device sky130_fd_pr__diode_pw2nd_05v5
+2025-02-17T01:12:46.0528462Z Matching pins of sky130_fd_pr__nfet_01v8 in circuits 1 and 2
+2025-02-17T01:12:46.0528995Z 
+2025-02-17T01:12:46.0529159Z Subcircuit pins:
+2025-02-17T01:12:46.0529713Z Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+2025-02-17T01:12:46.0530279Z -------------------------------------------|-------------------------------------------
+2025-02-17T01:12:46.0530716Z 1                                          |1                                          
+2025-02-17T01:12:46.0531053Z 2                                          |2                                          
+2025-02-17T01:12:46.0531389Z 3                                          |3                                          
+2025-02-17T01:12:46.0531741Z 4                                          |4                                          
+2025-02-17T01:12:46.0532138Z ---------------------------------------------------------------------------------------
+2025-02-17T01:12:46.0587899Z Cell pin lists are equivalent.
+2025-02-17T01:12:46.0588557Z Matching pins of sky130_fd_pr__pfet_01v8 in circuits 1 and 2
+2025-02-17T01:12:46.0589037Z 
+2025-02-17T01:12:46.0589199Z Subcircuit pins:
+2025-02-17T01:12:46.0589753Z Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+2025-02-17T01:12:46.0590278Z -------------------------------------------|-------------------------------------------
+2025-02-17T01:12:46.0590689Z 1                                          |1                                          
+2025-02-17T01:12:46.0591039Z 2                                          |2                                          
+2025-02-17T01:12:46.0591414Z 3                                          |3                                          
+2025-02-17T01:12:46.0591749Z 4                                          |4                                          
+2025-02-17T01:12:46.0592146Z ---------------------------------------------------------------------------------------
+2025-02-17T01:12:46.0613207Z Cell pin lists are equivalent.
+2025-02-17T01:12:46.0613827Z Comparison output logged to file lvs.report
+2025-02-17T01:12:46.0614490Z Logging to file "lvs.report" enabled
+2025-02-17T01:12:46.0617796Z Circuit sky130_fd_pr__nfet_01v8 contains no devices.
+2025-02-17T01:12:46.0669770Z Circuit sky130_fd_pr__pfet_01v8 contains no devices.
+2025-02-17T01:12:46.0690400Z 
+2025-02-17T01:12:46.0690650Z Contents of circuit 1:  Circuit: 'inverter'
+2025-02-17T01:12:46.0691288Z Circuit inverter contains 42 device instances.
+2025-02-17T01:12:46.0691913Z   Class: sky130_fd_pr__nfet_01v8 instances:  21
+2025-02-17T01:12:46.0692521Z   Class: sky130_fd_pr__pfet_01v8 instances:  21
+2025-02-17T01:12:46.0693173Z Circuit contains 5 nets.
+2025-02-17T01:12:46.0693519Z Contents of circuit 2:  Circuit: 'inverter'
+2025-02-17T01:12:46.0693926Z Circuit inverter contains 4 device instances.
+2025-02-17T01:12:46.0694318Z   Class: sky130_fd_pr__nfet_01v8 instances:   2
+2025-02-17T01:12:46.0694706Z   Class: sky130_fd_pr__pfet_01v8 instances:   2
+2025-02-17T01:12:46.0695070Z Circuit contains 5 nets.
+2025-02-17T01:12:46.0695255Z 
+2025-02-17T01:12:46.0699181Z Circuit was modified by parallel/series device merging.
+2025-02-17T01:12:46.0699831Z New circuit summary:
+2025-02-17T01:12:46.0700082Z 
+2025-02-17T01:12:46.0700291Z Contents of circuit 1:  Circuit: 'inverter'
+2025-02-17T01:12:46.0700895Z Circuit inverter contains 4 device instances.
+2025-02-17T01:12:46.0701311Z   Class: sky130_fd_pr__nfet_01v8 instances:   2
+2025-02-17T01:12:46.0701686Z   Class: sky130_fd_pr__pfet_01v8 instances:   2
+2025-02-17T01:12:46.0702030Z Circuit contains 5 nets.
+2025-02-17T01:12:46.0702331Z Contents of circuit 2:  Circuit: 'inverter'
+2025-02-17T01:12:46.0702889Z Circuit inverter contains 4 device instances.
+2025-02-17T01:12:46.0703436Z   Class: sky130_fd_pr__nfet_01v8 instances:   2
+2025-02-17T01:12:46.0703800Z   Class: sky130_fd_pr__pfet_01v8 instances:   2
+2025-02-17T01:12:46.0704138Z Circuit contains 5 nets.
+2025-02-17T01:12:46.0704307Z 
+2025-02-17T01:12:46.0704494Z Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+2025-02-17T01:12:46.0704952Z Circuit 1 contains 5 nets,    Circuit 2 contains 5 nets.
+2025-02-17T01:12:46.0705230Z 
+2025-02-17T01:12:46.0725943Z Pins uo_out[7] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0726641Z Pins uo_out[6] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0727343Z Pins uo_out[5] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0728021Z Pins uo_out[4] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0728734Z Pins uo_out[3] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0729507Z Pins uo_out[2] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0730259Z Pins uo_out[1] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0730763Z Pins uo_out[0] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0731279Z Pins uio_out[7] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0731796Z Pins uio_out[6] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0732292Z Pins uio_out[5] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0732814Z Pins uio_out[4] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0733563Z Pins uio_out[3] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0734059Z Pins uio_out[2] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0734616Z Pins uio_out[1] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0735449Z Pins uio_out[0] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0736269Z Pins uio_oe[7] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0737069Z Pins uio_oe[6] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0737556Z Pins uio_oe[5] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0738038Z Pins uio_oe[4] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0738519Z Pins uio_oe[3] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0739001Z Pins uio_oe[2] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0739582Z Pins uio_oe[1] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0739968Z Pins uio_oe[0] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0740220Z 
+2025-02-17T01:12:46.0740367Z Contents of circuit 1:  Circuit: 'tt_um_mattvenn_inverter'
+2025-02-17T01:12:46.0740740Z Circuit tt_um_mattvenn_inverter contains 25 device instances.
+2025-02-17T01:12:46.0741218Z   Class: r                     instances:  24
+2025-02-17T01:12:46.0741653Z   Class: inverter              instances:   1
+2025-02-17T01:12:46.0742136Z Circuit contains 28 nets, and 25 disconnected pins.
+2025-02-17T01:12:46.0742698Z Contents of circuit 2:  Circuit: 'tt_um_mattvenn_inverter'
+2025-02-17T01:12:46.0743426Z Circuit tt_um_mattvenn_inverter contains 1 device instances.
+2025-02-17T01:12:46.0743955Z   Class: inverter              instances:   1
+2025-02-17T01:12:46.0744430Z Circuit contains 4 nets, and 25 disconnected pins.
+2025-02-17T01:12:46.0744769Z 
+2025-02-17T01:12:46.0745024Z Flattened mismatched instances and attempting compare again.
+2025-02-17T01:12:46.0745429Z 
+2025-02-17T01:12:46.0745655Z Contents of circuit 1:  Circuit: 'tt_um_mattvenn_inverter'
+2025-02-17T01:12:46.0746231Z Circuit tt_um_mattvenn_inverter contains 1 device instances.
+2025-02-17T01:12:46.0746554Z   Class: inverter              instances:   1
+2025-02-17T01:12:46.0747001Z Circuit contains 4 nets, and 25 disconnected pins.
+2025-02-17T01:12:46.0747340Z Contents of circuit 2:  Circuit: 'tt_um_mattvenn_inverter'
+2025-02-17T01:12:46.0747697Z Circuit tt_um_mattvenn_inverter contains 1 device instances.
+2025-02-17T01:12:46.0748014Z   Class: inverter              instances:   1
+2025-02-17T01:12:46.0748303Z Circuit contains 4 nets, and 25 disconnected pins.
+2025-02-17T01:12:46.0748498Z 
+2025-02-17T01:12:46.0748659Z Circuit 1 contains 1 devices, Circuit 2 contains 1 devices.
+2025-02-17T01:12:46.0749006Z Circuit 1 contains 4 nets,    Circuit 2 contains 4 nets.
+2025-02-17T01:12:46.0749220Z 
+2025-02-17T01:12:46.0749397Z Pins uio_oe[1] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0749801Z Pins uio_oe[2] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0750200Z Pins uio_oe[3] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0750597Z Pins uio_oe[4] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0750996Z Pins uio_oe[5] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0751386Z Pins uio_oe[6] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0751781Z Pins uio_oe[7] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0752181Z Pins uio_out[0] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0752591Z Pins uio_out[1] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0753170Z Pins uio_out[2] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0753590Z Pins uio_out[3] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0753993Z Pins uio_out[4] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0754399Z Pins uio_out[5] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0754807Z Pins uio_out[6] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0755210Z Pins uio_out[7] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0755610Z Pins uo_out[0] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0756004Z Pins uo_out[1] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0756396Z Pins uo_out[2] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0756789Z Pins uo_out[3] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0757678Z Pins uo_out[4] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0758287Z Pins uo_out[5] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0758699Z Pins uo_out[6] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0759099Z Pins uo_out[7] and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0759503Z Pins VGND and uio_oe[0] are shorted in cell tt_um_mattvenn_inverter (0)
+2025-02-17T01:12:46.0759896Z Pins uo_out[7] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0760282Z Pins uo_out[6] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0760662Z Pins uo_out[5] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0761040Z Pins uo_out[4] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0761417Z Pins uo_out[3] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0761796Z Pins uo_out[2] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0762171Z Pins uo_out[1] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0762552Z Pins uo_out[0] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0763043Z Pins uio_out[7] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0763573Z Pins uio_out[6] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0763972Z Pins uio_out[5] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0764362Z Pins uio_out[4] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0764748Z Pins uio_out[3] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0765136Z Pins uio_out[2] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0765526Z Pins uio_out[1] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0765919Z Pins uio_out[0] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0766305Z Pins uio_oe[7] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0766684Z Pins uio_oe[6] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0767071Z Pins uio_oe[5] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0767458Z Pins uio_oe[4] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0767841Z Pins uio_oe[3] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0768223Z Pins uio_oe[2] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0768609Z Pins uio_oe[1] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0768986Z Pins uio_oe[0] and VGND are shorted in cell tt_um_mattvenn_inverter (1)
+2025-02-17T01:12:46.0769242Z 
+2025-02-17T01:12:46.0769318Z Final result: 
+2025-02-17T01:12:46.0769514Z Circuits match uniquely.
+2025-02-17T01:12:46.0769727Z .
+2025-02-17T01:12:46.0769912Z Logging to file "lvs.report" disabled
+2025-02-17T01:12:46.0770148Z LVS Done.
+2025-02-17T01:12:46.1145992Z LVS OK

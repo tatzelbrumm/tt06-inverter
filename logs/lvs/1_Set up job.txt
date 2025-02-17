@@ -1,0 +1,40 @@
+﻿2025-02-17T01:11:47.8949462Z Current runner version: '2.322.0'
+2025-02-17T01:11:47.8975520Z ##[group]Operating System
+2025-02-17T01:11:47.8976441Z Ubuntu
+2025-02-17T01:11:47.8976951Z 24.04.1
+2025-02-17T01:11:47.8977501Z LTS
+2025-02-17T01:11:47.8978065Z ##[endgroup]
+2025-02-17T01:11:47.8978604Z ##[group]Runner Image
+2025-02-17T01:11:47.8979225Z Image: ubuntu-24.04
+2025-02-17T01:11:47.8979769Z Version: 20250209.1.0
+2025-02-17T01:11:47.8980756Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250209.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-02-17T01:11:47.8982148Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250209.1
+2025-02-17T01:11:47.8983225Z ##[endgroup]
+2025-02-17T01:11:47.8983793Z ##[group]Runner Image Provisioner
+2025-02-17T01:11:47.8984450Z 2.0.422.1
+2025-02-17T01:11:47.8984907Z ##[endgroup]
+2025-02-17T01:11:47.8987168Z ##[group]GITHUB_TOKEN Permissions
+2025-02-17T01:11:47.8989614Z Actions: write
+2025-02-17T01:11:47.8990222Z Attestations: write
+2025-02-17T01:11:47.8991115Z Checks: write
+2025-02-17T01:11:47.8991633Z Contents: write
+2025-02-17T01:11:47.8992287Z Deployments: write
+2025-02-17T01:11:47.8992863Z Discussions: write
+2025-02-17T01:11:47.8993542Z Issues: write
+2025-02-17T01:11:47.8994145Z Metadata: read
+2025-02-17T01:11:47.8994672Z Packages: write
+2025-02-17T01:11:47.8995227Z Pages: write
+2025-02-17T01:11:47.8995755Z PullRequests: write
+2025-02-17T01:11:47.8996262Z RepositoryProjects: write
+2025-02-17T01:11:47.8996936Z SecurityEvents: write
+2025-02-17T01:11:47.8997496Z Statuses: write
+2025-02-17T01:11:47.8998063Z ##[endgroup]
+2025-02-17T01:11:47.9001674Z Secret source: Actions
+2025-02-17T01:11:47.9002740Z Prepare workflow directory
+2025-02-17T01:11:47.9315919Z Prepare all required actions
+2025-02-17T01:11:47.9353196Z Getting action download info
+2025-02-17T01:11:48.1238321Z Download action repository 'actions/checkout@v4' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2025-02-17T01:11:48.2068276Z Download action repository 'TinyTapeout/volare-action@v1' (SHA:da552da69d4274bed9db8480093990949d037006)
+2025-02-17T01:11:48.5758635Z Getting action download info
+2025-02-17T01:11:48.6754561Z Download action repository 'actions/cache@v3' (SHA:f4b3439a656ba812b8cb417d2d49f9c810103092)
+2025-02-17T01:11:48.9630574Z Complete job name: lvs

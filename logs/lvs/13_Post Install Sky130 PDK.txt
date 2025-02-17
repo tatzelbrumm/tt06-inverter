@@ -1,0 +1,6 @@
+﻿2025-02-17T01:12:46.1204074Z Post job cleanup.
+2025-02-17T01:12:46.1240561Z Post job cleanup.
+2025-02-17T01:12:46.2645764Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/tt06-inverter/tt06-inverter --files-from manifest.txt --use-compress-program zstdmt
+2025-02-17T01:12:51.5071922Z Sent 0 of 312539118 (0.0%), 0.0 MBs/sec
+2025-02-17T01:12:52.0937120Z Sent 312539118 of 312539118 (100.0%), 187.8 MBs/sec
+2025-02-17T01:12:52.2010348Z Cache saved with key: Linux-pdk-sky130-78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc

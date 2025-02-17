@@ -1,0 +1,328 @@
+﻿2025-02-17T01:12:41.4325107Z ##[group]Run git clone -b $NETGEN_VERSION https://github.com/RTimothyEdwards/netgen /tmp/netgen
+2025-02-17T01:12:41.4325791Z [36;1mgit clone -b $NETGEN_VERSION https://github.com/RTimothyEdwards/netgen /tmp/netgen[0m
+2025-02-17T01:12:41.4326216Z [36;1mcd /tmp/netgen[0m
+2025-02-17T01:12:41.4326431Z [36;1m./configure[0m
+2025-02-17T01:12:41.4326653Z [36;1mmake -j4 [0m
+2025-02-17T01:12:41.4326857Z [36;1msudo make install[0m
+2025-02-17T01:12:41.4382668Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:12:41.4383211Z env:
+2025-02-17T01:12:41.4383459Z   PDK_ROOT: /home/runner/pdk
+2025-02-17T01:12:41.4383731Z   PDK: sky130A
+2025-02-17T01:12:41.4383933Z   MAGIC_VERSION: master
+2025-02-17T01:12:41.4384142Z   NETGEN_VERSION: master
+2025-02-17T01:12:41.4384351Z ##[endgroup]
+2025-02-17T01:12:41.4470605Z Cloning into '/tmp/netgen'...
+2025-02-17T01:12:42.2208867Z checking build system type... x86_64-pc-linux-gnu
+2025-02-17T01:12:42.2209745Z checking host system type... x86_64-pc-linux-gnu
+2025-02-17T01:12:42.2210980Z checking target system type... x86_64-pc-linux-gnu
+2025-02-17T01:12:42.2263552Z checking for gcc... gcc
+2025-02-17T01:12:42.2761224Z checking whether the C compiler works... yes
+2025-02-17T01:12:42.2761925Z checking for C compiler default output file name... a.out
+2025-02-17T01:12:42.3052895Z checking for suffix of executables... 
+2025-02-17T01:12:42.3401720Z checking whether we are cross compiling... no
+2025-02-17T01:12:42.3579349Z checking for suffix of object files... o
+2025-02-17T01:12:42.3729549Z checking whether we are using the GNU C compiler... yes
+2025-02-17T01:12:42.3880603Z checking whether gcc accepts -g... yes
+2025-02-17T01:12:42.4109613Z checking for gcc option to accept ISO C89... none needed
+2025-02-17T01:12:42.4327611Z checking how to run the C preprocessor... gcc -E
+2025-02-17T01:12:42.4875824Z checking for library containing strerror... none required
+2025-02-17T01:12:42.4952519Z checking for a BSD-compatible install... /usr/bin/install -c
+2025-02-17T01:12:42.4956935Z checking for ranlib... ranlib
+2025-02-17T01:12:42.4999581Z checking for ld used by GCC... /usr/bin/ld
+2025-02-17T01:12:42.5021735Z checking if the linker (/usr/bin/ld) is GNU ld... yes
+2025-02-17T01:12:42.5042411Z checking for grep that handles long lines and -e... /usr/bin/grep
+2025-02-17T01:12:42.5057797Z checking for egrep... /usr/bin/grep -E
+2025-02-17T01:12:42.5866554Z checking for ANSI C header files... yes
+2025-02-17T01:12:42.6067284Z checking for sys/types.h... yes
+2025-02-17T01:12:42.6303973Z checking for sys/stat.h... yes
+2025-02-17T01:12:42.6533859Z checking for stdlib.h... yes
+2025-02-17T01:12:42.6777746Z checking for string.h... yes
+2025-02-17T01:12:42.7028317Z checking for memory.h... yes
+2025-02-17T01:12:42.7277429Z checking for strings.h... yes
+2025-02-17T01:12:42.7525523Z checking for inttypes.h... yes
+2025-02-17T01:12:42.7768648Z checking for stdint.h... yes
+2025-02-17T01:12:42.8029865Z checking for unistd.h... yes
+2025-02-17T01:12:42.8497451Z checking size of void *... 8
+2025-02-17T01:12:42.8942679Z checking size of unsigned int... 4
+2025-02-17T01:12:42.9388937Z checking size of unsigned long... 8
+2025-02-17T01:12:42.9840229Z checking size of unsigned long long... 8
+2025-02-17T01:12:43.0376034Z checking whether byte ordering is bigendian... no
+2025-02-17T01:12:43.0377227Z checking for ANSI C header files... (cached) yes
+2025-02-17T01:12:43.0726589Z checking for setenv... yes
+2025-02-17T01:12:43.1106184Z checking for putenv... yes
+2025-02-17T01:12:43.1479693Z checking for vfork... yes
+2025-02-17T01:12:43.1699476Z checking dirent.h usability... yes
+2025-02-17T01:12:43.1793621Z checking dirent.h presence... yes
+2025-02-17T01:12:43.1794025Z checking for dirent.h... yes
+2025-02-17T01:12:43.2016347Z checking limits.h usability... yes
+2025-02-17T01:12:43.2104053Z checking limits.h presence... yes
+2025-02-17T01:12:43.2104666Z checking for limits.h... yes
+2025-02-17T01:12:43.2345549Z checking param.h usability... no
+2025-02-17T01:12:43.2462195Z checking param.h presence... no
+2025-02-17T01:12:43.2462911Z checking for param.h... no
+2025-02-17T01:12:43.2468010Z checking for python3... yes
+2025-02-17T01:12:43.2790173Z checking for va_copy... yes
+2025-02-17T01:12:43.3109895Z checking for __va_copy... yes
+2025-02-17T01:12:43.3147929Z checking for tclConfig.sh... /usr/lib/tcl8.6/tclConfig.sh
+2025-02-17T01:12:43.3214312Z checking for tkConfig.sh... /usr/lib/tk8.6/tkConfig.sh
+2025-02-17T01:12:43.3813708Z checking for wish executable... /usr/bin/wish
+2025-02-17T01:12:43.3814406Z checking for tclsh executable... /usr/bin/tclsh
+2025-02-17T01:12:43.4391189Z checking for X... libraries , headers 
+2025-02-17T01:12:43.5072038Z checking for gethostbyname... yes
+2025-02-17T01:12:43.5400617Z checking for connect... yes
+2025-02-17T01:12:43.5737663Z checking for remove... yes
+2025-02-17T01:12:43.6067819Z checking for shmat... yes
+2025-02-17T01:12:43.6393989Z checking for IceConnectionNumber in -lICE... yes
+2025-02-17T01:12:43.6574792Z configure: creating ./config.status
+2025-02-17T01:12:43.7232551Z config.status: creating defs.mak
+2025-02-17T01:12:43.7261824Z config.status: WARNING:  'defs.mak.in' seems to ignore the --datarootdir setting
+2025-02-17T01:12:43.7326585Z 
+2025-02-17T01:12:43.7327111Z -----------------------------------------------------------
+2025-02-17T01:12:43.7327692Z Configuration Summary (principle requirements):
+2025-02-17T01:12:43.7328081Z 
+2025-02-17T01:12:43.7328218Z Tcl/Tk:      yes
+2025-02-17T01:12:43.7328526Z Python3:    yes
+2025-02-17T01:12:43.7328883Z -----------------------------------------------------------
+2025-02-17T01:12:43.7329202Z 
+2025-02-17T01:12:43.7329386Z Use 'make' to compile and 'make install' to install.
+2025-02-17T01:12:43.7329616Z 
+2025-02-17T01:12:43.7329806Z Errors may not be printed to stdout:  see files 'make.log' 
+2025-02-17T01:12:43.7330242Z    and 'install.log' for a complete error summary.
+2025-02-17T01:12:43.7330458Z 
+2025-02-17T01:12:43.7330570Z -----------------------------------------------------------
+2025-02-17T01:12:43.7330865Z 
+2025-02-17T01:12:43.7540917Z --- errors and warnings logged in file make.log
+2025-02-17T01:12:43.7569594Z make[1]: Entering directory '/tmp/netgen'
+2025-02-17T01:12:43.7581443Z --- making modules
+2025-02-17T01:12:43.7583876Z for dir in base tcltk; do \
+2025-02-17T01:12:43.7584320Z 	(cd $dir && make module); done
+2025-02-17T01:12:43.7617252Z make[2]: Entering directory '/tmp/netgen/base'
+2025-02-17T01:12:43.7635076Z --- compiling base/actel.o
+2025-02-17T01:12:43.7637541Z --- compiling base/ccode.o
+2025-02-17T01:12:43.7639989Z rm -f actel.o
+2025-02-17T01:12:43.7640678Z --- compiling base/greedy.o
+2025-02-17T01:12:43.7642614Z --- compiling base/ntk.o
+2025-02-17T01:12:43.7644883Z rm -f ccode.o
+2025-02-17T01:12:43.7648130Z rm -f greedy.o
+2025-02-17T01:12:43.7650820Z rm -f ntk.o
+2025-02-17T01:12:43.7674360Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c actel.c
+2025-02-17T01:12:43.7685643Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c ccode.c
+2025-02-17T01:12:43.7695112Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c greedy.c
+2025-02-17T01:12:43.7723693Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c ntk.c
+2025-02-17T01:12:43.8090006Z ntk.c: In function ‘ReadNtk’:
+2025-02-17T01:12:43.8107946Z ntk.c:292:30: warning: ‘pin’ directive writing 3 bytes into a region of size between 0 and 255 [-Wformat-overflow=]
+2025-02-17T01:12:43.8108870Z   292 |           sprintf(name, "%s%spin%d", instancename, SEPARATOR, i+1);
+2025-02-17T01:12:43.8109416Z       |                              ^~~
+2025-02-17T01:12:43.8109909Z ntk.c:292:25: note: directive argument in the range [1, 101]
+2025-02-17T01:12:43.8110526Z   292 |           sprintf(name, "%s%spin%d", instancename, SEPARATOR, i+1);
+2025-02-17T01:12:43.8111099Z       |                         ^~~~~~~~~~~
+2025-02-17T01:12:43.8111894Z ntk.c:292:11: note: ‘sprintf’ output between 6 and 263 bytes into a destination of size 256
+2025-02-17T01:12:43.8112663Z   292 |           sprintf(name, "%s%spin%d", instancename, SEPARATOR, i+1);
+2025-02-17T01:12:43.8113669Z       |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:43.8152899Z --- compiling base/print.o
+2025-02-17T01:12:43.8153532Z rm -f print.o
+2025-02-17T01:12:43.8158164Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c print.c
+2025-02-17T01:12:43.8253644Z --- compiling base/actellib.o
+2025-02-17T01:12:43.8254491Z rm -f actellib.o
+2025-02-17T01:12:43.8281142Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c actellib.c
+2025-02-17T01:12:43.8400042Z --- compiling base/embed.o
+2025-02-17T01:12:43.8401814Z rm -f embed.o
+2025-02-17T01:12:43.8408352Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c embed.c
+2025-02-17T01:12:43.8478493Z --- compiling base/hash.o
+2025-02-17T01:12:43.8483863Z rm -f hash.o
+2025-02-17T01:12:43.8537836Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c hash.c
+2025-02-17T01:12:43.8935661Z --- compiling base/netfile.o
+2025-02-17T01:12:43.8937176Z rm -f netfile.o
+2025-02-17T01:12:43.8972852Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c netfile.c
+2025-02-17T01:12:43.9154584Z --- compiling base/objlist.o
+2025-02-17T01:12:43.9155086Z rm -f objlist.o
+2025-02-17T01:12:43.9163121Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c objlist.c
+2025-02-17T01:12:43.9267230Z --- compiling base/query.o
+2025-02-17T01:12:43.9293530Z rm -f query.o
+2025-02-17T01:12:43.9303498Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c query.c
+2025-02-17T01:12:43.9370622Z --- compiling base/anneal.o
+2025-02-17T01:12:43.9373711Z rm -f anneal.o
+2025-02-17T01:12:43.9406446Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c anneal.c
+2025-02-17T01:12:43.9976972Z --- compiling base/ext.o
+2025-02-17T01:12:43.9980608Z rm -f ext.o
+2025-02-17T01:12:44.0002513Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c ext.c
+2025-02-17T01:12:44.0275291Z --- compiling base/netcmp.o
+2025-02-17T01:12:44.0277231Z rm -f netcmp.o
+2025-02-17T01:12:44.0311559Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c netcmp.c
+2025-02-17T01:12:44.0437289Z --- compiling base/netgen.o
+2025-02-17T01:12:44.0441789Z rm -f netgen.o
+2025-02-17T01:12:44.0465902Z --- compiling base/pdutils.o
+2025-02-17T01:12:44.0473398Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c netgen.c
+2025-02-17T01:12:44.0480175Z rm -f pdutils.o
+2025-02-17T01:12:44.0518388Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c pdutils.c
+2025-02-17T01:12:44.1003748Z --- compiling base/random.o
+2025-02-17T01:12:44.1011266Z rm -f random.o
+2025-02-17T01:12:44.1067529Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c random.c
+2025-02-17T01:12:44.1180943Z --- compiling base/timing.o
+2025-02-17T01:12:44.1186514Z rm -f timing.o
+2025-02-17T01:12:44.1226923Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c timing.c
+2025-02-17T01:12:44.1514391Z --- compiling base/bottomup.o
+2025-02-17T01:12:44.1515234Z rm -f bottomup.o
+2025-02-17T01:12:44.1520395Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c bottomup.c
+2025-02-17T01:12:44.1547674Z --- compiling base/flatten.o
+2025-02-17T01:12:44.1555501Z rm -f flatten.o
+2025-02-17T01:12:44.1592788Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c flatten.c
+2025-02-17T01:12:44.2211043Z --- compiling base/place.o
+2025-02-17T01:12:44.2215632Z rm -f place.o
+2025-02-17T01:12:44.2224126Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c place.c
+2025-02-17T01:12:44.3303462Z --- compiling base/spice.o
+2025-02-17T01:12:44.3310695Z rm -f spice.o
+2025-02-17T01:12:44.3351057Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c spice.c
+2025-02-17T01:12:44.3438026Z --- compiling base/verilog.o
+2025-02-17T01:12:44.3440840Z rm -f verilog.o
+2025-02-17T01:12:44.3476472Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c verilog.c
+2025-02-17T01:12:44.3533589Z --- compiling base/wombat.o
+2025-02-17T01:12:44.3536924Z rm -f wombat.o
+2025-02-17T01:12:44.3576783Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c wombat.c
+2025-02-17T01:12:44.3950663Z spice.c: In function ‘ReadSpiceFile’:
+2025-02-17T01:12:44.3955241Z spice.c:1818:48: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 254 [-Wformat-truncation=]
+2025-02-17T01:12:44.3960912Z  1818 |          snprintf(subcktname, MAX_STR_LEN-1, "/%s", instancename);
+2025-02-17T01:12:44.3961537Z       |                                                ^~   ~~~~~~~~~~~~
+2025-02-17T01:12:44.3961987Z --- compiling base/xilinx.o
+2025-02-17T01:12:44.3962385Z rm -f xilinx.o
+2025-02-17T01:12:44.3965224Z spice.c:1818:10: note: ‘snprintf’ output between 2 and 257 bytes into a destination of size 255
+2025-02-17T01:12:44.3966881Z  1818 |          snprintf(subcktname, MAX_STR_LEN-1, "/%s", instancename);
+2025-02-17T01:12:44.3969880Z       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.3974231Z spice.c:1814:50: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 254 [-Wformat-truncation=]
+2025-02-17T01:12:44.3975427Z  1814 |          snprintf(subcktname, MAX_STR_LEN-1, "%s:%s", scan->name, instancename);
+2025-02-17T01:12:44.3976099Z       |                                                  ^~               ~~~~~~~~~~~~
+2025-02-17T01:12:44.3977099Z spice.c:1814:10: note: ‘snprintf’ output 2 or more bytes (assuming 257) into a destination of size 255
+2025-02-17T01:12:44.3978082Z  1814 |          snprintf(subcktname, MAX_STR_LEN-1, "%s:%s", scan->name, instancename);
+2025-02-17T01:12:44.3978812Z       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.3979908Z spice.c:1843:31: warning: ‘%d’ directive writing between 1 and 10 bytes into a region of size 8 [-Wformat-overflow=]
+2025-02-17T01:12:44.3980799Z  1843 |             sprintf(defport, "%d", i);
+2025-02-17T01:12:44.3981259Z       |                               ^~
+2025-02-17T01:12:44.3981768Z spice.c:1843:30: note: directive argument in the range [1, 2147483647]
+2025-02-17T01:12:44.3982379Z  1843 |             sprintf(defport, "%d", i);
+2025-02-17T01:12:44.3983181Z       |                              ^~~~
+2025-02-17T01:12:44.3984185Z spice.c:1843:13: note: ‘sprintf’ output between 2 and 11 bytes into a destination of size 8
+2025-02-17T01:12:44.3984888Z  1843 |             sprintf(defport, "%d", i);
+2025-02-17T01:12:44.3985335Z       |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.3986463Z spice.c:1489:44: warning: ‘:’ directive output may be truncated writing 1 byte into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.3987534Z  1489 |       snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.3988095Z       |                                            ^
+2025-02-17T01:12:44.3989003Z spice.c:1489:7: note: ‘snprintf’ output between 2 and 512 bytes into a destination of size 255
+2025-02-17T01:12:44.3989842Z  1489 |       snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.3990424Z       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.3991851Z spice.c:1406:46: warning: ‘:’ directive output may be truncated writing 1 byte into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.3992901Z  1406 |         snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4013166Z       |                                              ^
+2025-02-17T01:12:44.4014150Z spice.c:1406:9: note: ‘snprintf’ output between 2 and 512 bytes into a destination of size 255
+2025-02-17T01:12:44.4014984Z  1406 |         snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4015570Z       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4016992Z spice.c:1327:44: warning: ‘:’ directive output may be truncated writing 1 byte into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.4018067Z  1327 |       snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4018629Z       |                                            ^
+2025-02-17T01:12:44.4019512Z spice.c:1327:7: note: ‘snprintf’ output between 2 and 512 bytes into a destination of size 255
+2025-02-17T01:12:44.4020357Z  1327 |       snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4020950Z       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4022133Z spice.c:1269:46: warning: ‘:’ directive output may be truncated writing 1 byte into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.4023399Z  1269 |         snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4023970Z       |                                              ^
+2025-02-17T01:12:44.4024870Z spice.c:1269:9: note: ‘snprintf’ output between 2 and 512 bytes into a destination of size 255
+2025-02-17T01:12:44.4025712Z  1269 |         snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4026319Z       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4027507Z spice.c:1176:46: warning: ‘:’ directive output may be truncated writing 1 byte into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.4028566Z  1176 |         snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4029122Z       |                                              ^
+2025-02-17T01:12:44.4029986Z spice.c:1176:9: note: ‘snprintf’ output between 2 and 512 bytes into a destination of size 255
+2025-02-17T01:12:44.4030824Z  1176 |         snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4031408Z       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4032579Z spice.c:1085:44: warning: ‘:’ directive output may be truncated writing 1 byte into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.4033839Z  1085 |       snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4034409Z       |                                            ^
+2025-02-17T01:12:44.4035300Z spice.c:1085:7: note: ‘snprintf’ output between 2 and 512 bytes into a destination of size 255
+2025-02-17T01:12:44.4036162Z  1085 |       snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4036756Z       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4037927Z spice.c:1012:44: warning: ‘:’ directive output may be truncated writing 1 byte into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.4038986Z  1012 |       snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4039541Z       |                                            ^
+2025-02-17T01:12:44.4040429Z spice.c:1012:7: note: ‘snprintf’ output between 2 and 512 bytes into a destination of size 255
+2025-02-17T01:12:44.4041270Z  1012 |       snprintf(instname, MAX_STR_LEN-1, "%s:%s", model, inst);
+2025-02-17T01:12:44.4041853Z       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4043338Z spice.c:610:32: warning: ‘sprintf’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+2025-02-17T01:12:44.4044197Z   610 |              sprintf(pname, "%d", i);
+2025-02-17T01:12:44.4044638Z       |                                ^
+2025-02-17T01:12:44.4045437Z spice.c:610:14: note: ‘sprintf’ output between 2 and 11 bytes into a destination of size 10
+2025-02-17T01:12:44.4046133Z   610 |              sprintf(pname, "%d", i);
+2025-02-17T01:12:44.4046575Z       |              ^~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4091090Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c xilinx.c
+2025-02-17T01:12:44.4138207Z verilog.c: In function ‘ReadVerilogFile’:
+2025-02-17T01:12:44.4142201Z verilog.c:2583:34: warning: ‘%d’ directive writing between 1 and 11 bytes into a region of size between 0 and 255 [-Wformat-overflow=]
+2025-02-17T01:12:44.4167819Z  2583 |             sprintf(locinst, "%s[%d]", instancename, i);
+2025-02-17T01:12:44.4168381Z       |                                  ^~
+2025-02-17T01:12:44.4169029Z verilog.c:2583:30: note: using the range [-2147483648, 2147483647] for directive argument
+2025-02-17T01:12:44.4169780Z  2583 |             sprintf(locinst, "%s[%d]", instancename, i);
+2025-02-17T01:12:44.4170290Z       |                              ^~~~~~~~
+2025-02-17T01:12:44.4171232Z verilog.c:2583:13: note: ‘sprintf’ output between 4 and 269 bytes into a destination of size 256
+2025-02-17T01:12:44.4172062Z  2583 |             sprintf(locinst, "%s[%d]", instancename, i);
+2025-02-17T01:12:44.4172595Z       |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4174011Z verilog.c:1976:65: warning: ‘%d’ directive output may be truncated writing between 1 and 11 bytes into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.4175150Z  1976 |                             snprintf(nodename, MAX_STR_LEN, "%s[%d]", noderoot, i);
+2025-02-17T01:12:44.4175749Z       |                                                                 ^~
+2025-02-17T01:12:44.4176414Z verilog.c:1976:61: note: using the range [-2147483648, 2147483647] for directive argument
+2025-02-17T01:12:44.4177189Z  1976 |                             snprintf(nodename, MAX_STR_LEN, "%s[%d]", noderoot, i);
+2025-02-17T01:12:44.4177778Z       |                                                             ^~~~~~~~
+2025-02-17T01:12:44.4178677Z verilog.c:1976:29: note: ‘snprintf’ output between 4 and 269 bytes into a destination of size 256
+2025-02-17T01:12:44.4179546Z  1976 |                             snprintf(nodename, MAX_STR_LEN, "%s[%d]", noderoot, i);
+2025-02-17T01:12:44.4180154Z       |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4181439Z verilog.c:1984:67: warning: ‘%d’ directive output may be truncated writing between 1 and 11 bytes into a region of size between 0 and 255 [-Wformat-truncation=]
+2025-02-17T01:12:44.4182611Z  1984 |                             snprintf(assignname, MAX_STR_LEN, "%s[%d]", assignroot, j);
+2025-02-17T01:12:44.4183396Z       |                                                                   ^~
+2025-02-17T01:12:44.4206972Z verilog.c:1984:63: note: using the range [-2147483648, 2147483647] for directive argument
+2025-02-17T01:12:44.4207837Z  1984 |                             snprintf(assignname, MAX_STR_LEN, "%s[%d]", assignroot, j);
+2025-02-17T01:12:44.4208481Z       |                                                               ^~~~~~~~
+2025-02-17T01:12:44.4209463Z verilog.c:1984:29: note: ‘snprintf’ output between 4 and 269 bytes into a destination of size 256
+2025-02-17T01:12:44.4210360Z  1984 |                             snprintf(assignname, MAX_STR_LEN, "%s[%d]", assignroot, j);
+2025-02-17T01:12:44.4211015Z       |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-02-17T01:12:44.4603552Z --- compiling base/xillib.o
+2025-02-17T01:12:44.4607871Z rm -f xillib.o
+2025-02-17T01:12:44.4640619Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c xillib.c
+2025-02-17T01:12:44.5600105Z --- linking libbase.o
+2025-02-17T01:12:44.5601312Z rm -f libbase.o
+2025-02-17T01:12:44.5624064Z /usr/bin/ld -r actel.o ccode.o greedy.o ntk.o print.o actellib.o embed.o hash.o netfile.o objlist.o query.o anneal.o ext.o netcmp.o netgen.o pdutils.o random.o timing.o bottomup.o flatten.o place.o spice.o verilog.o wombat.o xilinx.o xillib.o -o libbase.o 
+2025-02-17T01:12:44.5741246Z make[2]: Leaving directory '/tmp/netgen/base'
+2025-02-17T01:12:44.5766407Z make[2]: Entering directory '/tmp/netgen/tcltk'
+2025-02-17T01:12:44.5778674Z --- compiling tcltk/tclnetgen.o
+2025-02-17T01:12:44.5780666Z rm -f tclnetgen.o
+2025-02-17T01:12:44.5805665Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6 -I../base -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\"  -DUSE_TCL_STUBS -DUSE_TK_STUBS -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG -DNETGEN_DATE="\"`date`\""  -c tclnetgen.c
+2025-02-17T01:12:44.7669933Z --- linking libtcltk.o
+2025-02-17T01:12:44.7671171Z rm -f libtcltk.o
+2025-02-17T01:12:44.7693647Z /usr/bin/ld -r tclnetgen.o -o libtcltk.o 
+2025-02-17T01:12:44.7733752Z make[2]: Leaving directory '/tmp/netgen/tcltk'
+2025-02-17T01:12:44.7750529Z --- making Tcl shared-object libraries
+2025-02-17T01:12:44.7752472Z for dir in netgen python tcltk; do \
+2025-02-17T01:12:44.7753140Z 	(cd $dir && make tcl-main); done
+2025-02-17T01:12:44.7787934Z make[2]: Entering directory '/tmp/netgen/netgen'
+2025-02-17T01:12:44.7800441Z --- making netgen Tcl library (tclnetgen.so)
+2025-02-17T01:12:44.7802375Z rm -f tclnetgen.so
+2025-02-17T01:12:44.7824460Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6  -I../base -I. -I..  -o tclnetgen.so -shared -Wl,-soname,tclnetgen.so -Wl,--version-script=../netgen/symbol.map \
+2025-02-17T01:12:44.7825351Z 	 ../base/libbase.o ../tcltk/libtcltk.o  \
+2025-02-17T01:12:44.7825667Z 	-lc  -lm -L/usr/lib/x86_64-linux-gnu -ltclstub8.6 
+2025-02-17T01:12:44.8160277Z make[2]: Leaving directory '/tmp/netgen/netgen'
+2025-02-17T01:12:44.8186645Z make[2]: Entering directory '/tmp/netgen/python'
+2025-02-17T01:12:44.8187331Z sed -e '/SUBST_SCRIPT_DIR/s#SUBST_SCRIPT_DIR#/usr/local/lib/netgen/python#' \
+2025-02-17T01:12:44.8187738Z 	lvs_manager.py.in > lvs_manager.py
+2025-02-17T01:12:44.8221346Z make[2]: Leaving directory '/tmp/netgen/python'
+2025-02-17T01:12:44.8244434Z make[2]: Entering directory '/tmp/netgen/tcltk'
+2025-02-17T01:12:44.8247889Z gcc -g -m64 -fPIC -fPIC  -I/usr/include/tcl8.6 -I../base -I. -I..  -DCAD_DIR=\"/usr/local/lib\" -DTCL_DIR=\"/usr/local/lib/netgen/tcl\" -DPACKAGE_NAME=\"netgen\" -DPACKAGE_TARNAME=\"netgen\" -DPACKAGE_VERSION=\"1.3\" -DPACKAGE_STRING=\"netgen\ 1.3\" -DPACKAGE_BUGREPORT=\"eda-dev@opencircuitdesign.com\" -DPACKAGE_URL=\"\" -DNETGEN_VERSION=\"1.5\" -DNETGEN_REVISION=\"292\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DSIZEOF_VOID_P=8 -DSIZEOF_UNSIGNED_INT=4 -DSIZEOF_UNSIGNED_LONG=8 -DSIZEOF_UNSIGNED_LONG_LONG=8 -DSTDC_HEADERS=1 -DHAVE_SETENV=1 -DHAVE_PUTENV=1 -DHAVE_DIRENT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_VA_COPY=1 -DHAVE___VA_COPY=1 -DDBUG_OFF=1 -DTCL_NETGEN=1 -Dlinux=1 -DSYSV=1 -DISC=1 -DSHDLIB_EXT=\".so\" -DNDEBUG netgenexec.c \
+2025-02-17T01:12:44.8252301Z 	-o netgenexec \
+2025-02-17T01:12:44.8252761Z 	-L/usr/lib/x86_64-linux-gnu -ltcl8.6  -lm 
+2025-02-17T01:12:44.8253549Z sed -e 's%TCL_DIR%/usr/local/lib/netgen/tcl%g' \
+2025-02-17T01:12:44.8254063Z     -e 's%SHDLIB_EXT%.so%g' \
+2025-02-17T01:12:44.8254506Z     netgen.tcl.in > netgen.tcl
+2025-02-17T01:12:44.8256353Z sed -e 's%TCL_DIR%/usr/local/lib/netgen/tcl%g' \
+2025-02-17T01:12:44.8257176Z     -e 's%PY_DIR%/usr/local/lib/netgen/python%g' \
+2025-02-17T01:12:44.8260055Z     -e 's%TCLLIB_DIR%/usr/lib%g' \
+2025-02-17T01:12:44.8260649Z     -e 's%WISH_EXE%/usr/bin/wish%g' \
+2025-02-17T01:12:44.8261479Z     netgen.sh.in > netgen.sh
+2025-02-17T01:12:44.8719229Z make[2]: Leaving directory '/tmp/netgen/tcltk'
+2025-02-17T01:12:44.8722909Z make[1]: Leaving directory '/tmp/netgen'
+2025-02-17T01:12:44.8803508Z ./scripts/mkdirs /usr/local/bin
+2025-02-17T01:12:44.8831060Z --- installing executable to /usr/local/bin
+2025-02-17T01:12:44.8843365Z --- installing run-time files to /usr/local/lib
