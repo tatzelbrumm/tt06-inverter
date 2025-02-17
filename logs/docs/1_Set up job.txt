@@ -1,0 +1,41 @@
+﻿2025-02-17T01:11:48.0056072Z Current runner version: '2.322.0'
+2025-02-17T01:11:48.0082125Z ##[group]Operating System
+2025-02-17T01:11:48.0083046Z Ubuntu
+2025-02-17T01:11:48.0083575Z 24.04.1
+2025-02-17T01:11:48.0084346Z LTS
+2025-02-17T01:11:48.0084835Z ##[endgroup]
+2025-02-17T01:11:48.0085377Z ##[group]Runner Image
+2025-02-17T01:11:48.0086056Z Image: ubuntu-24.04
+2025-02-17T01:11:48.0086607Z Version: 20250209.1.0
+2025-02-17T01:11:48.0087680Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250209.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-02-17T01:11:48.0089072Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250209.1
+2025-02-17T01:11:48.0089964Z ##[endgroup]
+2025-02-17T01:11:48.0090573Z ##[group]Runner Image Provisioner
+2025-02-17T01:11:48.0091208Z 2.0.422.1
+2025-02-17T01:11:48.0091721Z ##[endgroup]
+2025-02-17T01:11:48.0093987Z ##[group]GITHUB_TOKEN Permissions
+2025-02-17T01:11:48.0096094Z Actions: write
+2025-02-17T01:11:48.0096784Z Attestations: write
+2025-02-17T01:11:48.0097630Z Checks: write
+2025-02-17T01:11:48.0098268Z Contents: write
+2025-02-17T01:11:48.0098841Z Deployments: write
+2025-02-17T01:11:48.0099371Z Discussions: write
+2025-02-17T01:11:48.0099977Z Issues: write
+2025-02-17T01:11:48.0100512Z Metadata: read
+2025-02-17T01:11:48.0100980Z Packages: write
+2025-02-17T01:11:48.0101600Z Pages: write
+2025-02-17T01:11:48.0102156Z PullRequests: write
+2025-02-17T01:11:48.0102761Z RepositoryProjects: write
+2025-02-17T01:11:48.0103397Z SecurityEvents: write
+2025-02-17T01:11:48.0103922Z Statuses: write
+2025-02-17T01:11:48.0104652Z ##[endgroup]
+2025-02-17T01:11:48.0107612Z Secret source: Actions
+2025-02-17T01:11:48.0108378Z Prepare workflow directory
+2025-02-17T01:11:48.0427789Z Prepare all required actions
+2025-02-17T01:11:48.0465428Z Getting action download info
+2025-02-17T01:11:48.2567230Z Download action repository 'actions/checkout@v4' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2025-02-17T01:11:48.3396173Z Download action repository 'TinyTapeout/tt-gds-action@tt06' (SHA:da8d213d49d19b34416cbf994fc6452e2520a81e)
+2025-02-17T01:11:48.8050689Z Getting action download info
+2025-02-17T01:11:48.9680274Z Download action repository 'actions/setup-python@v5' (SHA:42375524e23c412d93fb67b49958b491fce71c38)
+2025-02-17T01:11:49.5360374Z Download action repository 'actions/upload-artifact@v4' (SHA:65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08)
+2025-02-17T01:11:49.6785917Z Complete job name: docs

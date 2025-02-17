@@ -1,0 +1,986 @@
+﻿2025-02-17T01:11:50.9100550Z ##[group]Run TinyTapeout/tt-gds-action/docs@tt06
+2025-02-17T01:11:50.9101209Z ##[endgroup]
+2025-02-17T01:11:50.9236974Z ##[group]Run actions/checkout@v4
+2025-02-17T01:11:50.9237488Z with:
+2025-02-17T01:11:50.9237908Z   repository: tinytapeout/tt-support-tools
+2025-02-17T01:11:50.9238421Z   path: tt
+2025-02-17T01:11:50.9238796Z   ref: tt06
+2025-02-17T01:11:50.9239347Z   token: ***
+2025-02-17T01:11:50.9239769Z   ssh-strict: true
+2025-02-17T01:11:50.9240163Z   ssh-user: git
+2025-02-17T01:11:50.9240575Z   persist-credentials: true
+2025-02-17T01:11:50.9241029Z   clean: true
+2025-02-17T01:11:50.9241436Z   sparse-checkout-cone-mode: true
+2025-02-17T01:11:50.9241923Z   fetch-depth: 1
+2025-02-17T01:11:50.9242322Z   fetch-tags: false
+2025-02-17T01:11:50.9242727Z   show-progress: true
+2025-02-17T01:11:50.9243139Z   lfs: false
+2025-02-17T01:11:50.9243511Z   submodules: false
+2025-02-17T01:11:50.9243925Z   set-safe-directory: true
+2025-02-17T01:11:50.9244512Z ##[endgroup]
+2025-02-17T01:11:51.0181379Z Syncing repository: tinytapeout/tt-support-tools
+2025-02-17T01:11:51.0188168Z ##[group]Getting Git version info
+2025-02-17T01:11:51.0189364Z Working directory is '/home/runner/work/tt06-inverter/tt06-inverter/tt'
+2025-02-17T01:11:51.0229612Z [command]/usr/bin/git version
+2025-02-17T01:11:51.0269247Z git version 2.48.1
+2025-02-17T01:11:51.0299472Z ##[endgroup]
+2025-02-17T01:11:51.0319583Z Temporarily overriding HOME='/home/runner/work/_temp/845ab751-7338-4bd3-8462-dab7665c414c' before making global git config changes
+2025-02-17T01:11:51.0321919Z Adding repository directory to the temporary git global config as a safe directory
+2025-02-17T01:11:51.0325053Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tt06-inverter/tt06-inverter/tt
+2025-02-17T01:11:51.0356095Z ##[group]Initializing the repository
+2025-02-17T01:11:51.0360942Z [command]/usr/bin/git init /home/runner/work/tt06-inverter/tt06-inverter/tt
+2025-02-17T01:11:51.0397731Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-02-17T01:11:51.0399398Z hint: is subject to change. To configure the initial branch name to use in all
+2025-02-17T01:11:51.0400754Z hint: of your new repositories, which will suppress this warning, call:
+2025-02-17T01:11:51.0401490Z hint:
+2025-02-17T01:11:51.0401964Z hint: 	git config --global init.defaultBranch <name>
+2025-02-17T01:11:51.0402528Z hint:
+2025-02-17T01:11:51.0403080Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-02-17T01:11:51.0404470Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-02-17T01:11:51.0405204Z hint:
+2025-02-17T01:11:51.0405592Z hint: 	git branch -m <name>
+2025-02-17T01:11:51.0406336Z Initialized empty Git repository in /home/runner/work/tt06-inverter/tt06-inverter/tt/.git/
+2025-02-17T01:11:51.0411229Z [command]/usr/bin/git remote add origin https://github.com/tinytapeout/tt-support-tools
+2025-02-17T01:11:51.0444869Z ##[endgroup]
+2025-02-17T01:11:51.0445632Z ##[group]Disabling automatic garbage collection
+2025-02-17T01:11:51.0449021Z [command]/usr/bin/git config --local gc.auto 0
+2025-02-17T01:11:51.0478464Z ##[endgroup]
+2025-02-17T01:11:51.0479162Z ##[group]Setting up auth
+2025-02-17T01:11:51.0484812Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-02-17T01:11:51.0515059Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-02-17T01:11:51.0759214Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-02-17T01:11:51.0796556Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-02-17T01:11:51.1064595Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-02-17T01:11:51.1117848Z ##[endgroup]
+2025-02-17T01:11:51.1119150Z ##[group]Fetching the repository
+2025-02-17T01:11:51.1129593Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/tt06*:refs/remotes/origin/tt06* +refs/tags/tt06*:refs/tags/tt06*
+2025-02-17T01:11:51.7318542Z From https://github.com/tinytapeout/tt-support-tools
+2025-02-17T01:11:51.7320648Z  * [new branch]      tt06                  -> origin/tt06
+2025-02-17T01:11:51.7322430Z  * [new branch]      tt06-staging          -> origin/tt06-staging
+2025-02-17T01:11:51.7324484Z  * [new branch]      tt06-xxl-experimental -> origin/tt06-xxl-experimental
+2025-02-17T01:11:51.7348755Z ##[endgroup]
+2025-02-17T01:11:51.7350061Z ##[group]Determining the checkout info
+2025-02-17T01:11:51.7355098Z [command]/usr/bin/git branch --list --remote origin/tt06
+2025-02-17T01:11:51.7379187Z   origin/tt06
+2025-02-17T01:11:51.7385316Z ##[endgroup]
+2025-02-17T01:11:51.7388874Z [command]/usr/bin/git sparse-checkout disable
+2025-02-17T01:11:51.7426669Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-02-17T01:11:51.7457381Z ##[group]Checking out the ref
+2025-02-17T01:11:51.7459960Z [command]/usr/bin/git checkout --progress --force -B tt06 refs/remotes/origin/tt06
+2025-02-17T01:11:51.7632229Z Switched to a new branch 'tt06'
+2025-02-17T01:11:51.7634605Z branch 'tt06' set up to track 'origin/tt06'.
+2025-02-17T01:11:51.7643090Z ##[endgroup]
+2025-02-17T01:11:51.7690127Z [command]/usr/bin/git log -1 --format=%H
+2025-02-17T01:11:51.7716797Z 2ca0809d9ed2c9be0d1040137fd56f8443ca3589
+2025-02-17T01:11:51.7970549Z ##[group]Run actions/setup-python@v5
+2025-02-17T01:11:51.7971750Z with:
+2025-02-17T01:11:51.7972599Z   python-version: 3.11
+2025-02-17T01:11:51.7973585Z   cache: pip
+2025-02-17T01:11:51.7974702Z   check-latest: false
+2025-02-17T01:11:51.7975954Z   token: ***
+2025-02-17T01:11:51.7976850Z   update-environment: true
+2025-02-17T01:11:51.7977922Z   allow-prereleases: false
+2025-02-17T01:11:51.7978964Z ##[endgroup]
+2025-02-17T01:11:51.9695202Z ##[group]Installed versions
+2025-02-17T01:11:51.9755005Z Successfully set up CPython (3.11.11)
+2025-02-17T01:11:51.9756897Z ##[endgroup]
+2025-02-17T01:11:52.0462506Z [command]/opt/hostedtoolcache/Python/3.11.11/x64/bin/pip cache dir
+2025-02-17T01:11:52.3264960Z /home/runner/.cache/pip
+2025-02-17T01:11:52.6300354Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip-b53d2406990fca66e4d9719ad3f30c32758897e746380b0fb3161134de927dbb
+2025-02-17T01:11:53.9166612Z Received 8388608 of 45113343 (18.6%), 8.0 MBs/sec
+2025-02-17T01:11:54.2015470Z Received 45113343 of 45113343 (100.0%), 33.5 MBs/sec
+2025-02-17T01:11:54.2016179Z Cache Size: ~43 MB (45113343 B)
+2025-02-17T01:11:54.2071670Z [command]/usr/bin/tar -xf /home/runner/work/_temp/62567ca1-1c18-4dfe-b339-5f8a2395271f/cache.tzst -P -C /home/runner/work/tt06-inverter/tt06-inverter --use-compress-program unzstd
+2025-02-17T01:11:54.3030449Z Cache restored successfully
+2025-02-17T01:11:54.3131401Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip-b53d2406990fca66e4d9719ad3f30c32758897e746380b0fb3161134de927dbb
+2025-02-17T01:11:54.3285240Z ##[group]Run pip install -r tt/requirements.txt
+2025-02-17T01:11:54.3285675Z [36;1mpip install -r tt/requirements.txt[0m
+2025-02-17T01:11:54.3445589Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:11:54.3445970Z env:
+2025-02-17T01:11:54.3446255Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:11:54.3446675Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:11:54.3447079Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:11:54.3447486Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:11:54.3447833Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:11:54.3448193Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:11:54.3448500Z ##[endgroup]
+2025-02-17T01:11:54.9258746Z Collecting appdirs==1.4.4 (from -r tt/requirements.txt (line 1))
+2025-02-17T01:11:54.9282943Z   Using cached appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-02-17T01:11:54.9396932Z Collecting cairocffi==1.6.0 (from -r tt/requirements.txt (line 2))
+2025-02-17T01:11:54.9419811Z   Using cached cairocffi-1.6.0-py3-none-any.whl.metadata (3.3 kB)
+2025-02-17T01:11:54.9585075Z Collecting CairoSVG==2.7.0 (from -r tt/requirements.txt (line 3))
+2025-02-17T01:11:54.9598866Z   Using cached CairoSVG-2.7.0-py3-none-any.whl.metadata (2.7 kB)
+2025-02-17T01:11:54.9745238Z Collecting certifi==2023.5.7 (from -r tt/requirements.txt (line 4))
+2025-02-17T01:11:54.9759475Z   Using cached certifi-2023.5.7-py3-none-any.whl.metadata (2.2 kB)
+2025-02-17T01:11:55.0537066Z Collecting cffi==1.15.1 (from -r tt/requirements.txt (line 5))
+2025-02-17T01:11:55.0552167Z   Using cached cffi-1.15.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+2025-02-17T01:11:55.1023895Z Collecting charset-normalizer==3.1.0 (from -r tt/requirements.txt (line 6))
+2025-02-17T01:11:55.1039155Z   Using cached charset_normalizer-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (30 kB)
+2025-02-17T01:11:55.1155854Z Collecting chevron==0.14.0 (from -r tt/requirements.txt (line 7))
+2025-02-17T01:11:55.1171906Z   Using cached chevron-0.14.0-py3-none-any.whl.metadata (4.9 kB)
+2025-02-17T01:11:55.1307169Z Collecting click==8.1.3 (from -r tt/requirements.txt (line 8))
+2025-02-17T01:11:55.1320065Z   Using cached click-8.1.3-py3-none-any.whl.metadata (3.2 kB)
+2025-02-17T01:11:55.1405684Z Collecting cssselect2==0.7.0 (from -r tt/requirements.txt (line 9))
+2025-02-17T01:11:55.1427309Z   Using cached cssselect2-0.7.0-py3-none-any.whl.metadata (2.9 kB)
+2025-02-17T01:11:55.1541591Z Collecting defusedxml==0.7.1 (from -r tt/requirements.txt (line 10))
+2025-02-17T01:11:55.1562027Z   Using cached defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2025-02-17T01:11:55.2670831Z Collecting gdstk==0.9.49 (from -r tt/requirements.txt (line 11))
+2025-02-17T01:11:55.2686576Z   Using cached gdstk-0.9.49-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.4 kB)
+2025-02-17T01:11:55.2791370Z Collecting gitdb==4.0.10 (from -r tt/requirements.txt (line 12))
+2025-02-17T01:11:55.2804988Z   Using cached gitdb-4.0.10-py3-none-any.whl.metadata (1.1 kB)
+2025-02-17T01:11:55.3092222Z Collecting GitPython==3.1.40 (from -r tt/requirements.txt (line 13))
+2025-02-17T01:11:55.3106495Z   Using cached GitPython-3.1.40-py3-none-any.whl.metadata (12 kB)
+2025-02-17T01:11:55.3218924Z Collecting idna==3.4 (from -r tt/requirements.txt (line 14))
+2025-02-17T01:11:55.3232228Z   Using cached idna-3.4-py3-none-any.whl.metadata (9.8 kB)
+2025-02-17T01:11:55.3404462Z Collecting importlib-resources==5.12.0 (from -r tt/requirements.txt (line 15))
+2025-02-17T01:11:55.3418257Z   Using cached importlib_resources-5.12.0-py3-none-any.whl.metadata (4.1 kB)
+2025-02-17T01:11:55.3553510Z Collecting mistune==3.0.1 (from -r tt/requirements.txt (line 16))
+2025-02-17T01:11:55.3567398Z   Using cached mistune-3.0.1-py3-none-any.whl.metadata (1.7 kB)
+2025-02-17T01:11:55.4662311Z Collecting numpy==1.24.3 (from -r tt/requirements.txt (line 17))
+2025-02-17T01:11:55.4677289Z   Using cached numpy-1.24.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+2025-02-17T01:11:55.5945156Z Collecting Pillow==9.5.0 (from -r tt/requirements.txt (line 18))
+2025-02-17T01:11:55.5959841Z   Using cached Pillow-9.5.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+2025-02-17T01:11:55.6057173Z Collecting pycparser==2.21 (from -r tt/requirements.txt (line 19))
+2025-02-17T01:11:55.6070712Z   Using cached pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+2025-02-17T01:11:55.6157728Z Collecting python-frontmatter==1.0.0 (from -r tt/requirements.txt (line 20))
+2025-02-17T01:11:55.6170600Z   Using cached python_frontmatter-1.0.0-py3-none-any.whl.metadata (3.6 kB)
+2025-02-17T01:11:55.6458031Z Collecting pytz==2023.3 (from -r tt/requirements.txt (line 21))
+2025-02-17T01:11:55.6472209Z   Using cached pytz-2023.3-py2.py3-none-any.whl.metadata (22 kB)
+2025-02-17T01:11:55.6725973Z Collecting PyYAML==6.0 (from -r tt/requirements.txt (line 22))
+2025-02-17T01:11:55.6740220Z   Using cached PyYAML-6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+2025-02-17T01:11:55.6937619Z Collecting requests==2.31.0 (from -r tt/requirements.txt (line 23))
+2025-02-17T01:11:55.6950737Z   Using cached requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+2025-02-17T01:11:55.7040750Z Collecting smmap==5.0.0 (from -r tt/requirements.txt (line 24))
+2025-02-17T01:11:55.7053691Z   Using cached smmap-5.0.0-py3-none-any.whl.metadata (4.2 kB)
+2025-02-17T01:11:55.7596641Z Collecting stripe==5.4.0 (from -r tt/requirements.txt (line 25))
+2025-02-17T01:11:55.7611248Z   Using cached stripe-5.4.0-py2.py3-none-any.whl.metadata (2.6 kB)
+2025-02-17T01:11:55.7711800Z Collecting tinycss2==1.2.1 (from -r tt/requirements.txt (line 26))
+2025-02-17T01:11:55.7724592Z   Using cached tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+2025-02-17T01:11:55.7895506Z Collecting urllib3==2.0.3 (from -r tt/requirements.txt (line 27))
+2025-02-17T01:11:55.7908798Z   Using cached urllib3-2.0.3-py3-none-any.whl.metadata (6.6 kB)
+2025-02-17T01:11:55.8184147Z Collecting wasmtime==9.0.0 (from -r tt/requirements.txt (line 28))
+2025-02-17T01:11:55.8198919Z   Using cached wasmtime-9.0.0-py3-none-manylinux1_x86_64.whl.metadata (7.3 kB)
+2025-02-17T01:11:55.8272354Z Collecting webencodings==0.5.1 (from -r tt/requirements.txt (line 29))
+2025-02-17T01:11:55.8285829Z   Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+2025-02-17T01:11:55.8440330Z Collecting yowasp-runtime==1.22 (from -r tt/requirements.txt (line 30))
+2025-02-17T01:11:55.8454063Z   Using cached yowasp_runtime-1.22-py3-none-any.whl.metadata (3.3 kB)
+2025-02-17T01:11:55.8613511Z Collecting yowasp-yosys==0.30.0.0.post538 (from -r tt/requirements.txt (line 31))
+2025-02-17T01:11:55.8627141Z   Using cached yowasp_yosys-0.30.0.0.post538-py3-none-any.whl.metadata (2.6 kB)
+2025-02-17T01:11:55.8757588Z Collecting zipp==3.15.0 (from -r tt/requirements.txt (line 32))
+2025-02-17T01:11:55.8771075Z   Using cached zipp-3.15.0-py3-none-any.whl.metadata (3.7 kB)
+2025-02-17T01:11:55.9052297Z Collecting pre-commit==3.4.0 (from -r tt/requirements.txt (line 33))
+2025-02-17T01:11:55.9066145Z   Using cached pre_commit-3.4.0-py2.py3-none-any.whl.metadata (1.3 kB)
+2025-02-17T01:11:55.9790894Z Collecting cfgv>=2.0.0 (from pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-17T01:11:55.9804097Z   Using cached cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+2025-02-17T01:11:56.0136185Z Collecting identify>=1.0.0 (from pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-17T01:11:56.0151008Z   Using cached identify-2.6.7-py2.py3-none-any.whl.metadata (4.4 kB)
+2025-02-17T01:11:56.0271465Z Collecting nodeenv>=0.11.1 (from pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-17T01:11:56.0284902Z   Using cached nodeenv-1.9.1-py2.py3-none-any.whl.metadata (21 kB)
+2025-02-17T01:11:56.0638858Z Collecting virtualenv>=20.10.0 (from pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-17T01:11:56.0653231Z   Using cached virtualenv-20.29.2-py3-none-any.whl.metadata (4.5 kB)
+2025-02-17T01:11:56.0831027Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-17T01:11:56.0845329Z   Using cached distlib-0.3.9-py2.py3-none-any.whl.metadata (5.2 kB)
+2025-02-17T01:11:56.1005854Z Collecting filelock<4,>=3.12.2 (from virtualenv>=20.10.0->pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-17T01:11:56.1019673Z   Using cached filelock-3.17.0-py3-none-any.whl.metadata (2.9 kB)
+2025-02-17T01:11:56.1177413Z Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.10.0->pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-17T01:11:56.1191192Z   Using cached platformdirs-4.3.6-py3-none-any.whl.metadata (11 kB)
+2025-02-17T01:11:56.1294910Z Using cached appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+2025-02-17T01:11:56.1308236Z Using cached cairocffi-1.6.0-py3-none-any.whl (75 kB)
+2025-02-17T01:11:56.1322104Z Using cached CairoSVG-2.7.0-py3-none-any.whl (43 kB)
+2025-02-17T01:11:56.1335633Z Using cached certifi-2023.5.7-py3-none-any.whl (156 kB)
+2025-02-17T01:11:56.1350279Z Using cached cffi-1.15.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (462 kB)
+2025-02-17T01:11:56.1367309Z Using cached charset_normalizer-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (197 kB)
+2025-02-17T01:11:56.1381698Z Using cached chevron-0.14.0-py3-none-any.whl (11 kB)
+2025-02-17T01:11:56.1394757Z Using cached click-8.1.3-py3-none-any.whl (96 kB)
+2025-02-17T01:11:56.1408809Z Using cached cssselect2-0.7.0-py3-none-any.whl (15 kB)
+2025-02-17T01:11:56.1421973Z Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2025-02-17T01:11:56.1435560Z Using cached gdstk-0.9.49-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (881 kB)
+2025-02-17T01:11:56.1455458Z Using cached gitdb-4.0.10-py3-none-any.whl (62 kB)
+2025-02-17T01:11:56.1469692Z Using cached GitPython-3.1.40-py3-none-any.whl (190 kB)
+2025-02-17T01:11:56.1505223Z Using cached idna-3.4-py3-none-any.whl (61 kB)
+2025-02-17T01:11:56.1508065Z Using cached importlib_resources-5.12.0-py3-none-any.whl (36 kB)
+2025-02-17T01:11:56.1521386Z Using cached mistune-3.0.1-py3-none-any.whl (47 kB)
+2025-02-17T01:11:56.1535166Z Using cached numpy-1.24.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+2025-02-17T01:11:56.1678705Z Using cached Pillow-9.5.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.4 MB)
+2025-02-17T01:11:56.1717261Z Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+2025-02-17T01:11:56.1730763Z Using cached python_frontmatter-1.0.0-py3-none-any.whl (9.0 kB)
+2025-02-17T01:11:56.1743426Z Using cached pytz-2023.3-py2.py3-none-any.whl (502 kB)
+2025-02-17T01:11:56.1760189Z Using cached PyYAML-6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (757 kB)
+2025-02-17T01:11:56.1778375Z Using cached requests-2.31.0-py3-none-any.whl (62 kB)
+2025-02-17T01:11:56.1791418Z Using cached smmap-5.0.0-py3-none-any.whl (24 kB)
+2025-02-17T01:11:56.1804185Z Using cached stripe-5.4.0-py2.py3-none-any.whl (255 kB)
+2025-02-17T01:11:56.1819190Z Using cached tinycss2-1.2.1-py3-none-any.whl (21 kB)
+2025-02-17T01:11:56.1831796Z Using cached urllib3-2.0.3-py3-none-any.whl (123 kB)
+2025-02-17T01:11:56.1845715Z Using cached wasmtime-9.0.0-py3-none-manylinux1_x86_64.whl (6.6 MB)
+2025-02-17T01:11:56.1906824Z Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+2025-02-17T01:11:56.1919432Z Using cached yowasp_runtime-1.22-py3-none-any.whl (5.2 kB)
+2025-02-17T01:11:56.1932214Z Using cached yowasp_yosys-0.30.0.0.post538-py3-none-any.whl (6.8 MB)
+2025-02-17T01:11:56.1993562Z Using cached zipp-3.15.0-py3-none-any.whl (6.8 kB)
+2025-02-17T01:11:56.2006738Z Using cached pre_commit-3.4.0-py2.py3-none-any.whl (203 kB)
+2025-02-17T01:11:56.2020707Z Using cached cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+2025-02-17T01:11:56.2033386Z Using cached identify-2.6.7-py2.py3-none-any.whl (99 kB)
+2025-02-17T01:11:56.2046901Z Using cached nodeenv-1.9.1-py2.py3-none-any.whl (22 kB)
+2025-02-17T01:11:56.2059925Z Using cached virtualenv-20.29.2-py3-none-any.whl (4.3 MB)
+2025-02-17T01:11:56.2104553Z Using cached distlib-0.3.9-py2.py3-none-any.whl (468 kB)
+2025-02-17T01:11:56.2120542Z Using cached filelock-3.17.0-py3-none-any.whl (16 kB)
+2025-02-17T01:11:56.2133475Z Using cached platformdirs-4.3.6-py3-none-any.whl (18 kB)
+2025-02-17T01:11:56.3338047Z Installing collected packages: webencodings, pytz, distlib, chevron, appdirs, zipp, wasmtime, urllib3, tinycss2, smmap, PyYAML, pycparser, platformdirs, Pillow, numpy, nodeenv, mistune, importlib-resources, idna, identify, filelock, defusedxml, click, charset-normalizer, cfgv, certifi, yowasp-runtime, virtualenv, requests, python-frontmatter, gitdb, gdstk, cssselect2, cffi, yowasp-yosys, stripe, pre-commit, GitPython, cairocffi, CairoSVG
+2025-02-17T01:12:00.1736410Z Successfully installed CairoSVG-2.7.0 GitPython-3.1.40 Pillow-9.5.0 PyYAML-6.0 appdirs-1.4.4 cairocffi-1.6.0 certifi-2023.5.7 cffi-1.15.1 cfgv-3.4.0 charset-normalizer-3.1.0 chevron-0.14.0 click-8.1.3 cssselect2-0.7.0 defusedxml-0.7.1 distlib-0.3.9 filelock-3.17.0 gdstk-0.9.49 gitdb-4.0.10 identify-2.6.7 idna-3.4 importlib-resources-5.12.0 mistune-3.0.1 nodeenv-1.9.1 numpy-1.24.3 platformdirs-4.3.6 pre-commit-3.4.0 pycparser-2.21 python-frontmatter-1.0.0 pytz-2023.3 requests-2.31.0 smmap-5.0.0 stripe-5.4.0 tinycss2-1.2.1 urllib3-2.0.3 virtualenv-20.29.2 wasmtime-9.0.0 webencodings-0.5.1 yowasp-runtime-1.22 yowasp-yosys-0.30.0.0.post538 zipp-3.15.0
+2025-02-17T01:12:00.3378283Z ##[group]Run ./tt/tt_tool.py --check-docs
+2025-02-17T01:12:00.3378632Z [36;1m./tt/tt_tool.py --check-docs[0m
+2025-02-17T01:12:00.3436336Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:12:00.3436678Z env:
+2025-02-17T01:12:00.3436925Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:00.3437333Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:00.3437744Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:00.3438092Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:00.3438463Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:00.3438815Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:00.3439124Z ##[endgroup]
+2025-02-17T01:12:01.3350673Z ##[group]Run sudo apt-get update -y
+2025-02-17T01:12:01.3351189Z [36;1msudo apt-get update -y[0m
+2025-02-17T01:12:01.3351759Z [36;1msudo apt-get install -y pandoc texlive-xetex librsvg2-bin[0m
+2025-02-17T01:12:01.3431731Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:12:01.3432300Z env:
+2025-02-17T01:12:01.3432731Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:01.3433465Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:12:01.3434395Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:01.3435089Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:01.3435702Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:12:01.3436334Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:12:01.3436868Z ##[endgroup]
+2025-02-17T01:12:01.4188874Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [142 B]
+2025-02-17T01:12:01.4526365Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2025-02-17T01:12:01.4527719Z Hit:6 https://packages.microsoft.com/repos/azure-cli noble InRelease
+2025-02-17T01:12:01.4529449Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2025-02-17T01:12:01.4550044Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2025-02-17T01:12:01.4609011Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2025-02-17T01:12:01.4630486Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2025-02-17T01:12:01.6287911Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [21.0 kB]
+2025-02-17T01:12:01.6390220Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [12.9 kB]
+2025-02-17T01:12:01.6419663Z Get:10 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [6679 B]
+2025-02-17T01:12:01.6798984Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [865 kB]
+2025-02-17T01:12:01.6879423Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [150 kB]
+2025-02-17T01:12:01.6924999Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1014 kB]
+2025-02-17T01:12:01.7011446Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [363 kB]
+2025-02-17T01:12:01.7029633Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+2025-02-17T01:12:01.7048881Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+2025-02-17T01:12:01.7393560Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+2025-02-17T01:12:01.7406575Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [17.6 kB]
+2025-02-17T01:12:01.7420929Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+2025-02-17T01:12:01.7431799Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+2025-02-17T01:12:01.8410898Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [617 kB]
+2025-02-17T01:12:01.8455393Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [9020 B]
+2025-02-17T01:12:01.8472493Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [803 kB]
+2025-02-17T01:12:01.8526885Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.0 kB]
+2025-02-17T01:12:01.8542439Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+2025-02-17T01:12:01.8555315Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+2025-02-17T01:12:06.6586609Z Fetched 4317 kB in 1s (6165 kB/s)
+2025-02-17T01:12:07.3085878Z Reading package lists...
+2025-02-17T01:12:07.3410253Z Reading package lists...
+2025-02-17T01:12:07.5037021Z Building dependency tree...
+2025-02-17T01:12:07.5044754Z Reading state information...
+2025-02-17T01:12:07.6669856Z The following additional packages will be installed:
+2025-02-17T01:12:07.6670604Z   ca-certificates-java default-jre default-jre-headless dvisvgm
+2025-02-17T01:12:07.6671489Z   fonts-droid-fallback fonts-lmodern fonts-noto-mono fonts-texgyre
+2025-02-17T01:12:07.6672260Z   fonts-texgyre-math fonts-urw-base35 libapache-pom-java libatk-wrapper-java
+2025-02-17T01:12:07.6673024Z   libatk-wrapper-java-jni libbit-vector-perl libcarp-clan-perl
+2025-02-17T01:12:07.6673768Z   libcommons-logging-java libcommons-parent-java libcrypt-rc4-perl
+2025-02-17T01:12:07.6674664Z   libdate-calc-perl libdate-calc-xs-perl libdate-manip-perl
+2025-02-17T01:12:07.6675368Z   libdigest-perl-md5-perl libfontbox-java libgif7 libgs-common libgs10
+2025-02-17T01:12:07.6676087Z   libgs10-common libgumbo2 libidn12 libijs-0.35 libio-stringy-perl
+2025-02-17T01:12:07.6677348Z   libjbig2dec0 libjcode-pm-perl libkpathsea6 libmujs3 libole-storage-lite-perl
+2025-02-17T01:12:07.6678126Z   libpaper-utils libpaper1 libparse-recdescent-perl libpcsclite1
+2025-02-17T01:12:07.6678832Z   libpdfbox-java libpotrace0 libptexenc1 librsvg2-2 librsvg2-common
+2025-02-17T01:12:07.6679627Z   libspreadsheet-parseexcel-perl libspreadsheet-writeexcel-perl libsynctex2
+2025-02-17T01:12:07.6680438Z   libteckit0 libtexlua53-5 libunicode-map-perl libwoff1 libxcb-shape0 libxv1
+2025-02-17T01:12:07.6680921Z   libxxf86dga1 libzzip-0-13t64 lmodern mupdf-tools openjdk-21-jre
+2025-02-17T01:12:07.6681403Z   openjdk-21-jre-headless pandoc-data poppler-data preview-latex-style t1utils
+2025-02-17T01:12:07.6681888Z   teckit tex-gyre texlive-base texlive-binaries texlive-fonts-recommended
+2025-02-17T01:12:07.6682547Z   texlive-latex-base texlive-latex-extra texlive-latex-recommended
+2025-02-17T01:12:07.6682998Z   texlive-pictures texlive-plain-generic tipa x11-utils xfonts-encodings
+2025-02-17T01:12:07.6683345Z   xfonts-utils
+2025-02-17T01:12:07.6685354Z Suggested packages:
+2025-02-17T01:12:07.6685906Z   fonts-noto fonts-freefont-otf | fonts-freefont-ttf libavalon-framework-java
+2025-02-17T01:12:07.6686739Z   libexcalibur-logkit-java liblog4j1.2-java pcscd libwww-perl libnss-mdns
+2025-02-17T01:12:07.6687482Z   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+2025-02-17T01:12:07.6688202Z   | fonts-wqy-zenhei fonts-indic texlive-luatex pandoc-citeproc context
+2025-02-17T01:12:07.6688945Z   wkhtmltopdf groff ghc nodejs python r-base-core libjs-mathjax libjs-katex
+2025-02-17T01:12:07.6689606Z   citation-style-language-styles poppler-utils ghostscript
+2025-02-17T01:12:07.6690016Z   fonts-japanese-mincho | fonts-ipafont-mincho fonts-japanese-gothic
+2025-02-17T01:12:07.6690465Z   | fonts-ipafont-gothic fonts-arphic-ukai fonts-arphic-uming fonts-nanum gv
+2025-02-17T01:12:07.6690948Z   | postscript-viewer perl-tk xpdf | pdf-viewer xzdec texlive-binaries-sse2
+2025-02-17T01:12:07.6691426Z   hintview texlive-fonts-recommended-doc texlive-latex-base-doc wp2latex
+2025-02-17T01:12:07.6691880Z   icc-profiles libfile-which-perl texlive-latex-extra-doc texlive-science
+2025-02-17T01:12:07.6692314Z   texlive-latex-recommended-doc texlive-pstricks dot2tex prerex
+2025-02-17T01:12:07.6692682Z   texlive-pictures-doc vprerex tipa-doc mesa-utils
+2025-02-17T01:12:07.6692962Z Recommended packages:
+2025-02-17T01:12:07.6693151Z   luit
+2025-02-17T01:12:07.7063632Z The following NEW packages will be installed:
+2025-02-17T01:12:07.7064718Z   ca-certificates-java default-jre default-jre-headless dvisvgm
+2025-02-17T01:12:07.7065652Z   fonts-droid-fallback fonts-lmodern fonts-noto-mono fonts-texgyre
+2025-02-17T01:12:07.7066619Z   fonts-texgyre-math fonts-urw-base35 libapache-pom-java libatk-wrapper-java
+2025-02-17T01:12:07.7067560Z   libatk-wrapper-java-jni libbit-vector-perl libcarp-clan-perl
+2025-02-17T01:12:07.7068450Z   libcommons-logging-java libcommons-parent-java libcrypt-rc4-perl
+2025-02-17T01:12:07.7069322Z   libdate-calc-perl libdate-calc-xs-perl libdate-manip-perl
+2025-02-17T01:12:07.7070177Z   libdigest-perl-md5-perl libfontbox-java libgif7 libgs-common libgs10
+2025-02-17T01:12:07.7071066Z   libgs10-common libgumbo2 libidn12 libijs-0.35 libio-stringy-perl
+2025-02-17T01:12:07.7072022Z   libjbig2dec0 libjcode-pm-perl libkpathsea6 libmujs3 libole-storage-lite-perl
+2025-02-17T01:12:07.7073007Z   libpaper-utils libpaper1 libparse-recdescent-perl libpcsclite1
+2025-02-17T01:12:07.7073860Z   libpdfbox-java libpotrace0 libptexenc1 librsvg2-2 librsvg2-bin
+2025-02-17T01:12:07.7074662Z   librsvg2-common libspreadsheet-parseexcel-perl
+2025-02-17T01:12:07.7075334Z   libspreadsheet-writeexcel-perl libsynctex2 libteckit0 libtexlua53-5
+2025-02-17T01:12:07.7076053Z   libunicode-map-perl libwoff1 libxcb-shape0 libxv1 libxxf86dga1
+2025-02-17T01:12:07.7076708Z   libzzip-0-13t64 lmodern mupdf-tools openjdk-21-jre openjdk-21-jre-headless
+2025-02-17T01:12:07.7077226Z   pandoc pandoc-data poppler-data preview-latex-style t1utils teckit tex-gyre
+2025-02-17T01:12:07.7078062Z   texlive-base texlive-binaries texlive-fonts-recommended texlive-latex-base
+2025-02-17T01:12:07.7078522Z   texlive-latex-extra texlive-latex-recommended texlive-pictures
+2025-02-17T01:12:07.7078951Z   texlive-plain-generic texlive-xetex tipa x11-utils xfonts-encodings
+2025-02-17T01:12:07.7079283Z   xfonts-utils
+2025-02-17T01:12:07.7269748Z 0 upgraded, 81 newly installed, 0 to remove and 22 not upgraded.
+2025-02-17T01:12:07.7270365Z Need to get 315 MB of archives.
+2025-02-17T01:12:07.7270709Z After this operation, 1089 MB of additional disk space will be used.
+2025-02-17T01:12:07.7271133Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [142 B]
+2025-02-17T01:12:07.8266286Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-droid-fallback all 1:6.0.1r16-1.1build1 [1805 kB]
+2025-02-17T01:12:08.1643955Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 poppler-data all 0.4.12-1 [2060 kB]
+2025-02-17T01:12:08.5746323Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 ca-certificates-java all 20240118 [11.6 kB]
+2025-02-17T01:12:08.6582979Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libpcsclite1 amd64 2.0.3-1build1 [21.4 kB]
+2025-02-17T01:12:08.7493046Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.6+7-1~24.04.1 [46.4 MB]
+2025-02-17T01:12:11.2159872Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 default-jre-headless amd64 2:1.21-75+exp1 [3094 B]
+2025-02-17T01:12:11.2996302Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libgif7 amd64 5.2.2-1ubuntu1 [35.2 kB]
+2025-02-17T01:12:11.3844963Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre amd64 21.0.6+7-1~24.04.1 [227 kB]
+2025-02-17T01:12:11.4729225Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 default-jre amd64 2:1.21-75+exp1 [922 B]
+2025-02-17T01:12:11.5557691Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+2025-02-17T01:12:11.7257657Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+2025-02-17T01:12:11.8105490Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-urw-base35 all 20200910-8 [11.0 MB]
+2025-02-17T01:12:12.6396426Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgs-common all 10.02.1~dfsg1-0ubuntu7.4 [175 kB]
+2025-02-17T01:12:12.8050023Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgs10-common all 10.02.1~dfsg1-0ubuntu7.4 [488 kB]
+2025-02-17T01:12:13.0564769Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libidn12 amd64 1.42-1build1 [55.9 kB]
+2025-02-17T01:12:13.1414851Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libijs-0.35 amd64 0.35-15.1build1 [15.3 kB]
+2025-02-17T01:12:13.2257072Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libjbig2dec0 amd64 0.20-1build3 [65.0 kB]
+2025-02-17T01:12:13.3135116Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libpaper1 amd64 1.1.29build1 [13.4 kB]
+2025-02-17T01:12:13.3976476Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgs10 amd64 10.02.1~dfsg1-0ubuntu7.4 [3896 kB]
+2025-02-17T01:12:13.9963635Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libkpathsea6 amd64 2023.20230311.66589-9build3 [63.0 kB]
+2025-02-17T01:12:14.0799233Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libpotrace0 amd64 1.16-2build1 [17.7 kB]
+2025-02-17T01:12:14.1645808Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libwoff1 amd64 1.0.2-2build1 [45.3 kB]
+2025-02-17T01:12:14.2482030Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 dvisvgm amd64 3.2.1+ds-1build1 [1042 kB]
+2025-02-17T01:12:14.4972182Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-lmodern all 2.005-1 [4799 kB]
+2025-02-17T01:12:15.0035312Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-noto-mono all 20201225-2 [435 kB]
+2025-02-17T01:12:15.1710975Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-texgyre all 20180621-6 [8350 kB]
+2025-02-17T01:12:15.8566186Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-texgyre-math all 20180621-6 [2373 kB]
+2025-02-17T01:12:16.2038047Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libapache-pom-java all 29-2 [5284 B]
+2025-02-17T01:12:16.2916179Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shape0 amd64 1.15-1ubuntu2 [6100 B]
+2025-02-17T01:12:16.3752764Z Get:31 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libxv1 amd64 2:1.0.11-1.1build1 [10.7 kB]
+2025-02-17T01:12:16.4585909Z Get:32 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libxxf86dga1 amd64 2:1.1.5-1build1 [11.6 kB]
+2025-02-17T01:12:16.5418148Z Get:33 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 x11-utils amd64 7.7+6build2 [189 kB]
+2025-02-17T01:12:16.6289367Z Get:34 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libatk-wrapper-java all 0.40.0-3build2 [54.3 kB]
+2025-02-17T01:12:16.7140832Z Get:35 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libatk-wrapper-java-jni amd64 0.40.0-3build2 [46.4 kB]
+2025-02-17T01:12:16.7986974Z Get:36 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libcarp-clan-perl all 6.08-2 [11.9 kB]
+2025-02-17T01:12:16.8821080Z Get:37 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libbit-vector-perl amd64 7.4-3build1 [139 kB]
+2025-02-17T01:12:16.9691252Z Get:38 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-parent-java all 56-1 [10.7 kB]
+2025-02-17T01:12:17.0541473Z Get:39 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libcommons-logging-java all 1.3.0-1ubuntu1 [63.8 kB]
+2025-02-17T01:12:17.1383270Z Get:40 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libcrypt-rc4-perl all 2.02-5 [7064 B]
+2025-02-17T01:12:17.2216453Z Get:41 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libdate-calc-perl all 6.4-2 [187 kB]
+2025-02-17T01:12:17.3161660Z Get:42 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libdate-calc-xs-perl amd64 6.4-2build4 [46.8 kB]
+2025-02-17T01:12:17.4009450Z Get:43 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libdate-manip-perl all 6.95-1 [923 kB]
+2025-02-17T01:12:17.6530467Z Get:44 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libdigest-perl-md5-perl all 1.9-5 [11.1 kB]
+2025-02-17T01:12:17.7364638Z Get:45 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libgumbo2 amd64 0.12.0+dfsg-2build1 [126 kB]
+2025-02-17T01:12:17.8225347Z Get:46 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libio-stringy-perl all 2.111-3 [55.8 kB]
+2025-02-17T01:12:17.9073341Z Get:47 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libjcode-pm-perl amd64 2.06-1.1build1 [26.8 kB]
+2025-02-17T01:12:17.9912531Z Get:48 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libmujs3 amd64 1.3.3-3build2 [134 kB]
+2025-02-17T01:12:18.0780645Z Get:49 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libole-storage-lite-perl all 0.22-1 [21.6 kB]
+2025-02-17T01:12:18.1640052Z Get:50 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libpaper-utils amd64 1.1.29build1 [8650 B]
+2025-02-17T01:12:18.2472586Z Get:51 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libparse-recdescent-perl all 1.967015+dfsg-4 [139 kB]
+2025-02-17T01:12:18.3404875Z Get:52 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libptexenc1 amd64 2023.20230311.66589-9build3 [40.4 kB]
+2025-02-17T01:12:18.4775237Z Get:53 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 librsvg2-2 amd64 2.58.0+dfsg-1build1 [2135 kB]
+2025-02-17T01:12:18.8198297Z Get:54 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 librsvg2-bin amd64 2.58.0+dfsg-1build1 [2299 kB]
+2025-02-17T01:12:19.1518508Z Get:55 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 librsvg2-common amd64 2.58.0+dfsg-1build1 [11.8 kB]
+2025-02-17T01:12:19.2362660Z Get:56 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libspreadsheet-writeexcel-perl all 2.40-4 [497 kB]
+2025-02-17T01:12:19.4098503Z Get:57 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libunicode-map-perl amd64 0.112-13build4 [203 kB]
+2025-02-17T01:12:19.4976147Z Get:58 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libspreadsheet-parseexcel-perl all 0.6600-1 [144 kB]
+2025-02-17T01:12:19.5870882Z Get:59 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libsynctex2 amd64 2023.20230311.66589-9build3 [59.6 kB]
+2025-02-17T01:12:19.6711289Z Get:60 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libteckit0 amd64 2.5.12+ds1-1 [411 kB]
+2025-02-17T01:12:19.8375477Z Get:61 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libtexlua53-5 amd64 2023.20230311.66589-9build3 [123 kB]
+2025-02-17T01:12:19.9235193Z Get:62 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libzzip-0-13t64 amd64 0.13.72+dfsg.1-1.2build1 [28.1 kB]
+2025-02-17T01:12:20.0075479Z Get:63 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 lmodern all 2.005-1 [9542 kB]
+2025-02-17T01:12:21.3117760Z Get:64 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 mupdf-tools amd64 1.23.10+ds1-1build3 [49.3 MB]
+2025-02-17T01:12:23.2125342Z Get:65 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 pandoc-data all 3.1.3-1 [92.4 kB]
+2025-02-17T01:12:23.2972853Z Get:66 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 pandoc amd64 3.1.3+ds-2 [26.9 MB]
+2025-02-17T01:12:24.5422308Z Get:67 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 preview-latex-style all 13.2-1 [347 kB]
+2025-02-17T01:12:24.7095171Z Get:68 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 t1utils amd64 1.41-4build3 [61.3 kB]
+2025-02-17T01:12:24.7932750Z Get:69 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 teckit amd64 2.5.12+ds1-1 [713 kB]
+2025-02-17T01:12:24.9659880Z Get:70 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 tex-gyre all 20180621-6 [6396 kB]
+2025-02-17T01:12:25.5361264Z Get:71 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-binaries amd64 2023.20230311.66589-9build3 [8529 kB]
+2025-02-17T01:12:26.2146297Z Get:72 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-base all 2023.20240207-1 [21.7 MB]
+2025-02-17T01:12:27.3887817Z Get:73 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-fonts-recommended all 2023.20240207-1 [4973 kB]
+2025-02-17T01:12:27.8885402Z Get:74 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-latex-base all 2023.20240207-1 [1238 kB]
+2025-02-17T01:12:28.1496481Z Get:75 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libfontbox-java all 1:1.8.16-5 [208 kB]
+2025-02-17T01:12:28.2380836Z Get:76 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libpdfbox-java all 1:1.8.16-5 [5521 kB]
+2025-02-17T01:12:28.8198255Z Get:77 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-latex-recommended all 2023.20240207-1 [8826 kB]
+2025-02-17T01:12:29.5531589Z Get:78 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-pictures all 2023.20240207-1 [16.7 MB]
+2025-02-17T01:12:30.4470637Z Get:79 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-latex-extra all 2023.20240207-1 [19.2 MB]
+2025-02-17T01:12:32.2970720Z Get:80 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-plain-generic all 2023.20240207-1 [29.0 MB]
+2025-02-17T01:12:33.7041413Z Get:81 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 tipa all 2:1.3-21 [2967 kB]
+2025-02-17T01:12:34.1205407Z Get:82 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 texlive-xetex all 2023.20240207-1 [10.8 MB]
+2025-02-17T01:12:35.1947794Z Preconfiguring packages ...
+2025-02-17T01:12:35.2614448Z Fetched 315 MB in 27s (11.6 MB/s)
+2025-02-17T01:12:35.2883748Z Selecting previously unselected package fonts-droid-fallback.
+2025-02-17T01:12:35.3103585Z (Reading database ... 
+2025-02-17T01:12:35.3104734Z (Reading database ... 5%
+2025-02-17T01:12:35.3105032Z (Reading database ... 10%
+2025-02-17T01:12:35.3105303Z (Reading database ... 15%
+2025-02-17T01:12:35.3105557Z (Reading database ... 20%
+2025-02-17T01:12:35.3105801Z (Reading database ... 25%
+2025-02-17T01:12:35.3106041Z (Reading database ... 30%
+2025-02-17T01:12:35.3106281Z (Reading database ... 35%
+2025-02-17T01:12:35.3106517Z (Reading database ... 40%
+2025-02-17T01:12:35.3106759Z (Reading database ... 45%
+2025-02-17T01:12:35.3107000Z (Reading database ... 50%
+2025-02-17T01:12:35.3309660Z (Reading database ... 55%
+2025-02-17T01:12:35.3538237Z (Reading database ... 60%
+2025-02-17T01:12:35.3809375Z (Reading database ... 65%
+2025-02-17T01:12:35.4097559Z (Reading database ... 70%
+2025-02-17T01:12:35.4315836Z (Reading database ... 75%
+2025-02-17T01:12:35.4666881Z (Reading database ... 80%
+2025-02-17T01:12:35.5264052Z (Reading database ... 85%
+2025-02-17T01:12:35.5996591Z (Reading database ... 90%
+2025-02-17T01:12:35.6444185Z (Reading database ... 95%
+2025-02-17T01:12:35.6444860Z (Reading database ... 100%
+2025-02-17T01:12:35.6445274Z (Reading database ... 220710 files and directories currently installed.)
+2025-02-17T01:12:35.6490183Z Preparing to unpack .../00-fonts-droid-fallback_1%3a6.0.1r16-1.1build1_all.deb ...
+2025-02-17T01:12:35.6723984Z Unpacking fonts-droid-fallback (1:6.0.1r16-1.1build1) ...
+2025-02-17T01:12:35.8225755Z Selecting previously unselected package poppler-data.
+2025-02-17T01:12:35.8363514Z Preparing to unpack .../01-poppler-data_0.4.12-1_all.deb ...
+2025-02-17T01:12:35.8377275Z Unpacking poppler-data (0.4.12-1) ...
+2025-02-17T01:12:35.9702155Z Selecting previously unselected package ca-certificates-java.
+2025-02-17T01:12:35.9838275Z Preparing to unpack .../02-ca-certificates-java_20240118_all.deb ...
+2025-02-17T01:12:35.9875711Z Unpacking ca-certificates-java (20240118) ...
+2025-02-17T01:12:36.0132759Z Selecting previously unselected package libpcsclite1:amd64.
+2025-02-17T01:12:36.0268527Z Preparing to unpack .../03-libpcsclite1_2.0.3-1build1_amd64.deb ...
+2025-02-17T01:12:36.0293968Z Unpacking libpcsclite1:amd64 (2.0.3-1build1) ...
+2025-02-17T01:12:36.0576316Z Selecting previously unselected package openjdk-21-jre-headless:amd64.
+2025-02-17T01:12:36.0712930Z Preparing to unpack .../04-openjdk-21-jre-headless_21.0.6+7-1~24.04.1_amd64.deb ...
+2025-02-17T01:12:36.0724652Z Unpacking openjdk-21-jre-headless:amd64 (21.0.6+7-1~24.04.1) ...
+2025-02-17T01:12:36.8680783Z Selecting previously unselected package default-jre-headless.
+2025-02-17T01:12:36.8815774Z Preparing to unpack .../05-default-jre-headless_2%3a1.21-75+exp1_amd64.deb ...
+2025-02-17T01:12:36.8826135Z Unpacking default-jre-headless (2:1.21-75+exp1) ...
+2025-02-17T01:12:36.9081937Z Selecting previously unselected package libgif7:amd64.
+2025-02-17T01:12:36.9217769Z Preparing to unpack .../06-libgif7_5.2.2-1ubuntu1_amd64.deb ...
+2025-02-17T01:12:36.9229776Z Unpacking libgif7:amd64 (5.2.2-1ubuntu1) ...
+2025-02-17T01:12:36.9480204Z Selecting previously unselected package openjdk-21-jre:amd64.
+2025-02-17T01:12:36.9614723Z Preparing to unpack .../07-openjdk-21-jre_21.0.6+7-1~24.04.1_amd64.deb ...
+2025-02-17T01:12:36.9625674Z Unpacking openjdk-21-jre:amd64 (21.0.6+7-1~24.04.1) ...
+2025-02-17T01:12:37.0212015Z Selecting previously unselected package default-jre.
+2025-02-17T01:12:37.0346828Z Preparing to unpack .../08-default-jre_2%3a1.21-75+exp1_amd64.deb ...
+2025-02-17T01:12:37.0360616Z Unpacking default-jre (2:1.21-75+exp1) ...
+2025-02-17T01:12:37.0572796Z Selecting previously unselected package xfonts-encodings.
+2025-02-17T01:12:37.0710187Z Preparing to unpack .../09-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+2025-02-17T01:12:37.0721595Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+2025-02-17T01:12:37.1053000Z Selecting previously unselected package xfonts-utils.
+2025-02-17T01:12:37.1189738Z Preparing to unpack .../10-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+2025-02-17T01:12:37.1200345Z Unpacking xfonts-utils (1:7.7+6build3) ...
+2025-02-17T01:12:37.1601250Z Selecting previously unselected package fonts-urw-base35.
+2025-02-17T01:12:37.1738022Z Preparing to unpack .../11-fonts-urw-base35_20200910-8_all.deb ...
+2025-02-17T01:12:37.2424581Z Unpacking fonts-urw-base35 (20200910-8) ...
+2025-02-17T01:12:37.3388621Z Selecting previously unselected package libgs-common.
+2025-02-17T01:12:37.3524663Z Preparing to unpack .../12-libgs-common_10.02.1~dfsg1-0ubuntu7.4_all.deb ...
+2025-02-17T01:12:37.3533467Z Unpacking libgs-common (10.02.1~dfsg1-0ubuntu7.4) ...
+2025-02-17T01:12:37.3794000Z Selecting previously unselected package libgs10-common.
+2025-02-17T01:12:37.3929906Z Preparing to unpack .../13-libgs10-common_10.02.1~dfsg1-0ubuntu7.4_all.deb ...
+2025-02-17T01:12:37.3942043Z Unpacking libgs10-common (10.02.1~dfsg1-0ubuntu7.4) ...
+2025-02-17T01:12:37.4657384Z Selecting previously unselected package libidn12:amd64.
+2025-02-17T01:12:37.4791743Z Preparing to unpack .../14-libidn12_1.42-1build1_amd64.deb ...
+2025-02-17T01:12:37.4804418Z Unpacking libidn12:amd64 (1.42-1build1) ...
+2025-02-17T01:12:37.5053297Z Selecting previously unselected package libijs-0.35:amd64.
+2025-02-17T01:12:37.5188351Z Preparing to unpack .../15-libijs-0.35_0.35-15.1build1_amd64.deb ...
+2025-02-17T01:12:37.5200300Z Unpacking libijs-0.35:amd64 (0.35-15.1build1) ...
+2025-02-17T01:12:37.5437917Z Selecting previously unselected package libjbig2dec0:amd64.
+2025-02-17T01:12:37.5574770Z Preparing to unpack .../16-libjbig2dec0_0.20-1build3_amd64.deb ...
+2025-02-17T01:12:37.5586780Z Unpacking libjbig2dec0:amd64 (0.20-1build3) ...
+2025-02-17T01:12:37.5846025Z Selecting previously unselected package libpaper1:amd64.
+2025-02-17T01:12:37.5980961Z Preparing to unpack .../17-libpaper1_1.1.29build1_amd64.deb ...
+2025-02-17T01:12:37.5991333Z Unpacking libpaper1:amd64 (1.1.29build1) ...
+2025-02-17T01:12:37.6231938Z Selecting previously unselected package libgs10:amd64.
+2025-02-17T01:12:37.6368053Z Preparing to unpack .../18-libgs10_10.02.1~dfsg1-0ubuntu7.4_amd64.deb ...
+2025-02-17T01:12:37.6382885Z Unpacking libgs10:amd64 (10.02.1~dfsg1-0ubuntu7.4) ...
+2025-02-17T01:12:37.7714968Z Selecting previously unselected package libkpathsea6:amd64.
+2025-02-17T01:12:37.7850648Z Preparing to unpack .../19-libkpathsea6_2023.20230311.66589-9build3_amd64.deb ...
+2025-02-17T01:12:37.7860745Z Unpacking libkpathsea6:amd64 (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:37.8138771Z Selecting previously unselected package libpotrace0:amd64.
+2025-02-17T01:12:37.8274543Z Preparing to unpack .../20-libpotrace0_1.16-2build1_amd64.deb ...
+2025-02-17T01:12:37.8295401Z Unpacking libpotrace0:amd64 (1.16-2build1) ...
+2025-02-17T01:12:37.8539621Z Selecting previously unselected package libwoff1:amd64.
+2025-02-17T01:12:37.8676944Z Preparing to unpack .../21-libwoff1_1.0.2-2build1_amd64.deb ...
+2025-02-17T01:12:37.8690441Z Unpacking libwoff1:amd64 (1.0.2-2build1) ...
+2025-02-17T01:12:37.8945936Z Selecting previously unselected package dvisvgm.
+2025-02-17T01:12:37.9082253Z Preparing to unpack .../22-dvisvgm_3.2.1+ds-1build1_amd64.deb ...
+2025-02-17T01:12:37.9094616Z Unpacking dvisvgm (3.2.1+ds-1build1) ...
+2025-02-17T01:12:37.9483431Z Selecting previously unselected package fonts-lmodern.
+2025-02-17T01:12:37.9618687Z Preparing to unpack .../23-fonts-lmodern_2.005-1_all.deb ...
+2025-02-17T01:12:37.9634520Z Unpacking fonts-lmodern (2.005-1) ...
+2025-02-17T01:12:38.0838726Z Selecting previously unselected package fonts-noto-mono.
+2025-02-17T01:12:38.0975786Z Preparing to unpack .../24-fonts-noto-mono_20201225-2_all.deb ...
+2025-02-17T01:12:38.0988598Z Unpacking fonts-noto-mono (20201225-2) ...
+2025-02-17T01:12:38.1299824Z Selecting previously unselected package fonts-texgyre.
+2025-02-17T01:12:38.1435466Z Preparing to unpack .../25-fonts-texgyre_20180621-6_all.deb ...
+2025-02-17T01:12:38.1447002Z Unpacking fonts-texgyre (20180621-6) ...
+2025-02-17T01:12:38.2308746Z Selecting previously unselected package fonts-texgyre-math.
+2025-02-17T01:12:38.2461247Z Preparing to unpack .../26-fonts-texgyre-math_20180621-6_all.deb ...
+2025-02-17T01:12:38.2472199Z Unpacking fonts-texgyre-math (20180621-6) ...
+2025-02-17T01:12:38.3115238Z Selecting previously unselected package libapache-pom-java.
+2025-02-17T01:12:38.3251185Z Preparing to unpack .../27-libapache-pom-java_29-2_all.deb ...
+2025-02-17T01:12:38.3262437Z Unpacking libapache-pom-java (29-2) ...
+2025-02-17T01:12:38.3710891Z Selecting previously unselected package libxcb-shape0:amd64.
+2025-02-17T01:12:38.3846575Z Preparing to unpack .../28-libxcb-shape0_1.15-1ubuntu2_amd64.deb ...
+2025-02-17T01:12:38.3860932Z Unpacking libxcb-shape0:amd64 (1.15-1ubuntu2) ...
+2025-02-17T01:12:38.4086371Z Selecting previously unselected package libxv1:amd64.
+2025-02-17T01:12:38.4221629Z Preparing to unpack .../29-libxv1_2%3a1.0.11-1.1build1_amd64.deb ...
+2025-02-17T01:12:38.4237451Z Unpacking libxv1:amd64 (2:1.0.11-1.1build1) ...
+2025-02-17T01:12:38.4485723Z Selecting previously unselected package libxxf86dga1:amd64.
+2025-02-17T01:12:38.4622795Z Preparing to unpack .../30-libxxf86dga1_2%3a1.1.5-1build1_amd64.deb ...
+2025-02-17T01:12:38.4637499Z Unpacking libxxf86dga1:amd64 (2:1.1.5-1build1) ...
+2025-02-17T01:12:38.4882218Z Selecting previously unselected package x11-utils.
+2025-02-17T01:12:38.5020277Z Preparing to unpack .../31-x11-utils_7.7+6build2_amd64.deb ...
+2025-02-17T01:12:38.5032147Z Unpacking x11-utils (7.7+6build2) ...
+2025-02-17T01:12:38.5449484Z Selecting previously unselected package libatk-wrapper-java.
+2025-02-17T01:12:38.5587159Z Preparing to unpack .../32-libatk-wrapper-java_0.40.0-3build2_all.deb ...
+2025-02-17T01:12:38.5608663Z Unpacking libatk-wrapper-java (0.40.0-3build2) ...
+2025-02-17T01:12:38.5850343Z Selecting previously unselected package libatk-wrapper-java-jni:amd64.
+2025-02-17T01:12:38.5985820Z Preparing to unpack .../33-libatk-wrapper-java-jni_0.40.0-3build2_amd64.deb ...
+2025-02-17T01:12:38.5996120Z Unpacking libatk-wrapper-java-jni:amd64 (0.40.0-3build2) ...
+2025-02-17T01:12:38.6260047Z Selecting previously unselected package libcarp-clan-perl.
+2025-02-17T01:12:38.6396788Z Preparing to unpack .../34-libcarp-clan-perl_6.08-2_all.deb ...
+2025-02-17T01:12:38.6412324Z Unpacking libcarp-clan-perl (6.08-2) ...
+2025-02-17T01:12:38.6661718Z Selecting previously unselected package libbit-vector-perl:amd64.
+2025-02-17T01:12:38.6797858Z Preparing to unpack .../35-libbit-vector-perl_7.4-3build1_amd64.deb ...
+2025-02-17T01:12:38.6809349Z Unpacking libbit-vector-perl:amd64 (7.4-3build1) ...
+2025-02-17T01:12:38.7096039Z Selecting previously unselected package libcommons-parent-java.
+2025-02-17T01:12:38.7233216Z Preparing to unpack .../36-libcommons-parent-java_56-1_all.deb ...
+2025-02-17T01:12:38.7250661Z Unpacking libcommons-parent-java (56-1) ...
+2025-02-17T01:12:38.7514834Z Selecting previously unselected package libcommons-logging-java.
+2025-02-17T01:12:38.7651152Z Preparing to unpack .../37-libcommons-logging-java_1.3.0-1ubuntu1_all.deb ...
+2025-02-17T01:12:38.7663263Z Unpacking libcommons-logging-java (1.3.0-1ubuntu1) ...
+2025-02-17T01:12:38.7917219Z Selecting previously unselected package libcrypt-rc4-perl.
+2025-02-17T01:12:38.8055945Z Preparing to unpack .../38-libcrypt-rc4-perl_2.02-5_all.deb ...
+2025-02-17T01:12:38.8066946Z Unpacking libcrypt-rc4-perl (2.02-5) ...
+2025-02-17T01:12:38.8311362Z Selecting previously unselected package libdate-calc-perl.
+2025-02-17T01:12:38.8448720Z Preparing to unpack .../39-libdate-calc-perl_6.4-2_all.deb ...
+2025-02-17T01:12:38.8461363Z Unpacking libdate-calc-perl (6.4-2) ...
+2025-02-17T01:12:38.8758580Z Selecting previously unselected package libdate-calc-xs-perl:amd64.
+2025-02-17T01:12:38.8894893Z Preparing to unpack .../40-libdate-calc-xs-perl_6.4-2build4_amd64.deb ...
+2025-02-17T01:12:38.8907094Z Unpacking libdate-calc-xs-perl:amd64 (6.4-2build4) ...
+2025-02-17T01:12:38.9168203Z Selecting previously unselected package libdate-manip-perl.
+2025-02-17T01:12:38.9304038Z Preparing to unpack .../41-libdate-manip-perl_6.95-1_all.deb ...
+2025-02-17T01:12:38.9319273Z Unpacking libdate-manip-perl (6.95-1) ...
+2025-02-17T01:12:39.1396510Z Selecting previously unselected package libdigest-perl-md5-perl.
+2025-02-17T01:12:39.1537338Z Preparing to unpack .../42-libdigest-perl-md5-perl_1.9-5_all.deb ...
+2025-02-17T01:12:39.1547854Z Unpacking libdigest-perl-md5-perl (1.9-5) ...
+2025-02-17T01:12:39.1783359Z Selecting previously unselected package libgumbo2:amd64.
+2025-02-17T01:12:39.1920282Z Preparing to unpack .../43-libgumbo2_0.12.0+dfsg-2build1_amd64.deb ...
+2025-02-17T01:12:39.1932219Z Unpacking libgumbo2:amd64 (0.12.0+dfsg-2build1) ...
+2025-02-17T01:12:39.2175540Z Selecting previously unselected package libio-stringy-perl.
+2025-02-17T01:12:39.2311776Z Preparing to unpack .../44-libio-stringy-perl_2.111-3_all.deb ...
+2025-02-17T01:12:39.2321518Z Unpacking libio-stringy-perl (2.111-3) ...
+2025-02-17T01:12:39.2590569Z Selecting previously unselected package libjcode-pm-perl.
+2025-02-17T01:12:39.2727850Z Preparing to unpack .../45-libjcode-pm-perl_2.06-1.1build1_amd64.deb ...
+2025-02-17T01:12:39.2738043Z Unpacking libjcode-pm-perl (2.06-1.1build1) ...
+2025-02-17T01:12:39.3033182Z Selecting previously unselected package libmujs3:amd64.
+2025-02-17T01:12:39.3170505Z Preparing to unpack .../46-libmujs3_1.3.3-3build2_amd64.deb ...
+2025-02-17T01:12:39.3181025Z Unpacking libmujs3:amd64 (1.3.3-3build2) ...
+2025-02-17T01:12:39.3409224Z Selecting previously unselected package libole-storage-lite-perl.
+2025-02-17T01:12:39.3546711Z Preparing to unpack .../47-libole-storage-lite-perl_0.22-1_all.deb ...
+2025-02-17T01:12:39.3556746Z Unpacking libole-storage-lite-perl (0.22-1) ...
+2025-02-17T01:12:39.3786367Z Selecting previously unselected package libpaper-utils.
+2025-02-17T01:12:39.3923450Z Preparing to unpack .../48-libpaper-utils_1.1.29build1_amd64.deb ...
+2025-02-17T01:12:39.3938268Z Unpacking libpaper-utils (1.1.29build1) ...
+2025-02-17T01:12:39.4158808Z Selecting previously unselected package libparse-recdescent-perl.
+2025-02-17T01:12:39.4295060Z Preparing to unpack .../49-libparse-recdescent-perl_1.967015+dfsg-4_all.deb ...
+2025-02-17T01:12:39.4304432Z Unpacking libparse-recdescent-perl (1.967015+dfsg-4) ...
+2025-02-17T01:12:39.4646606Z Selecting previously unselected package libptexenc1:amd64.
+2025-02-17T01:12:39.4782688Z Preparing to unpack .../50-libptexenc1_2023.20230311.66589-9build3_amd64.deb ...
+2025-02-17T01:12:39.4794177Z Unpacking libptexenc1:amd64 (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:39.5029528Z Selecting previously unselected package librsvg2-2:amd64.
+2025-02-17T01:12:39.5166802Z Preparing to unpack .../51-librsvg2-2_2.58.0+dfsg-1build1_amd64.deb ...
+2025-02-17T01:12:39.5176231Z Unpacking librsvg2-2:amd64 (2.58.0+dfsg-1build1) ...
+2025-02-17T01:12:39.5733200Z Selecting previously unselected package librsvg2-bin.
+2025-02-17T01:12:39.5869605Z Preparing to unpack .../52-librsvg2-bin_2.58.0+dfsg-1build1_amd64.deb ...
+2025-02-17T01:12:39.5879666Z Unpacking librsvg2-bin (2.58.0+dfsg-1build1) ...
+2025-02-17T01:12:39.6446217Z Selecting previously unselected package librsvg2-common:amd64.
+2025-02-17T01:12:39.6582005Z Preparing to unpack .../53-librsvg2-common_2.58.0+dfsg-1build1_amd64.deb ...
+2025-02-17T01:12:39.6592898Z Unpacking librsvg2-common:amd64 (2.58.0+dfsg-1build1) ...
+2025-02-17T01:12:39.6827879Z Selecting previously unselected package libspreadsheet-writeexcel-perl.
+2025-02-17T01:12:39.6965309Z Preparing to unpack .../54-libspreadsheet-writeexcel-perl_2.40-4_all.deb ...
+2025-02-17T01:12:39.6974913Z Unpacking libspreadsheet-writeexcel-perl (2.40-4) ...
+2025-02-17T01:12:39.7516929Z Selecting previously unselected package libunicode-map-perl.
+2025-02-17T01:12:39.7653700Z Preparing to unpack .../55-libunicode-map-perl_0.112-13build4_amd64.deb ...
+2025-02-17T01:12:39.7664133Z Unpacking libunicode-map-perl (0.112-13build4) ...
+2025-02-17T01:12:39.8067518Z Selecting previously unselected package libspreadsheet-parseexcel-perl.
+2025-02-17T01:12:39.8205335Z Preparing to unpack .../56-libspreadsheet-parseexcel-perl_0.6600-1_all.deb ...
+2025-02-17T01:12:39.8216721Z Unpacking libspreadsheet-parseexcel-perl (0.6600-1) ...
+2025-02-17T01:12:39.8564552Z Selecting previously unselected package libsynctex2:amd64.
+2025-02-17T01:12:39.8703205Z Preparing to unpack .../57-libsynctex2_2023.20230311.66589-9build3_amd64.deb ...
+2025-02-17T01:12:39.8713122Z Unpacking libsynctex2:amd64 (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:39.8944936Z Selecting previously unselected package libteckit0:amd64.
+2025-02-17T01:12:39.9081985Z Preparing to unpack .../58-libteckit0_2.5.12+ds1-1_amd64.deb ...
+2025-02-17T01:12:39.9093311Z Unpacking libteckit0:amd64 (2.5.12+ds1-1) ...
+2025-02-17T01:12:39.9431646Z Selecting previously unselected package libtexlua53-5:amd64.
+2025-02-17T01:12:39.9569846Z Preparing to unpack .../59-libtexlua53-5_2023.20230311.66589-9build3_amd64.deb ...
+2025-02-17T01:12:39.9580255Z Unpacking libtexlua53-5:amd64 (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:39.9819673Z Selecting previously unselected package libzzip-0-13t64:amd64.
+2025-02-17T01:12:39.9957089Z Preparing to unpack .../60-libzzip-0-13t64_0.13.72+dfsg.1-1.2build1_amd64.deb ...
+2025-02-17T01:12:39.9967277Z Unpacking libzzip-0-13t64:amd64 (0.13.72+dfsg.1-1.2build1) ...
+2025-02-17T01:12:40.0224509Z Selecting previously unselected package lmodern.
+2025-02-17T01:12:40.0362511Z Preparing to unpack .../61-lmodern_2.005-1_all.deb ...
+2025-02-17T01:12:40.0373814Z Unpacking lmodern (2.005-1) ...
+2025-02-17T01:12:40.3120866Z Selecting previously unselected package mupdf-tools.
+2025-02-17T01:12:40.3261324Z Preparing to unpack .../62-mupdf-tools_1.23.10+ds1-1build3_amd64.deb ...
+2025-02-17T01:12:40.3272679Z Unpacking mupdf-tools (1.23.10+ds1-1build3) ...
+2025-02-17T01:12:40.7574801Z Selecting previously unselected package pandoc-data.
+2025-02-17T01:12:40.7711268Z Preparing to unpack .../63-pandoc-data_3.1.3-1_all.deb ...
+2025-02-17T01:12:40.7725517Z Unpacking pandoc-data (3.1.3-1) ...
+2025-02-17T01:12:40.8247547Z Selecting previously unselected package pandoc.
+2025-02-17T01:12:40.8386087Z Preparing to unpack .../64-pandoc_3.1.3+ds-2_amd64.deb ...
+2025-02-17T01:12:40.8400540Z Unpacking pandoc (3.1.3+ds-2) ...
+2025-02-17T01:12:41.8509216Z Selecting previously unselected package preview-latex-style.
+2025-02-17T01:12:41.8647917Z Preparing to unpack .../65-preview-latex-style_13.2-1_all.deb ...
+2025-02-17T01:12:41.8664588Z Unpacking preview-latex-style (13.2-1) ...
+2025-02-17T01:12:41.8953083Z Selecting previously unselected package t1utils.
+2025-02-17T01:12:41.9091941Z Preparing to unpack .../66-t1utils_1.41-4build3_amd64.deb ...
+2025-02-17T01:12:41.9103697Z Unpacking t1utils (1.41-4build3) ...
+2025-02-17T01:12:41.9391603Z Selecting previously unselected package teckit.
+2025-02-17T01:12:41.9529938Z Preparing to unpack .../67-teckit_2.5.12+ds1-1_amd64.deb ...
+2025-02-17T01:12:41.9542444Z Unpacking teckit (2.5.12+ds1-1) ...
+2025-02-17T01:12:41.9852380Z Selecting previously unselected package tex-gyre.
+2025-02-17T01:12:41.9990423Z Preparing to unpack .../68-tex-gyre_20180621-6_all.deb ...
+2025-02-17T01:12:42.0005717Z Unpacking tex-gyre (20180621-6) ...
+2025-02-17T01:12:42.2152650Z Selecting previously unselected package texlive-binaries.
+2025-02-17T01:12:42.2294155Z Preparing to unpack .../69-texlive-binaries_2023.20230311.66589-9build3_amd64.deb ...
+2025-02-17T01:12:42.2369609Z Unpacking texlive-binaries (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:42.4667216Z Selecting previously unselected package texlive-base.
+2025-02-17T01:12:42.4808576Z Preparing to unpack .../70-texlive-base_2023.20240207-1_all.deb ...
+2025-02-17T01:12:42.4821704Z Unpacking texlive-base (2023.20240207-1) ...
+2025-02-17T01:12:43.7573883Z Selecting previously unselected package texlive-fonts-recommended.
+2025-02-17T01:12:43.7725361Z Preparing to unpack .../71-texlive-fonts-recommended_2023.20240207-1_all.deb ...
+2025-02-17T01:12:43.7738493Z Unpacking texlive-fonts-recommended (2023.20240207-1) ...
+2025-02-17T01:12:44.2850274Z Selecting previously unselected package texlive-latex-base.
+2025-02-17T01:12:44.3002785Z Preparing to unpack .../72-texlive-latex-base_2023.20240207-1_all.deb ...
+2025-02-17T01:12:44.3013729Z Unpacking texlive-latex-base (2023.20240207-1) ...
+2025-02-17T01:12:44.7023041Z Selecting previously unselected package libfontbox-java.
+2025-02-17T01:12:44.7175192Z Preparing to unpack .../73-libfontbox-java_1%3a1.8.16-5_all.deb ...
+2025-02-17T01:12:44.7190591Z Unpacking libfontbox-java (1:1.8.16-5) ...
+2025-02-17T01:12:44.7466328Z Selecting previously unselected package libpdfbox-java.
+2025-02-17T01:12:44.7608736Z Preparing to unpack .../74-libpdfbox-java_1%3a1.8.16-5_all.deb ...
+2025-02-17T01:12:44.7619809Z Unpacking libpdfbox-java (1:1.8.16-5) ...
+2025-02-17T01:12:44.8130696Z Selecting previously unselected package texlive-latex-recommended.
+2025-02-17T01:12:44.8274435Z Preparing to unpack .../75-texlive-latex-recommended_2023.20240207-1_all.deb ...
+2025-02-17T01:12:44.8293669Z Unpacking texlive-latex-recommended (2023.20240207-1) ...
+2025-02-17T01:12:45.5569421Z Selecting previously unselected package texlive-pictures.
+2025-02-17T01:12:45.5721741Z Preparing to unpack .../76-texlive-pictures_2023.20240207-1_all.deb ...
+2025-02-17T01:12:45.5734377Z Unpacking texlive-pictures (2023.20240207-1) ...
+2025-02-17T01:12:46.6698708Z Selecting previously unselected package texlive-latex-extra.
+2025-02-17T01:12:46.6861941Z Preparing to unpack .../77-texlive-latex-extra_2023.20240207-1_all.deb ...
+2025-02-17T01:12:46.6886376Z Unpacking texlive-latex-extra (2023.20240207-1) ...
+2025-02-17T01:12:48.1850159Z Selecting previously unselected package texlive-plain-generic.
+2025-02-17T01:12:48.2026036Z Preparing to unpack .../78-texlive-plain-generic_2023.20240207-1_all.deb ...
+2025-02-17T01:12:48.2041583Z Unpacking texlive-plain-generic (2023.20240207-1) ...
+2025-02-17T01:12:50.9228350Z Selecting previously unselected package tipa.
+2025-02-17T01:12:50.9430013Z Preparing to unpack .../79-tipa_2%3a1.3-21_all.deb ...
+2025-02-17T01:12:50.9510805Z Unpacking tipa (2:1.3-21) ...
+2025-02-17T01:12:51.1935493Z Selecting previously unselected package texlive-xetex.
+2025-02-17T01:12:51.2098599Z Preparing to unpack .../80-texlive-xetex_2023.20240207-1_all.deb ...
+2025-02-17T01:12:51.2115995Z Unpacking texlive-xetex (2023.20240207-1) ...
+2025-02-17T01:12:51.7925942Z Setting up libjcode-pm-perl (2.06-1.1build1) ...
+2025-02-17T01:12:51.7955581Z Setting up libpaper1:amd64 (1.1.29build1) ...
+2025-02-17T01:12:51.9822999Z 
+2025-02-17T01:12:51.9823623Z Creating config file /etc/papersize with new version
+2025-02-17T01:12:52.0614439Z Setting up fonts-noto-mono (20201225-2) ...
+2025-02-17T01:12:52.0651809Z Setting up fonts-texgyre-math (20180621-6) ...
+2025-02-17T01:12:52.0686851Z Setting up libwoff1:amd64 (1.0.2-2build1) ...
+2025-02-17T01:12:52.0714489Z Setting up libmujs3:amd64 (1.3.3-3build2) ...
+2025-02-17T01:12:52.0742212Z Setting up libio-stringy-perl (2.111-3) ...
+2025-02-17T01:12:52.0765847Z Setting up libijs-0.35:amd64 (0.35-15.1build1) ...
+2025-02-17T01:12:52.0790327Z Setting up preview-latex-style (13.2-1) ...
+2025-02-17T01:12:52.1154014Z Setting up libgs-common (10.02.1~dfsg1-0ubuntu7.4) ...
+2025-02-17T01:12:52.1242523Z Setting up libfontbox-java (1:1.8.16-5) ...
+2025-02-17T01:12:52.1272292Z Setting up libxcb-shape0:amd64 (1.15-1ubuntu2) ...
+2025-02-17T01:12:52.1316174Z Setting up libxxf86dga1:amd64 (2:1.1.5-1build1) ...
+2025-02-17T01:12:52.1353648Z Setting up libpaper-utils (1.1.29build1) ...
+2025-02-17T01:12:52.1392994Z Setting up poppler-data (0.4.12-1) ...
+2025-02-17T01:12:52.1534053Z Setting up librsvg2-2:amd64 (2.58.0+dfsg-1build1) ...
+2025-02-17T01:12:52.1568426Z Setting up libdigest-perl-md5-perl (1.9-5) ...
+2025-02-17T01:12:52.1604169Z Setting up libunicode-map-perl (0.112-13build4) ...
+2025-02-17T01:12:52.1636180Z Setting up libzzip-0-13t64:amd64 (0.13.72+dfsg.1-1.2build1) ...
+2025-02-17T01:12:52.1674532Z Setting up libjbig2dec0:amd64 (0.20-1build3) ...
+2025-02-17T01:12:52.1718480Z Setting up libgumbo2:amd64 (0.12.0+dfsg-2build1) ...
+2025-02-17T01:12:52.1755851Z Setting up libteckit0:amd64 (2.5.12+ds1-1) ...
+2025-02-17T01:12:52.1803658Z Setting up libapache-pom-java (29-2) ...
+2025-02-17T01:12:52.1847814Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+2025-02-17T01:12:52.1882307Z Setting up t1utils (1.41-4build3) ...
+2025-02-17T01:12:52.1926300Z Setting up libtexlua53-5:amd64 (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:52.1981343Z Setting up libcrypt-rc4-perl (2.02-5) ...
+2025-02-17T01:12:52.2025740Z Setting up libxv1:amd64 (2:1.0.11-1.1build1) ...
+2025-02-17T01:12:52.2071700Z Setting up libidn12:amd64 (1.42-1build1) ...
+2025-02-17T01:12:52.2112729Z Setting up libpcsclite1:amd64 (2.0.3-1build1) ...
+2025-02-17T01:12:52.2142750Z Setting up fonts-texgyre (20180621-6) ...
+2025-02-17T01:12:52.2217171Z Setting up librsvg2-common:amd64 (2.58.0+dfsg-1build1) ...
+2025-02-17T01:12:52.2296278Z Setting up libkpathsea6:amd64 (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:52.2355414Z Setting up libole-storage-lite-perl (0.22-1) ...
+2025-02-17T01:12:52.2391534Z Setting up libgif7:amd64 (5.2.2-1ubuntu1) ...
+2025-02-17T01:12:52.2426809Z Setting up libparse-recdescent-perl (1.967015+dfsg-4) ...
+2025-02-17T01:12:52.2462033Z Setting up x11-utils (7.7+6build2) ...
+2025-02-17T01:12:52.2602400Z Setting up fonts-lmodern (2.005-1) ...
+2025-02-17T01:12:52.2660847Z Setting up libcarp-clan-perl (6.08-2) ...
+2025-02-17T01:12:52.2689951Z Setting up fonts-droid-fallback (1:6.0.1r16-1.1build1) ...
+2025-02-17T01:12:52.2919974Z Setting up libatk-wrapper-java (0.40.0-3build2) ...
+2025-02-17T01:12:52.2954186Z Setting up pandoc-data (3.1.3-1) ...
+2025-02-17T01:12:52.2989372Z Setting up ca-certificates-java (20240118) ...
+2025-02-17T01:12:52.6861349Z Adding debian:ACCVRAIZ1.pem
+2025-02-17T01:12:52.6887507Z Adding debian:AC_RAIZ_FNMT-RCM.pem
+2025-02-17T01:12:52.7052714Z Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+2025-02-17T01:12:52.7085643Z Adding debian:ANF_Secure_Server_Root_CA.pem
+2025-02-17T01:12:52.7114945Z Adding debian:Actalis_Authentication_Root_CA.pem
+2025-02-17T01:12:52.7129989Z Adding debian:AffirmTrust_Commercial.pem
+2025-02-17T01:12:52.7145765Z Adding debian:AffirmTrust_Networking.pem
+2025-02-17T01:12:52.7167721Z Adding debian:AffirmTrust_Premium.pem
+2025-02-17T01:12:52.7179310Z Adding debian:AffirmTrust_Premium_ECC.pem
+2025-02-17T01:12:52.7194086Z Adding debian:Amazon_Root_CA_1.pem
+2025-02-17T01:12:52.7216145Z Adding debian:Amazon_Root_CA_2.pem
+2025-02-17T01:12:52.7226578Z Adding debian:Amazon_Root_CA_3.pem
+2025-02-17T01:12:52.7240642Z Adding debian:Amazon_Root_CA_4.pem
+2025-02-17T01:12:52.7257135Z Adding debian:Atos_TrustedRoot_2011.pem
+2025-02-17T01:12:52.7268872Z Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+2025-02-17T01:12:52.7328316Z Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+2025-02-17T01:12:52.7352475Z Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+2025-02-17T01:12:52.7374617Z Adding debian:BJCA_Global_Root_CA1.pem
+2025-02-17T01:12:52.7388152Z Adding debian:BJCA_Global_Root_CA2.pem
+2025-02-17T01:12:52.7403199Z Adding debian:Baltimore_CyberTrust_Root.pem
+2025-02-17T01:12:52.7424118Z Adding debian:Buypass_Class_2_Root_CA.pem
+2025-02-17T01:12:52.7449545Z Adding debian:Buypass_Class_3_Root_CA.pem
+2025-02-17T01:12:52.7470668Z Adding debian:CA_Disig_Root_R2.pem
+2025-02-17T01:12:52.7492334Z Adding debian:CFCA_EV_ROOT.pem
+2025-02-17T01:12:52.7510075Z Adding debian:COMODO_Certification_Authority.pem
+2025-02-17T01:12:52.7522306Z Adding debian:COMODO_ECC_Certification_Authority.pem
+2025-02-17T01:12:52.7543726Z Adding debian:COMODO_RSA_Certification_Authority.pem
+2025-02-17T01:12:52.7553058Z Adding debian:Certainly_Root_E1.pem
+2025-02-17T01:12:52.7572278Z Adding debian:Certainly_Root_R1.pem
+2025-02-17T01:12:52.7603039Z Adding debian:Certigna.pem
+2025-02-17T01:12:52.7629307Z Adding debian:Certigna_Root_CA.pem
+2025-02-17T01:12:52.7642773Z Adding debian:Certum_EC-384_CA.pem
+2025-02-17T01:12:52.7658993Z Adding debian:Certum_Trusted_Network_CA.pem
+2025-02-17T01:12:52.7680631Z Adding debian:Certum_Trusted_Network_CA_2.pem
+2025-02-17T01:12:52.7703783Z Adding debian:Certum_Trusted_Root_CA.pem
+2025-02-17T01:12:52.7715012Z Adding debian:CommScope_Public_Trust_ECC_Root-01.pem
+2025-02-17T01:12:52.7727283Z Adding debian:CommScope_Public_Trust_ECC_Root-02.pem
+2025-02-17T01:12:52.7750086Z Adding debian:CommScope_Public_Trust_RSA_Root-01.pem
+2025-02-17T01:12:52.7771599Z Adding debian:CommScope_Public_Trust_RSA_Root-02.pem
+2025-02-17T01:12:52.7792469Z Adding debian:Comodo_AAA_Services_root.pem
+2025-02-17T01:12:52.7811253Z Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+2025-02-17T01:12:52.7828604Z Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+2025-02-17T01:12:52.7848738Z Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+2025-02-17T01:12:52.7866740Z Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+2025-02-17T01:12:52.7881076Z Adding debian:DigiCert_Assured_ID_Root_CA.pem
+2025-02-17T01:12:52.7894603Z Adding debian:DigiCert_Assured_ID_Root_G2.pem
+2025-02-17T01:12:52.7904744Z Adding debian:DigiCert_Assured_ID_Root_G3.pem
+2025-02-17T01:12:52.7918207Z Adding debian:DigiCert_Global_Root_CA.pem
+2025-02-17T01:12:52.7931259Z Adding debian:DigiCert_Global_Root_G2.pem
+2025-02-17T01:12:52.7941886Z Adding debian:DigiCert_Global_Root_G3.pem
+2025-02-17T01:12:52.7960111Z Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+2025-02-17T01:12:52.7969394Z Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+2025-02-17T01:12:52.7987979Z Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+2025-02-17T01:12:52.8007427Z Adding debian:DigiCert_Trusted_Root_G4.pem
+2025-02-17T01:12:52.8024054Z Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+2025-02-17T01:12:52.8048976Z Adding debian:Entrust_Root_Certification_Authority.pem
+2025-02-17T01:12:52.8060722Z Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+2025-02-17T01:12:52.8076269Z Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+2025-02-17T01:12:52.8097558Z Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+2025-02-17T01:12:52.8117487Z Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+2025-02-17T01:12:52.8139213Z Adding debian:GLOBALTRUST_2020.pem
+2025-02-17T01:12:52.8157569Z Adding debian:GTS_Root_R1.pem
+2025-02-17T01:12:52.8177246Z Adding debian:GTS_Root_R2.pem
+2025-02-17T01:12:52.8187201Z Adding debian:GTS_Root_R3.pem
+2025-02-17T01:12:52.8198600Z Adding debian:GTS_Root_R4.pem
+2025-02-17T01:12:52.8208440Z Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+2025-02-17T01:12:52.8217963Z Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+2025-02-17T01:12:52.8231931Z Adding debian:GlobalSign_Root_CA.pem
+2025-02-17T01:12:52.8244953Z Adding debian:GlobalSign_Root_CA_-_R3.pem
+2025-02-17T01:12:52.8265954Z Adding debian:GlobalSign_Root_CA_-_R6.pem
+2025-02-17T01:12:52.8276660Z Adding debian:GlobalSign_Root_E46.pem
+2025-02-17T01:12:52.8295041Z Adding debian:GlobalSign_Root_R46.pem
+2025-02-17T01:12:52.8313333Z Adding debian:Go_Daddy_Class_2_CA.pem
+2025-02-17T01:12:52.8327626Z Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+2025-02-17T01:12:52.8340570Z Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+2025-02-17T01:12:52.8363393Z Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+2025-02-17T01:12:52.8376650Z Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+2025-02-17T01:12:52.8397299Z Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+2025-02-17T01:12:52.8416123Z Adding debian:HiPKI_Root_CA_-_G1.pem
+2025-02-17T01:12:52.8435773Z Adding debian:Hongkong_Post_Root_CA_3.pem
+2025-02-17T01:12:52.8454790Z Adding debian:ISRG_Root_X1.pem
+2025-02-17T01:12:52.8464364Z Adding debian:ISRG_Root_X2.pem
+2025-02-17T01:12:52.8482732Z Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+2025-02-17T01:12:52.8500883Z Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+2025-02-17T01:12:52.8522379Z Adding debian:Izenpe.com.pem
+2025-02-17T01:12:52.8543328Z Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+2025-02-17T01:12:52.8554419Z Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+2025-02-17T01:12:52.8573911Z Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+2025-02-17T01:12:52.8593304Z Adding debian:NAVER_Global_Root_Certification_Authority.pem
+2025-02-17T01:12:52.8620860Z Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+2025-02-17T01:12:52.8635262Z Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+2025-02-17T01:12:52.8645961Z Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+2025-02-17T01:12:52.8666051Z Adding debian:QuoVadis_Root_CA_1_G3.pem
+2025-02-17T01:12:52.8685352Z Adding debian:QuoVadis_Root_CA_2.pem
+2025-02-17T01:12:52.8704438Z Adding debian:QuoVadis_Root_CA_2_G3.pem
+2025-02-17T01:12:52.8728855Z Adding debian:QuoVadis_Root_CA_3.pem
+2025-02-17T01:12:52.8749984Z Adding debian:QuoVadis_Root_CA_3_G3.pem
+2025-02-17T01:12:52.8764835Z Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+2025-02-17T01:12:52.8784525Z Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+2025-02-17T01:12:52.8796851Z Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+2025-02-17T01:12:52.8815317Z Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+2025-02-17T01:12:52.8825135Z Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+2025-02-17T01:12:52.8843605Z Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+2025-02-17T01:12:52.8857519Z Adding debian:SZAFIR_ROOT_CA2.pem
+2025-02-17T01:12:52.8869399Z Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+2025-02-17T01:12:52.8895722Z Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+2025-02-17T01:12:52.8907295Z Adding debian:SecureSign_RootCA11.pem
+2025-02-17T01:12:52.8922027Z Adding debian:SecureTrust_CA.pem
+2025-02-17T01:12:52.8936907Z Adding debian:Secure_Global_CA.pem
+2025-02-17T01:12:52.8947155Z Adding debian:Security_Communication_ECC_RootCA1.pem
+2025-02-17T01:12:52.8963486Z Adding debian:Security_Communication_RootCA2.pem
+2025-02-17T01:12:52.8985399Z Adding debian:Security_Communication_RootCA3.pem
+2025-02-17T01:12:52.8999540Z Adding debian:Security_Communication_Root_CA.pem
+2025-02-17T01:12:52.9013638Z Adding debian:Starfield_Class_2_CA.pem
+2025-02-17T01:12:52.9026900Z Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+2025-02-17T01:12:52.9039947Z Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+2025-02-17T01:12:52.9058011Z Adding debian:SwissSign_Gold_CA_-_G2.pem
+2025-02-17T01:12:52.9075621Z Adding debian:SwissSign_Silver_CA_-_G2.pem
+2025-02-17T01:12:52.9088342Z Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+2025-02-17T01:12:52.9100874Z Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+2025-02-17T01:12:52.9115228Z Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+2025-02-17T01:12:52.9132526Z Adding debian:TWCA_Global_Root_CA.pem
+2025-02-17T01:12:52.9144030Z Adding debian:TWCA_Root_Certification_Authority.pem
+2025-02-17T01:12:52.9159640Z Adding debian:TeliaSonera_Root_CA_v1.pem
+2025-02-17T01:12:52.9176917Z Adding debian:Telia_Root_CA_v2.pem
+2025-02-17T01:12:52.9196540Z Adding debian:TrustAsia_Global_Root_CA_G3.pem
+2025-02-17T01:12:52.9207258Z Adding debian:TrustAsia_Global_Root_CA_G4.pem
+2025-02-17T01:12:52.9232694Z Adding debian:Trustwave_Global_Certification_Authority.pem
+2025-02-17T01:12:52.9244173Z Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+2025-02-17T01:12:52.9259202Z Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+2025-02-17T01:12:52.9278400Z Adding debian:TunTrust_Root_CA.pem
+2025-02-17T01:12:52.9294799Z Adding debian:UCA_Extended_Validation_Root.pem
+2025-02-17T01:12:52.9310535Z Adding debian:UCA_Global_G2_Root.pem
+2025-02-17T01:12:52.9320117Z Adding debian:USERTrust_ECC_Certification_Authority.pem
+2025-02-17T01:12:52.9339244Z Adding debian:USERTrust_RSA_Certification_Authority.pem
+2025-02-17T01:12:52.9353951Z Adding debian:XRamp_Global_CA_Root.pem
+2025-02-17T01:12:52.9365991Z Adding debian:certSIGN_ROOT_CA.pem
+2025-02-17T01:12:52.9388020Z Adding debian:certSIGN_Root_CA_G2.pem
+2025-02-17T01:12:52.9397575Z Adding debian:e-Szigno_Root_CA_2017.pem
+2025-02-17T01:12:52.9414630Z Adding debian:ePKI_Root_Certification_Authority.pem
+2025-02-17T01:12:52.9422975Z Adding debian:emSign_ECC_Root_CA_-_C3.pem
+2025-02-17T01:12:52.9431502Z Adding debian:emSign_ECC_Root_CA_-_G3.pem
+2025-02-17T01:12:52.9442662Z Adding debian:emSign_Root_CA_-_C1.pem
+2025-02-17T01:12:52.9454002Z Adding debian:emSign_Root_CA_-_G1.pem
+2025-02-17T01:12:52.9462083Z Adding debian:vTrus_ECC_Root_CA.pem
+2025-02-17T01:12:52.9478173Z Adding debian:vTrus_Root_CA.pem
+2025-02-17T01:12:52.9888568Z done.
+2025-02-17T01:12:52.9923583Z Setting up libdate-manip-perl (6.95-1) ...
+2025-02-17T01:12:52.9953321Z Setting up libsynctex2:amd64 (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:52.9982267Z Setting up libpotrace0:amd64 (1.16-2build1) ...
+2025-02-17T01:12:53.0023185Z Setting up teckit (2.5.12+ds1-1) ...
+2025-02-17T01:12:53.0166624Z Setting up librsvg2-bin (2.58.0+dfsg-1build1) ...
+2025-02-17T01:12:53.0216275Z Setting up libpdfbox-java (1:1.8.16-5) ...
+2025-02-17T01:12:53.0274499Z Setting up openjdk-21-jre-headless:amd64 (21.0.6+7-1~24.04.1) ...
+2025-02-17T01:12:53.1054691Z Setting up libcommons-parent-java (56-1) ...
+2025-02-17T01:12:53.1086010Z Setting up libcommons-logging-java (1.3.0-1ubuntu1) ...
+2025-02-17T01:12:53.1130001Z Setting up xfonts-utils (1:7.7+6build3) ...
+2025-02-17T01:12:53.1189824Z Setting up mupdf-tools (1.23.10+ds1-1build3) ...
+2025-02-17T01:12:53.1240672Z Setting up libspreadsheet-writeexcel-perl (2.40-4) ...
+2025-02-17T01:12:53.1278473Z Setting up libatk-wrapper-java-jni:amd64 (0.40.0-3build2) ...
+2025-02-17T01:12:53.1318311Z Setting up libbit-vector-perl:amd64 (7.4-3build1) ...
+2025-02-17T01:12:53.1366528Z Setting up libptexenc1:amd64 (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:53.1400469Z Setting up pandoc (3.1.3+ds-2) ...
+2025-02-17T01:12:53.1451462Z Setting up libspreadsheet-parseexcel-perl (0.6600-1) ...
+2025-02-17T01:12:53.1486040Z Setting up texlive-binaries (2023.20230311.66589-9build3) ...
+2025-02-17T01:12:53.1552198Z update-alternatives: using /usr/bin/xdvi-xaw to provide /usr/bin/xdvi.bin (xdvi.bin) in auto mode
+2025-02-17T01:12:53.1599029Z update-alternatives: using /usr/bin/bibtex.original to provide /usr/bin/bibtex (bibtex) in auto mode
+2025-02-17T01:12:53.1706247Z Setting up lmodern (2.005-1) ...
+2025-02-17T01:12:53.3629580Z Setting up texlive-base (2023.20240207-1) ...
+2025-02-17T01:12:54.0921021Z tl-paper: setting paper size for dvips to a4: /var/lib/texmf/dvips/config/config-paper.ps
+2025-02-17T01:12:54.2983100Z tl-paper: setting paper size for dvipdfmx to a4: /var/lib/texmf/dvipdfmx/dvipdfmx-paper.cfg
+2025-02-17T01:12:54.5038942Z tl-paper: setting paper size for xdvi to a4: /var/lib/texmf/xdvi/XDvi-paper
+2025-02-17T01:12:54.7086440Z tl-paper: setting paper size for pdftex to a4: /var/lib/texmf/tex/generic/tex-ini-files/pdftexconfig.tex
+2025-02-17T01:12:55.1907142Z Setting up tex-gyre (20180621-6) ...
+2025-02-17T01:12:55.3357087Z Setting up libdate-calc-perl (6.4-2) ...
+2025-02-17T01:12:55.3391204Z Setting up libdate-calc-xs-perl:amd64 (6.4-2build4) ...
+2025-02-17T01:12:55.3556035Z Setting up texlive-plain-generic (2023.20240207-1) ...
+2025-02-17T01:12:55.3612946Z Setting up fonts-urw-base35 (20200910-8) ...
+2025-02-17T01:12:55.5946879Z Setting up texlive-latex-base (2023.20240207-1) ...
+2025-02-17T01:12:55.6024817Z Setting up texlive-latex-recommended (2023.20240207-1) ...
+2025-02-17T01:12:55.6195651Z Setting up texlive-pictures (2023.20240207-1) ...
+2025-02-17T01:12:55.6256565Z Setting up texlive-fonts-recommended (2023.20240207-1) ...
+2025-02-17T01:12:55.6334657Z Setting up tipa (2:1.3-21) ...
+2025-02-17T01:12:55.6433474Z Setting up libgs10-common (10.02.1~dfsg1-0ubuntu7.4) ...
+2025-02-17T01:12:55.6468380Z Setting up texlive-latex-extra (2023.20240207-1) ...
+2025-02-17T01:12:55.6561554Z Setting up texlive-xetex (2023.20240207-1) ...
+2025-02-17T01:12:55.6631570Z Setting up libgs10:amd64 (10.02.1~dfsg1-0ubuntu7.4) ...
+2025-02-17T01:12:55.6668753Z Setting up dvisvgm (3.2.1+ds-1build1) ...
+2025-02-17T01:12:55.6767525Z Processing triggers for libgdk-pixbuf-2.0-0:amd64 (2.42.10+dfsg-3ubuntu3.1) ...
+2025-02-17T01:12:55.7085827Z Processing triggers for install-info (7.1-3build2) ...
+2025-02-17T01:12:56.0895775Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+2025-02-17T01:12:56.5046565Z Processing triggers for hicolor-icon-theme (0.17-2) ...
+2025-02-17T01:12:56.8098705Z Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+2025-02-17T01:12:57.0427325Z Processing triggers for man-db (2.12.0-4build2) ...
+2025-02-17T01:13:07.3138219Z Processing triggers for tex-common (6.18) ...
+2025-02-17T01:13:07.5146941Z Running mktexlsr. This may take some time... done.
+2025-02-17T01:13:07.9835040Z Running updmap-sys. This may take some time... done.
+2025-02-17T01:13:08.0093156Z Running mktexlsr /var/lib/texmf ... done.
+2025-02-17T01:13:08.0839409Z Building format(s) --all.
+2025-02-17T01:14:01.9267127Z 	This may take some time... done.
+2025-02-17T01:14:01.9376960Z Processing triggers for ca-certificates-java (20240118) ...
+2025-02-17T01:14:01.9717693Z done.
+2025-02-17T01:14:01.9753569Z Setting up default-jre-headless (2:1.21-75+exp1) ...
+2025-02-17T01:14:01.9799018Z Setting up openjdk-21-jre:amd64 (21.0.6+7-1~24.04.1) ...
+2025-02-17T01:14:01.9874033Z Setting up default-jre (2:1.21-75+exp1) ...
+2025-02-17T01:14:02.6157043Z 
+2025-02-17T01:14:02.6157614Z Running kernel seems to be up-to-date.
+2025-02-17T01:14:02.6157996Z 
+2025-02-17T01:14:02.6158170Z No services need to be restarted.
+2025-02-17T01:14:02.6158367Z 
+2025-02-17T01:14:02.6158482Z No containers need to be restarted.
+2025-02-17T01:14:02.6158706Z 
+2025-02-17T01:14:02.6158833Z No user sessions are running outdated binaries.
+2025-02-17T01:14:02.6159039Z 
+2025-02-17T01:14:02.6159248Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2025-02-17T01:14:03.4965021Z ##[group]Run ./tt/tt_tool.py --create-pdf
+2025-02-17T01:14:03.4965360Z [36;1m./tt/tt_tool.py --create-pdf[0m
+2025-02-17T01:14:03.5027273Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-17T01:14:03.5027597Z env:
+2025-02-17T01:14:03.5027836Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:14:03.5028451Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:14:03.5028851Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:14:03.5029190Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:14:03.5029528Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:14:03.5029867Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:14:03.5030175Z ##[endgroup]
+2025-02-17T01:14:03.9146343Z 2025-02-17 01:14:03,914 - project    - INFO     - Creating PDF
+2025-02-17T01:14:03.9151214Z 2025-02-17 01:14:03,914 - project    - INFO     - pandoc --pdf-engine=xelatex --resource-path=docs -i datasheet.md -o datasheet.pdf
+2025-02-17T01:14:05.8683465Z Error producing PDF.
+2025-02-17T01:14:05.8683919Z ! Undefined control sequence.
+2025-02-17T01:14:05.8684509Z l.56 \hypersetup
+2025-02-17T01:14:05.8684644Z 
+2025-02-17T01:14:05.8828271Z 2025-02-17 01:14:05,882 - project    - ERROR    - pdf command failed
+2025-02-17T01:14:05.9276269Z ##[group]Run actions/upload-artifact@v4
+2025-02-17T01:14:05.9276544Z with:
+2025-02-17T01:14:05.9276716Z   name: PDF
+2025-02-17T01:14:05.9276894Z   path: datasheet.pdf
+2025-02-17T01:14:05.9277104Z   if-no-files-found: warn
+2025-02-17T01:14:05.9277317Z   compression-level: 6
+2025-02-17T01:14:05.9277510Z   overwrite: false
+2025-02-17T01:14:05.9277709Z   include-hidden-files: false
+2025-02-17T01:14:05.9277940Z env:
+2025-02-17T01:14:05.9278178Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:14:05.9278584Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-17T01:14:05.9278971Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:14:05.9279319Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:14:05.9279668Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-17T01:14:05.9280022Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-17T01:14:05.9280328Z ##[endgroup]
+2025-02-17T01:14:06.1464085Z ##[warning]No files were found with the provided path: datasheet.pdf. No artifacts will be uploaded.
