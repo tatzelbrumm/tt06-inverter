@@ -1,0 +1,683 @@
+﻿2025-02-16T22:08:45.5906751Z Current runner version: '2.322.0'
+2025-02-16T22:08:45.5934050Z ##[group]Operating System
+2025-02-16T22:08:45.5934846Z Ubuntu
+2025-02-16T22:08:45.5935346Z 24.04.1
+2025-02-16T22:08:45.5935978Z LTS
+2025-02-16T22:08:45.5936507Z ##[endgroup]
+2025-02-16T22:08:45.5937122Z ##[group]Runner Image
+2025-02-16T22:08:45.5937694Z Image: ubuntu-24.04
+2025-02-16T22:08:45.5938227Z Version: 20250209.1.0
+2025-02-16T22:08:45.5939308Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250209.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-02-16T22:08:45.5940874Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250209.1
+2025-02-16T22:08:45.5941821Z ##[endgroup]
+2025-02-16T22:08:45.5942434Z ##[group]Runner Image Provisioner
+2025-02-16T22:08:45.5943042Z 2.0.422.1
+2025-02-16T22:08:45.5943549Z ##[endgroup]
+2025-02-16T22:08:45.5945857Z ##[group]GITHUB_TOKEN Permissions
+2025-02-16T22:08:45.5948135Z Actions: write
+2025-02-16T22:08:45.5948945Z Attestations: write
+2025-02-16T22:08:45.5949806Z Checks: write
+2025-02-16T22:08:45.5950436Z Contents: write
+2025-02-16T22:08:45.5950953Z Deployments: write
+2025-02-16T22:08:45.5951511Z Discussions: write
+2025-02-16T22:08:45.5952114Z Issues: write
+2025-02-16T22:08:45.5952660Z Metadata: read
+2025-02-16T22:08:45.5953508Z Packages: write
+2025-02-16T22:08:45.5954229Z Pages: write
+2025-02-16T22:08:45.5954755Z PullRequests: write
+2025-02-16T22:08:45.5955436Z RepositoryProjects: write
+2025-02-16T22:08:45.5956097Z SecurityEvents: write
+2025-02-16T22:08:45.5956866Z Statuses: write
+2025-02-16T22:08:45.5957529Z ##[endgroup]
+2025-02-16T22:08:45.5961307Z Secret source: Actions
+2025-02-16T22:08:45.5962267Z Prepare workflow directory
+2025-02-16T22:08:45.6287373Z Prepare all required actions
+2025-02-16T22:08:45.6324645Z Getting action download info
+2025-02-16T22:08:45.8051610Z Download action repository 'actions/checkout@v4' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2025-02-16T22:08:45.8830546Z Download action repository 'mikefarah/yq@v4' (SHA:8bf425b4d1344db7cd469a8d10a390876e0c77fd)
+2025-02-16T22:08:46.1811802Z Download action repository 'TinyTapeout/tt-gds-action@tt06' (SHA:da8d213d49d19b34416cbf994fc6452e2520a81e)
+2025-02-16T22:08:46.4971293Z Getting action download info
+2025-02-16T22:08:46.6294503Z Download action repository 'actions/upload-artifact@v4' (SHA:65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08)
+2025-02-16T22:08:46.7989937Z Download action repository 'awalsh128/cache-apt-pkgs-action@latest' (SHA:5902b33ae29014e6ca012c5d8025d4346556bd40)
+2025-02-16T22:08:47.1057607Z Download action repository 'actions/setup-python@v5' (SHA:42375524e23c412d93fb67b49958b491fce71c38)
+2025-02-16T22:08:47.3674338Z Getting action download info
+2025-02-16T22:08:47.4641572Z Download action repository 'actions/cache@v4' (SHA:1bd1e32a3bdc45362d1e726936510720a7c30a57)
+2025-02-16T22:08:47.6475916Z Complete job name: gds
+2025-02-16T22:08:47.6996445Z ##[group]Pull down action image 'mikefarah/yq:4-githubaction'
+2025-02-16T22:08:47.7205267Z ##[command]/usr/bin/docker pull mikefarah/yq:4-githubaction
+2025-02-16T22:08:48.1108210Z 4-githubaction: Pulling from mikefarah/yq
+2025-02-16T22:08:48.1894723Z 1f3e46996e29: Pulling fs layer
+2025-02-16T22:08:48.1896276Z 67048b9be8fc: Pulling fs layer
+2025-02-16T22:08:48.1898476Z e41e2357b13d: Pulling fs layer
+2025-02-16T22:08:48.1899767Z 947107566089: Pulling fs layer
+2025-02-16T22:08:48.1900773Z 3be10397fbe8: Pulling fs layer
+2025-02-16T22:08:48.1901674Z f95ba98632ce: Pulling fs layer
+2025-02-16T22:08:48.1902563Z 3be10397fbe8: Waiting
+2025-02-16T22:08:48.1903368Z f95ba98632ce: Waiting
+2025-02-16T22:08:48.1904159Z 947107566089: Waiting
+2025-02-16T22:08:48.2734713Z e41e2357b13d: Verifying Checksum
+2025-02-16T22:08:48.2736671Z e41e2357b13d: Download complete
+2025-02-16T22:08:48.3247771Z 1f3e46996e29: Verifying Checksum
+2025-02-16T22:08:48.3250114Z 1f3e46996e29: Download complete
+2025-02-16T22:08:48.3471148Z 67048b9be8fc: Verifying Checksum
+2025-02-16T22:08:48.3472989Z 67048b9be8fc: Download complete
+2025-02-16T22:08:48.3665721Z 947107566089: Verifying Checksum
+2025-02-16T22:08:48.3667428Z 947107566089: Download complete
+2025-02-16T22:08:48.4001604Z 3be10397fbe8: Verifying Checksum
+2025-02-16T22:08:48.4003213Z 3be10397fbe8: Download complete
+2025-02-16T22:08:48.4312529Z f95ba98632ce: Verifying Checksum
+2025-02-16T22:08:48.4314279Z f95ba98632ce: Download complete
+2025-02-16T22:08:48.4336349Z 1f3e46996e29: Pull complete
+2025-02-16T22:08:48.5304591Z 67048b9be8fc: Pull complete
+2025-02-16T22:08:48.5431622Z e41e2357b13d: Pull complete
+2025-02-16T22:08:48.5579113Z 947107566089: Pull complete
+2025-02-16T22:08:48.5688208Z 3be10397fbe8: Pull complete
+2025-02-16T22:08:48.5808817Z f95ba98632ce: Pull complete
+2025-02-16T22:08:48.5865856Z Digest: sha256:2ca9d74f8d4dedcc4498726e9a471a9f4288efb0ff3abf4034a8214baf074e52
+2025-02-16T22:08:48.5878695Z Status: Downloaded newer image for mikefarah/yq:4-githubaction
+2025-02-16T22:08:48.5889044Z docker.io/mikefarah/yq:4-githubaction
+2025-02-16T22:08:48.5910630Z ##[endgroup]
+2025-02-16T22:08:48.6273446Z ##[group]Run actions/checkout@v4
+2025-02-16T22:08:48.6274701Z with:
+2025-02-16T22:08:48.6275423Z   submodules: recursive
+2025-02-16T22:08:48.6276283Z   repository: tatzelbrumm/tt06-inverter
+2025-02-16T22:08:48.6277544Z   token: ***
+2025-02-16T22:08:48.6278271Z   ssh-strict: true
+2025-02-16T22:08:48.6279018Z   ssh-user: git
+2025-02-16T22:08:48.6279944Z   persist-credentials: true
+2025-02-16T22:08:48.6280764Z   clean: true
+2025-02-16T22:08:48.6281551Z   sparse-checkout-cone-mode: true
+2025-02-16T22:08:48.6282425Z   fetch-depth: 1
+2025-02-16T22:08:48.6283172Z   fetch-tags: false
+2025-02-16T22:08:48.6283919Z   show-progress: true
+2025-02-16T22:08:48.6284703Z   lfs: false
+2025-02-16T22:08:48.6285448Z   set-safe-directory: true
+2025-02-16T22:08:48.6286624Z ##[endgroup]
+2025-02-16T22:08:48.8137490Z Syncing repository: tatzelbrumm/tt06-inverter
+2025-02-16T22:08:48.8140253Z ##[group]Getting Git version info
+2025-02-16T22:08:48.8141592Z Working directory is '/home/runner/work/tt06-inverter/tt06-inverter'
+2025-02-16T22:08:48.8143435Z [command]/usr/bin/git version
+2025-02-16T22:08:48.8193975Z git version 2.48.1
+2025-02-16T22:08:48.8222878Z ##[endgroup]
+2025-02-16T22:08:48.8238530Z Temporarily overriding HOME='/home/runner/work/_temp/fc0fb60d-d714-494e-9023-5c16e3338a5f' before making global git config changes
+2025-02-16T22:08:48.8241430Z Adding repository directory to the temporary git global config as a safe directory
+2025-02-16T22:08:48.8251740Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tt06-inverter/tt06-inverter
+2025-02-16T22:08:48.8288109Z Deleting the contents of '/home/runner/work/tt06-inverter/tt06-inverter'
+2025-02-16T22:08:48.8292315Z ##[group]Initializing the repository
+2025-02-16T22:08:48.8296106Z [command]/usr/bin/git init /home/runner/work/tt06-inverter/tt06-inverter
+2025-02-16T22:08:48.8356319Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-02-16T22:08:48.8358129Z hint: is subject to change. To configure the initial branch name to use in all
+2025-02-16T22:08:48.8359859Z hint: of your new repositories, which will suppress this warning, call:
+2025-02-16T22:08:48.8361779Z hint:
+2025-02-16T22:08:48.8363233Z hint: 	git config --global init.defaultBranch <name>
+2025-02-16T22:08:48.8364930Z hint:
+2025-02-16T22:08:48.8366648Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-02-16T22:08:48.8369196Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-02-16T22:08:48.8371396Z hint:
+2025-02-16T22:08:48.8372682Z hint: 	git branch -m <name>
+2025-02-16T22:08:48.8374883Z Initialized empty Git repository in /home/runner/work/tt06-inverter/tt06-inverter/.git/
+2025-02-16T22:08:48.8379722Z [command]/usr/bin/git remote add origin https://github.com/tatzelbrumm/tt06-inverter
+2025-02-16T22:08:48.8410470Z ##[endgroup]
+2025-02-16T22:08:48.8412712Z ##[group]Disabling automatic garbage collection
+2025-02-16T22:08:48.8414650Z [command]/usr/bin/git config --local gc.auto 0
+2025-02-16T22:08:48.8444968Z ##[endgroup]
+2025-02-16T22:08:48.8447132Z ##[group]Setting up auth
+2025-02-16T22:08:48.8453007Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-02-16T22:08:48.8485778Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-02-16T22:08:48.8781889Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-02-16T22:08:48.8812525Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-02-16T22:08:48.9045417Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-02-16T22:08:48.9083649Z ##[endgroup]
+2025-02-16T22:08:48.9085299Z ##[group]Fetching the repository
+2025-02-16T22:08:48.9093833Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4efe453fc1028e0a57fe4273216b5590e355f0eb:refs/remotes/origin/main
+2025-02-16T22:08:49.2761418Z From https://github.com/tatzelbrumm/tt06-inverter
+2025-02-16T22:08:49.2762289Z  * [new ref]         4efe453fc1028e0a57fe4273216b5590e355f0eb -> origin/main
+2025-02-16T22:08:49.2793222Z ##[endgroup]
+2025-02-16T22:08:49.2793983Z ##[group]Determining the checkout info
+2025-02-16T22:08:49.2796415Z ##[endgroup]
+2025-02-16T22:08:49.2801941Z [command]/usr/bin/git sparse-checkout disable
+2025-02-16T22:08:49.2841174Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-02-16T22:08:49.2868670Z ##[group]Checking out the ref
+2025-02-16T22:08:49.2873124Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-02-16T22:08:49.2953871Z Switched to a new branch 'main'
+2025-02-16T22:08:49.2956706Z branch 'main' set up to track 'origin/main'.
+2025-02-16T22:08:49.2962852Z ##[endgroup]
+2025-02-16T22:08:49.2963665Z ##[group]Setting up auth for fetching submodules
+2025-02-16T22:08:49.2968882Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-02-16T22:08:49.3007500Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-02-16T22:08:49.3038702Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-02-16T22:08:49.3070373Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-1518649@github.com:
+2025-02-16T22:08:49.3096436Z ##[endgroup]
+2025-02-16T22:08:49.3097173Z ##[group]Fetching submodules
+2025-02-16T22:08:49.3101419Z [command]/usr/bin/git submodule sync --recursive
+2025-02-16T22:08:49.3374738Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-02-16T22:08:49.3619896Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-02-16T22:08:49.3850639Z ##[endgroup]
+2025-02-16T22:08:49.3851438Z ##[group]Persisting credentials for submodules
+2025-02-16T22:08:49.3856677Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-02-16T22:08:49.4091805Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-02-16T22:08:49.4322770Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-02-16T22:08:49.4558947Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-1518649@github.com:'
+2025-02-16T22:08:49.4786521Z ##[endgroup]
+2025-02-16T22:08:49.4823554Z [command]/usr/bin/git log -1 --format=%H
+2025-02-16T22:08:49.4845805Z 4efe453fc1028e0a57fe4273216b5590e355f0eb
+2025-02-16T22:08:49.5017264Z ##[group]Run mikefarah/yq@v4
+2025-02-16T22:08:49.5017595Z with:
+2025-02-16T22:08:49.5017948Z   cmd: echo TOP_MODULE=`yq '.project.top_module' info.yaml` > $GITHUB_OUTPUT
+2025-02-16T22:08:49.5018356Z ##[endgroup]
+2025-02-16T22:08:49.5117648Z ##[command]/usr/bin/docker run --name mikefarahyq4githubaction_54ba1b --label 13c326 --workdir /github/workspace --rm -e "INPUT_CMD" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/tt06-inverter/tt06-inverter":"/github/workspace" mikefarah/yq:4-githubaction  "echo TOP_MODULE=`yq '.project.top_module' info.yaml` > $GITHUB_OUTPUT"
+2025-02-16T22:08:49.8445371Z ##[group]Run TinyTapeout/tt-gds-action/custom_gds@tt06
+2025-02-16T22:08:49.8445780Z with:
+2025-02-16T22:08:49.8446026Z   top_module: tt_um_mattvenn_inverter
+2025-02-16T22:08:49.8446356Z   gds_path: gds/tt_um_mattvenn_inverter.gds
+2025-02-16T22:08:49.8446692Z   lef_path: lef/tt_um_mattvenn_inverter.lef
+2025-02-16T22:08:49.8447017Z   verilog_path: src/project.v
+2025-02-16T22:08:49.8447288Z ##[endgroup]
+2025-02-16T22:08:49.8537159Z ##[group]Run mkdir -p tt_submission
+2025-02-16T22:08:49.8537617Z [36;1mmkdir -p tt_submission[0m
+2025-02-16T22:08:49.8538046Z [36;1mjq -n \[0m
+2025-02-16T22:08:49.8538328Z [36;1m  --arg app "custom_gds action" \[0m
+2025-02-16T22:08:49.8538875Z [36;1m  --arg repo "https://github.com/tatzelbrumm/tt06-inverter" \[0m
+2025-02-16T22:08:49.8539689Z [36;1m  --arg commit "4efe453fc1028e0a57fe4273216b5590e355f0eb" \[0m
+2025-02-16T22:08:49.8540267Z [36;1m  --arg workflow_url "https://github.com/tatzelbrumm/tt06-inverter/actions/runs/13359245558" \[0m
+2025-02-16T22:08:49.8541022Z [36;1m  '{app: $app, repo: $repo, commit: $commit, workflow_url: $workflow_url}' \[0m
+2025-02-16T22:08:49.8541551Z [36;1m  > tt_submission/commit_id.json[0m
+2025-02-16T22:08:49.8604302Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-16T22:08:49.8604709Z ##[endgroup]
+2025-02-16T22:08:49.8806533Z ##[group]Run cp gds/tt_um_mattvenn_inverter.gds tt_submission/tt_um_mattvenn_inverter.gds
+2025-02-16T22:08:49.8807142Z [36;1mcp gds/tt_um_mattvenn_inverter.gds tt_submission/tt_um_mattvenn_inverter.gds[0m
+2025-02-16T22:08:49.8807710Z [36;1mcp lef/tt_um_mattvenn_inverter.lef tt_submission/tt_um_mattvenn_inverter.lef[0m
+2025-02-16T22:08:49.8808117Z [36;1m[0m
+2025-02-16T22:08:49.8808383Z [36;1mtouch tt_submission/tt_um_mattvenn_inverter.v[0m
+2025-02-16T22:08:49.8808725Z [36;1mif [ -n "src/project.v" ]; then[0m
+2025-02-16T22:08:49.8809110Z [36;1m  cp src/project.v tt_submission/tt_um_mattvenn_inverter.v[0m
+2025-02-16T22:08:49.8809699Z [36;1mfi[0m
+2025-02-16T22:08:49.8863342Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-16T22:08:49.8863913Z ##[endgroup]
+2025-02-16T22:08:49.9047923Z ##[group]Run actions/upload-artifact@v4
+2025-02-16T22:08:49.9048241Z with:
+2025-02-16T22:08:49.9048454Z   name: tt_submission
+2025-02-16T22:08:49.9048722Z   path: LICENSE
+docs/*
+tt_submission/*
+
+2025-02-16T22:08:49.9049018Z   if-no-files-found: warn
+2025-02-16T22:08:49.9049280Z   compression-level: 6
+2025-02-16T22:08:49.9049772Z   overwrite: false
+2025-02-16T22:08:49.9050027Z   include-hidden-files: false
+2025-02-16T22:08:49.9050298Z ##[endgroup]
+2025-02-16T22:08:50.1239303Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2025-02-16T22:08:50.1243699Z The least common ancestor is /home/runner/work/tt06-inverter/tt06-inverter. This will be the root directory of the artifact
+2025-02-16T22:08:50.1244683Z With the provided path, there will be 7 files uploaded
+2025-02-16T22:08:50.1248577Z Artifact name is valid!
+2025-02-16T22:08:50.1249884Z Root directory input is valid!
+2025-02-16T22:08:50.2336038Z Beginning upload of artifact content to blob storage
+2025-02-16T22:08:50.3514251Z Uploaded bytes 220315
+2025-02-16T22:08:50.3744373Z Finished uploading artifact content to blob storage!
+2025-02-16T22:08:50.3747365Z SHA256 hash of uploaded artifact zip is 57fdca70f2dc96657c596c39e0b5dfbd5ebbbd9429cc736ff44e160fa15af685
+2025-02-16T22:08:50.3749603Z Finalizing artifact upload
+2025-02-16T22:08:50.4442201Z Artifact tt_submission.zip successfully finalized. Artifact ID 2600050804
+2025-02-16T22:08:50.4443335Z Artifact tt_submission has been successfully uploaded! Final size is 220315 bytes. Artifact ID is 2600050804
+2025-02-16T22:08:50.4450526Z Artifact download URL: https://github.com/tatzelbrumm/tt06-inverter/actions/runs/13359245558/artifacts/2600050804
+2025-02-16T22:08:50.4641382Z ##[group]Run awalsh128/cache-apt-pkgs-action@latest
+2025-02-16T22:08:50.4641711Z with:
+2025-02-16T22:08:50.4641906Z   packages: librsvg2-bin pngquant
+2025-02-16T22:08:50.4642386Z   version: tt06
+2025-02-16T22:08:50.4642609Z   execute_install_scripts: false
+2025-02-16T22:08:50.4642849Z   debug: false
+2025-02-16T22:08:50.4643060Z ##[endgroup]
+2025-02-16T22:08:50.4668318Z ##[group]Run ${GITHUB_ACTION_PATH}/pre_cache_action.sh \
+2025-02-16T22:08:50.4668718Z [36;1m${GITHUB_ACTION_PATH}/pre_cache_action.sh \[0m
+2025-02-16T22:08:50.4669029Z [36;1m  ~/cache-apt-pkgs \[0m
+2025-02-16T22:08:50.4669262Z [36;1m  "$VERSION" \[0m
+2025-02-16T22:08:50.4669783Z [36;1m  "$EXEC_INSTALL_SCRIPTS" \[0m
+2025-02-16T22:08:50.4670046Z [36;1m  "$DEBUG" \[0m
+2025-02-16T22:08:50.4670249Z [36;1m  "$PACKAGES"[0m
+2025-02-16T22:08:50.4670572Z [36;1mecho "CACHE_KEY=$(cat ~/cache-apt-pkgs/cache_key.md5)" >> $GITHUB_ENV[0m
+2025-02-16T22:08:50.4725947Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-16T22:08:50.4726286Z env:
+2025-02-16T22:08:50.4726465Z   VERSION: tt06
+2025-02-16T22:08:50.4726671Z   EXEC_INSTALL_SCRIPTS: false
+2025-02-16T22:08:50.4726895Z   DEBUG: false
+2025-02-16T22:08:50.4727125Z   PACKAGES: librsvg2-bin pngquant
+2025-02-16T22:08:50.4727370Z ##[endgroup]
+2025-02-16T22:08:50.4858741Z 22:08:50.485 Normalizing package list...
+2025-02-16T22:08:50.8360692Z 22:08:50.835 done
+2025-02-16T22:08:50.8390488Z 22:08:50.838 Validating action arguments (version='tt06', packages='librsvg2-bin=2.58.0+dfsg-1build1 pngquant=2.18.0-1build2')...
+2025-02-16T22:08:50.8418862Z 22:08:50.841 done
+2025-02-16T22:08:50.8419166Z 
+2025-02-16T22:08:50.8432388Z 22:08:50.842 Creating cache key...
+2025-02-16T22:08:50.8446280Z 22:08:50.844 - Value to hash is 'librsvg2-bin=2.58.0+dfsg-1build1 pngquant=2.18.0-1build2 @ tt06 3'.
+2025-02-16T22:08:50.8494356Z 22:08:50.849 - Value hashed as '66809f1aaab76633238448ba654b76a9'.
+2025-02-16T22:08:50.8507299Z 22:08:50.850 done
+2025-02-16T22:08:50.8522038Z 22:08:50.851 Hash value written to /home/runner/cache-apt-pkgs/cache_key.md5
+2025-02-16T22:08:50.8585237Z ##[group]Run actions/cache/restore@v4
+2025-02-16T22:08:50.8585495Z with:
+2025-02-16T22:08:50.8585699Z   path: ~/cache-apt-pkgs
+2025-02-16T22:08:50.8585965Z   key: cache-apt-pkgs_66809f1aaab76633238448ba654b76a9
+2025-02-16T22:08:50.8586496Z   enableCrossOsArchive: false
+2025-02-16T22:08:50.8586740Z   fail-on-cache-miss: false
+2025-02-16T22:08:50.8586960Z   lookup-only: false
+2025-02-16T22:08:50.8587155Z env:
+2025-02-16T22:08:50.8587343Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:08:50.8587594Z ##[endgroup]
+2025-02-16T22:08:51.0855305Z ##[warning]Cache not found for keys: cache-apt-pkgs_66809f1aaab76633238448ba654b76a9
+2025-02-16T22:08:51.0856000Z Cache not found for input keys: cache-apt-pkgs_66809f1aaab76633238448ba654b76a9
+2025-02-16T22:08:51.0903892Z ##[group]Run ${GITHUB_ACTION_PATH}/post_cache_action.sh \
+2025-02-16T22:08:51.0904280Z [36;1m${GITHUB_ACTION_PATH}/post_cache_action.sh \[0m
+2025-02-16T22:08:51.0904583Z [36;1m  ~/cache-apt-pkgs \[0m
+2025-02-16T22:08:51.0904805Z [36;1m  / \[0m
+2025-02-16T22:08:51.0905005Z [36;1m  "$CACHE_HIT" \[0m
+2025-02-16T22:08:51.0905248Z [36;1m  "$EXEC_INSTALL_SCRIPTS" \[0m
+2025-02-16T22:08:51.0905493Z [36;1m  "$DEBUG" \[0m
+2025-02-16T22:08:51.0905703Z [36;1m  "$PACKAGES"[0m
+2025-02-16T22:08:51.0906166Z [36;1mfunction create_list { local list=$(cat ~/cache-apt-pkgs/manifest_${1}.log | tr '\n' ','); echo ${list:0:-1}; };[0m
+2025-02-16T22:08:51.0906758Z [36;1mecho "package-version-list=$(create_list main)" >> $GITHUB_OUTPUT[0m
+2025-02-16T22:08:51.0907241Z [36;1mecho "all-package-version-list=$(create_list all)" >> $GITHUB_OUTPUT[0m
+2025-02-16T22:08:51.0962809Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-16T22:08:51.0963147Z env:
+2025-02-16T22:08:51.0963360Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:08:51.0963628Z   CACHE_HIT: 
+2025-02-16T22:08:51.0963822Z   EXEC_INSTALL_SCRIPTS: false
+2025-02-16T22:08:51.0964043Z   DEBUG: false
+2025-02-16T22:08:51.0964248Z   PACKAGES: librsvg2-bin pngquant
+2025-02-16T22:08:51.0964485Z ##[endgroup]
+2025-02-16T22:08:51.1139579Z 22:08:51.113 Installing apt-fast for optimized installs...
+2025-02-16T22:08:51.3491860Z --2025-02-16 22:08:51--  https://raw.githubusercontent.com/ilikenwf/apt-fast/master/apt-fast
+2025-02-16T22:08:51.3734475Z Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.110.133, 185.199.108.133, ...
+2025-02-16T22:08:51.3787245Z Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+2025-02-16T22:08:51.3994197Z HTTP request sent, awaiting response... 200 OK
+2025-02-16T22:08:51.3994766Z Length: 23905 (23K) [text/plain]
+2025-02-16T22:08:51.3995751Z Saving to: ‘/usr/local/bin/apt-fast’
+2025-02-16T22:08:51.3995996Z 
+2025-02-16T22:08:51.4003875Z      0K .......... .......... ...                             100% 23.5M=0.001s
+2025-02-16T22:08:51.4004249Z 
+2025-02-16T22:08:51.4004611Z 2025-02-16 22:08:51 (23.5 MB/s) - ‘/usr/local/bin/apt-fast’ saved [23905/23905]
+2025-02-16T22:08:51.4004909Z 
+2025-02-16T22:08:51.4174940Z --2025-02-16 22:08:51--  https://raw.githubusercontent.com/ilikenwf/apt-fast/master/apt-fast.conf
+2025-02-16T22:08:51.4414130Z Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.108.133, 185.199.110.133, ...
+2025-02-16T22:08:51.4467392Z Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+2025-02-16T22:08:51.4936870Z HTTP request sent, awaiting response... 200 OK
+2025-02-16T22:08:51.4937517Z Length: 5052 (4.9K) [text/plain]
+2025-02-16T22:08:51.4938335Z Saving to: ‘/etc/apt-fast.conf’
+2025-02-16T22:08:51.4938764Z 
+2025-02-16T22:08:51.4938957Z      0K ....                                                  100% 37.3M=0s
+2025-02-16T22:08:51.4939229Z 
+2025-02-16T22:08:51.4939846Z 2025-02-16 22:08:51 (37.3 MB/s) - ‘/etc/apt-fast.conf’ saved [5052/5052]
+2025-02-16T22:08:51.4940183Z 
+2025-02-16T22:08:51.4976138Z 22:08:51.497 done
+2025-02-16T22:08:51.4976376Z 
+2025-02-16T22:08:51.4989651Z 22:08:51.498 Updating APT package list...
+2025-02-16T22:08:56.4294499Z 22:08:56.429 done
+2025-02-16T22:08:56.4294813Z 
+2025-02-16T22:08:56.6284238Z 22:08:56.628 Clean installing and caching 2 package(s).
+2025-02-16T22:08:56.6285177Z 
+2025-02-16T22:08:56.6296841Z 22:08:56.629 Package list:
+2025-02-16T22:08:56.6310380Z 22:08:56.630 - librsvg2-bin=2.58.0+dfsg-1build1
+2025-02-16T22:08:56.6323269Z 22:08:56.632 - pngquant=2.18.0-1build2
+2025-02-16T22:08:56.6336433Z 22:08:56.633 Writing main packages manifest to /home/runner/cache-apt-pkgs/manifest_main.log...
+2025-02-16T22:08:56.6370143Z 22:08:56.636 done
+2025-02-16T22:08:56.6370368Z 
+2025-02-16T22:08:56.6383427Z 22:08:56.638 Clean installing 2 packages...
+2025-02-16T22:09:06.7582710Z 
+2025-02-16T22:09:06.7583354Z Running kernel seems to be up-to-date.
+2025-02-16T22:09:06.7583800Z 
+2025-02-16T22:09:06.7583988Z No services need to be restarted.
+2025-02-16T22:09:06.7584213Z 
+2025-02-16T22:09:06.7584336Z No containers need to be restarted.
+2025-02-16T22:09:06.7584563Z 
+2025-02-16T22:09:06.7584705Z No user sessions are running outdated binaries.
+2025-02-16T22:09:06.7584984Z 
+2025-02-16T22:09:06.7585221Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2025-02-16T22:09:07.6082719Z 22:09:07.607 done
+2025-02-16T22:09:07.6095323Z 22:09:07.609 Installation log written to /home/runner/cache-apt-pkgs/install.log
+2025-02-16T22:09:07.6095677Z 
+2025-02-16T22:09:07.6138260Z 22:09:07.613 Installed package list:
+2025-02-16T22:09:07.6177707Z 22:09:07.617 - libimagequant0 (2.18.0-1build1)
+2025-02-16T22:09:07.6216736Z 22:09:07.621 - librsvg2-2 (2.58.0+dfsg-1build1)
+2025-02-16T22:09:07.6253695Z 22:09:07.625 - librsvg2-bin (2.58.0+dfsg-1build1)
+2025-02-16T22:09:07.6290599Z 22:09:07.628 - librsvg2-common (2.58.0+dfsg-1build1)
+2025-02-16T22:09:07.6327496Z 22:09:07.632 - pngquant (2.18.0-1build2)
+2025-02-16T22:09:07.6327868Z 
+2025-02-16T22:09:07.6357688Z 22:09:07.635 Caching 5 installed packages...
+2025-02-16T22:09:07.6377654Z 22:09:07.637   * Caching libimagequant0 to /home/runner/cache-apt-pkgs/libimagequant0=2.18.0-1build1.tar...
+2025-02-16T22:09:07.6643729Z 22:09:07.664     done (compressed size 80K).
+2025-02-16T22:09:07.6661325Z 22:09:07.665   * Caching librsvg2-2 to /home/runner/cache-apt-pkgs/librsvg2-2=2.58.0+dfsg-1build1.tar...
+2025-02-16T22:09:07.6927578Z 22:09:07.692     done (compressed size 6.6M).
+2025-02-16T22:09:07.6945398Z 22:09:07.694   * Caching librsvg2-bin to /home/runner/cache-apt-pkgs/librsvg2-bin=2.58.0+dfsg-1build1.tar...
+2025-02-16T22:09:07.7212898Z 22:09:07.720     done (compressed size 7.2M).
+2025-02-16T22:09:07.7231003Z 22:09:07.722   * Caching librsvg2-common to /home/runner/cache-apt-pkgs/librsvg2-common=2.58.0+dfsg-1build1.tar...
+2025-02-16T22:09:07.7440965Z 22:09:07.743     done (compressed size 40K).
+2025-02-16T22:09:07.7459151Z 22:09:07.745   * Caching pngquant to /home/runner/cache-apt-pkgs/pngquant=2.18.0-1build2.tar...
+2025-02-16T22:09:07.7670600Z 22:09:07.766     done (compressed size 60K).
+2025-02-16T22:09:07.7714169Z 22:09:07.771 done (total cache size 14M)
+2025-02-16T22:09:07.7714521Z 
+2025-02-16T22:09:07.7727717Z 22:09:07.772 Writing all packages manifest to /home/runner/cache-apt-pkgs/manifest_all.log...
+2025-02-16T22:09:07.7762489Z 22:09:07.776 done
+2025-02-16T22:09:07.7765946Z 
+2025-02-16T22:09:07.7867326Z ##[group]Run actions/cache/save@v4
+2025-02-16T22:09:07.7867564Z with:
+2025-02-16T22:09:07.7867743Z   path: ~/cache-apt-pkgs
+2025-02-16T22:09:07.7868008Z   key: cache-apt-pkgs_66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:07.7868300Z   enableCrossOsArchive: false
+2025-02-16T22:09:07.7868514Z env:
+2025-02-16T22:09:07.7868698Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:07.7868937Z ##[endgroup]
+2025-02-16T22:09:07.9280270Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/tt06-inverter/tt06-inverter --files-from manifest.txt --use-compress-program zstdmt
+2025-02-16T22:09:08.4098921Z Sent 5486984 of 5486984 (100.0%), 15.0 MBs/sec
+2025-02-16T22:09:08.4561608Z Cache saved with key: cache-apt-pkgs_66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:08.4634666Z ##[group]Run rm -rf ~/cache-apt-pkgs
+2025-02-16T22:09:08.4635738Z [36;1mrm -rf ~/cache-apt-pkgs[0m
+2025-02-16T22:09:08.4707790Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-16T22:09:08.4708320Z env:
+2025-02-16T22:09:08.4708655Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:08.4709100Z ##[endgroup]
+2025-02-16T22:09:08.4901695Z ##[group]Run actions/checkout@v4
+2025-02-16T22:09:08.4901919Z with:
+2025-02-16T22:09:08.4902116Z   repository: tinytapeout/tt-support-tools
+2025-02-16T22:09:08.4902369Z   path: tt
+2025-02-16T22:09:08.4902535Z   ref: tt06
+2025-02-16T22:09:08.4902811Z   token: ***
+2025-02-16T22:09:08.4902992Z   ssh-strict: true
+2025-02-16T22:09:08.4903176Z   ssh-user: git
+2025-02-16T22:09:08.4903367Z   persist-credentials: true
+2025-02-16T22:09:08.4903583Z   clean: true
+2025-02-16T22:09:08.4903770Z   sparse-checkout-cone-mode: true
+2025-02-16T22:09:08.4903997Z   fetch-depth: 1
+2025-02-16T22:09:08.4904176Z   fetch-tags: false
+2025-02-16T22:09:08.4904366Z   show-progress: true
+2025-02-16T22:09:08.4904571Z   lfs: false
+2025-02-16T22:09:08.4904736Z   submodules: false
+2025-02-16T22:09:08.4904953Z   set-safe-directory: true
+2025-02-16T22:09:08.4905156Z env:
+2025-02-16T22:09:08.4905339Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:08.4905584Z ##[endgroup]
+2025-02-16T22:09:08.5824863Z Syncing repository: tinytapeout/tt-support-tools
+2025-02-16T22:09:08.5832123Z ##[group]Getting Git version info
+2025-02-16T22:09:08.5833014Z Working directory is '/home/runner/work/tt06-inverter/tt06-inverter/tt'
+2025-02-16T22:09:08.5876383Z [command]/usr/bin/git version
+2025-02-16T22:09:08.5913261Z git version 2.48.1
+2025-02-16T22:09:08.5938901Z ##[endgroup]
+2025-02-16T22:09:08.5952371Z Temporarily overriding HOME='/home/runner/work/_temp/75d4c5e7-6c9f-4bc1-b925-5b4db1cc886f' before making global git config changes
+2025-02-16T22:09:08.5953093Z Adding repository directory to the temporary git global config as a safe directory
+2025-02-16T22:09:08.5965199Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tt06-inverter/tt06-inverter/tt
+2025-02-16T22:09:08.5996845Z ##[group]Initializing the repository
+2025-02-16T22:09:08.6002318Z [command]/usr/bin/git init /home/runner/work/tt06-inverter/tt06-inverter/tt
+2025-02-16T22:09:08.6038456Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-02-16T22:09:08.6039348Z hint: is subject to change. To configure the initial branch name to use in all
+2025-02-16T22:09:08.6040533Z hint: of your new repositories, which will suppress this warning, call:
+2025-02-16T22:09:08.6041002Z hint:
+2025-02-16T22:09:08.6041252Z hint: 	git config --global init.defaultBranch <name>
+2025-02-16T22:09:08.6041744Z hint:
+2025-02-16T22:09:08.6042217Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-02-16T22:09:08.6043024Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-02-16T22:09:08.6043626Z hint:
+2025-02-16T22:09:08.6043958Z hint: 	git branch -m <name>
+2025-02-16T22:09:08.6044658Z Initialized empty Git repository in /home/runner/work/tt06-inverter/tt06-inverter/tt/.git/
+2025-02-16T22:09:08.6052328Z [command]/usr/bin/git remote add origin https://github.com/tinytapeout/tt-support-tools
+2025-02-16T22:09:08.6082938Z ##[endgroup]
+2025-02-16T22:09:08.6083544Z ##[group]Disabling automatic garbage collection
+2025-02-16T22:09:08.6088350Z [command]/usr/bin/git config --local gc.auto 0
+2025-02-16T22:09:08.6116862Z ##[endgroup]
+2025-02-16T22:09:08.6117410Z ##[group]Setting up auth
+2025-02-16T22:09:08.6124208Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-02-16T22:09:08.6154159Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-02-16T22:09:08.6381420Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-02-16T22:09:08.6411380Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-02-16T22:09:08.6644638Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-02-16T22:09:08.6684008Z ##[endgroup]
+2025-02-16T22:09:08.6684659Z ##[group]Fetching the repository
+2025-02-16T22:09:08.6693308Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/tt06*:refs/remotes/origin/tt06* +refs/tags/tt06*:refs/tags/tt06*
+2025-02-16T22:09:08.9783096Z From https://github.com/tinytapeout/tt-support-tools
+2025-02-16T22:09:08.9783783Z  * [new branch]      tt06                  -> origin/tt06
+2025-02-16T22:09:08.9784286Z  * [new branch]      tt06-staging          -> origin/tt06-staging
+2025-02-16T22:09:08.9784792Z  * [new branch]      tt06-xxl-experimental -> origin/tt06-xxl-experimental
+2025-02-16T22:09:08.9811481Z ##[endgroup]
+2025-02-16T22:09:08.9812463Z ##[group]Determining the checkout info
+2025-02-16T22:09:08.9818824Z [command]/usr/bin/git branch --list --remote origin/tt06
+2025-02-16T22:09:08.9842490Z   origin/tt06
+2025-02-16T22:09:08.9847323Z ##[endgroup]
+2025-02-16T22:09:08.9852325Z [command]/usr/bin/git sparse-checkout disable
+2025-02-16T22:09:08.9886265Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-02-16T22:09:08.9912992Z ##[group]Checking out the ref
+2025-02-16T22:09:08.9916757Z [command]/usr/bin/git checkout --progress --force -B tt06 refs/remotes/origin/tt06
+2025-02-16T22:09:09.0089671Z Switched to a new branch 'tt06'
+2025-02-16T22:09:09.0092507Z branch 'tt06' set up to track 'origin/tt06'.
+2025-02-16T22:09:09.0099325Z ##[endgroup]
+2025-02-16T22:09:09.0156128Z [command]/usr/bin/git log -1 --format=%H
+2025-02-16T22:09:09.0164150Z 2ca0809d9ed2c9be0d1040137fd56f8443ca3589
+2025-02-16T22:09:09.0278562Z ##[group]Run actions/setup-python@v5
+2025-02-16T22:09:09.0278980Z with:
+2025-02-16T22:09:09.0279158Z   python-version: 3.11
+2025-02-16T22:09:09.0279363Z   cache: pip
+2025-02-16T22:09:09.0279767Z   check-latest: false
+2025-02-16T22:09:09.0280064Z   token: ***
+2025-02-16T22:09:09.0280252Z   update-environment: true
+2025-02-16T22:09:09.0280478Z   allow-prereleases: false
+2025-02-16T22:09:09.0280678Z env:
+2025-02-16T22:09:09.0280869Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:09.0281117Z ##[endgroup]
+2025-02-16T22:09:09.1981563Z ##[group]Installed versions
+2025-02-16T22:09:09.2043019Z Successfully set up CPython (3.11.11)
+2025-02-16T22:09:09.2043690Z ##[endgroup]
+2025-02-16T22:09:09.2730445Z [command]/opt/hostedtoolcache/Python/3.11.11/x64/bin/pip cache dir
+2025-02-16T22:09:10.2341688Z /home/runner/.cache/pip
+2025-02-16T22:09:10.3351991Z ##[warning]Cache not found for keys: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip-b53d2406990fca66e4d9719ad3f30c32758897e746380b0fb3161134de927dbb, setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip
+2025-02-16T22:09:10.3353661Z pip cache is not found
+2025-02-16T22:09:10.3442952Z ##[group]Run pip install -r tt/requirements.txt
+2025-02-16T22:09:10.3443285Z [36;1mpip install -r tt/requirements.txt[0m
+2025-02-16T22:09:10.3503896Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-16T22:09:10.3504218Z env:
+2025-02-16T22:09:10.3504419Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:10.3504756Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:10.3505180Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-16T22:09:10.3505587Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:10.3505953Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:10.3506310Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:10.3506658Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-16T22:09:10.3506946Z ##[endgroup]
+2025-02-16T22:09:11.2716695Z Collecting appdirs==1.4.4 (from -r tt/requirements.txt (line 1))
+2025-02-16T22:09:11.3450426Z   Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+2025-02-16T22:09:11.3626489Z Collecting cairocffi==1.6.0 (from -r tt/requirements.txt (line 2))
+2025-02-16T22:09:11.3772649Z   Downloading cairocffi-1.6.0-py3-none-any.whl.metadata (3.3 kB)
+2025-02-16T22:09:11.3978708Z Collecting CairoSVG==2.7.0 (from -r tt/requirements.txt (line 3))
+2025-02-16T22:09:11.4113023Z   Downloading CairoSVG-2.7.0-py3-none-any.whl.metadata (2.7 kB)
+2025-02-16T22:09:11.4343113Z Collecting certifi==2023.5.7 (from -r tt/requirements.txt (line 4))
+2025-02-16T22:09:11.4478939Z   Downloading certifi-2023.5.7-py3-none-any.whl.metadata (2.2 kB)
+2025-02-16T22:09:11.5564864Z Collecting cffi==1.15.1 (from -r tt/requirements.txt (line 5))
+2025-02-16T22:09:11.5705200Z   Downloading cffi-1.15.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+2025-02-16T22:09:11.6240686Z Collecting charset-normalizer==3.1.0 (from -r tt/requirements.txt (line 6))
+2025-02-16T22:09:11.6379052Z   Downloading charset_normalizer-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (30 kB)
+2025-02-16T22:09:11.6603642Z Collecting chevron==0.14.0 (from -r tt/requirements.txt (line 7))
+2025-02-16T22:09:11.6733417Z   Downloading chevron-0.14.0-py3-none-any.whl.metadata (4.9 kB)
+2025-02-16T22:09:11.6933185Z Collecting click==8.1.3 (from -r tt/requirements.txt (line 8))
+2025-02-16T22:09:11.7058064Z   Downloading click-8.1.3-py3-none-any.whl.metadata (3.2 kB)
+2025-02-16T22:09:11.7217962Z Collecting cssselect2==0.7.0 (from -r tt/requirements.txt (line 9))
+2025-02-16T22:09:11.7383377Z   Downloading cssselect2-0.7.0-py3-none-any.whl.metadata (2.9 kB)
+2025-02-16T22:09:11.7544965Z Collecting defusedxml==0.7.1 (from -r tt/requirements.txt (line 10))
+2025-02-16T22:09:11.7670534Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2025-02-16T22:09:11.8174447Z Collecting gdstk==0.9.49 (from -r tt/requirements.txt (line 11))
+2025-02-16T22:09:11.8328142Z   Downloading gdstk-0.9.49-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.4 kB)
+2025-02-16T22:09:11.8491428Z Collecting gitdb==4.0.10 (from -r tt/requirements.txt (line 12))
+2025-02-16T22:09:11.8630306Z   Downloading gitdb-4.0.10-py3-none-any.whl.metadata (1.1 kB)
+2025-02-16T22:09:11.8868805Z Collecting GitPython==3.1.40 (from -r tt/requirements.txt (line 13))
+2025-02-16T22:09:11.9018610Z   Downloading GitPython-3.1.40-py3-none-any.whl.metadata (12 kB)
+2025-02-16T22:09:11.9195628Z Collecting idna==3.4 (from -r tt/requirements.txt (line 14))
+2025-02-16T22:09:11.9320113Z   Downloading idna-3.4-py3-none-any.whl.metadata (9.8 kB)
+2025-02-16T22:09:11.9564748Z Collecting importlib-resources==5.12.0 (from -r tt/requirements.txt (line 15))
+2025-02-16T22:09:11.9694985Z   Downloading importlib_resources-5.12.0-py3-none-any.whl.metadata (4.1 kB)
+2025-02-16T22:09:11.9894877Z Collecting mistune==3.0.1 (from -r tt/requirements.txt (line 16))
+2025-02-16T22:09:12.0028246Z   Downloading mistune-3.0.1-py3-none-any.whl.metadata (1.7 kB)
+2025-02-16T22:09:12.1225815Z Collecting numpy==1.24.3 (from -r tt/requirements.txt (line 17))
+2025-02-16T22:09:12.1367487Z   Downloading numpy-1.24.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+2025-02-16T22:09:12.2686769Z Collecting Pillow==9.5.0 (from -r tt/requirements.txt (line 18))
+2025-02-16T22:09:12.2829728Z   Downloading Pillow-9.5.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+2025-02-16T22:09:12.2995690Z Collecting pycparser==2.21 (from -r tt/requirements.txt (line 19))
+2025-02-16T22:09:12.3126654Z   Downloading pycparser-2.21-py2.py3-none-any.whl.metadata (1.1 kB)
+2025-02-16T22:09:12.3333375Z Collecting python-frontmatter==1.0.0 (from -r tt/requirements.txt (line 20))
+2025-02-16T22:09:12.3476097Z   Downloading python_frontmatter-1.0.0-py3-none-any.whl.metadata (3.6 kB)
+2025-02-16T22:09:12.3848694Z Collecting pytz==2023.3 (from -r tt/requirements.txt (line 21))
+2025-02-16T22:09:12.3981306Z   Downloading pytz-2023.3-py2.py3-none-any.whl.metadata (22 kB)
+2025-02-16T22:09:12.4303012Z Collecting PyYAML==6.0 (from -r tt/requirements.txt (line 22))
+2025-02-16T22:09:12.4434436Z   Downloading PyYAML-6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+2025-02-16T22:09:12.4706378Z Collecting requests==2.31.0 (from -r tt/requirements.txt (line 23))
+2025-02-16T22:09:12.4834043Z   Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+2025-02-16T22:09:12.4990768Z Collecting smmap==5.0.0 (from -r tt/requirements.txt (line 24))
+2025-02-16T22:09:12.5141302Z   Downloading smmap-5.0.0-py3-none-any.whl.metadata (4.2 kB)
+2025-02-16T22:09:12.5750019Z Collecting stripe==5.4.0 (from -r tt/requirements.txt (line 25))
+2025-02-16T22:09:12.5887935Z   Downloading stripe-5.4.0-py2.py3-none-any.whl.metadata (2.6 kB)
+2025-02-16T22:09:12.6078153Z Collecting tinycss2==1.2.1 (from -r tt/requirements.txt (line 26))
+2025-02-16T22:09:12.6216088Z   Downloading tinycss2-1.2.1-py3-none-any.whl.metadata (3.0 kB)
+2025-02-16T22:09:12.6471547Z Collecting urllib3==2.0.3 (from -r tt/requirements.txt (line 27))
+2025-02-16T22:09:12.6598100Z   Downloading urllib3-2.0.3-py3-none-any.whl.metadata (6.6 kB)
+2025-02-16T22:09:12.6933052Z Collecting wasmtime==9.0.0 (from -r tt/requirements.txt (line 28))
+2025-02-16T22:09:12.7071039Z   Downloading wasmtime-9.0.0-py3-none-manylinux1_x86_64.whl.metadata (7.3 kB)
+2025-02-16T22:09:12.7213633Z Collecting webencodings==0.5.1 (from -r tt/requirements.txt (line 29))
+2025-02-16T22:09:12.7338679Z   Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+2025-02-16T22:09:12.7504379Z Collecting yowasp-runtime==1.22 (from -r tt/requirements.txt (line 30))
+2025-02-16T22:09:12.7643470Z   Downloading yowasp_runtime-1.22-py3-none-any.whl.metadata (3.3 kB)
+2025-02-16T22:09:12.7942975Z Collecting yowasp-yosys==0.30.0.0.post538 (from -r tt/requirements.txt (line 31))
+2025-02-16T22:09:12.8105040Z   Downloading yowasp_yosys-0.30.0.0.post538-py3-none-any.whl.metadata (2.6 kB)
+2025-02-16T22:09:12.8304589Z Collecting zipp==3.15.0 (from -r tt/requirements.txt (line 32))
+2025-02-16T22:09:12.8441340Z   Downloading zipp-3.15.0-py3-none-any.whl.metadata (3.7 kB)
+2025-02-16T22:09:12.8792876Z Collecting pre-commit==3.4.0 (from -r tt/requirements.txt (line 33))
+2025-02-16T22:09:12.8928316Z   Downloading pre_commit-3.4.0-py2.py3-none-any.whl.metadata (1.3 kB)
+2025-02-16T22:09:12.9676341Z Collecting cfgv>=2.0.0 (from pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-16T22:09:12.9801833Z   Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+2025-02-16T22:09:13.0199716Z Collecting identify>=1.0.0 (from pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-16T22:09:13.0329877Z   Downloading identify-2.6.7-py2.py3-none-any.whl.metadata (4.4 kB)
+2025-02-16T22:09:13.0519102Z Collecting nodeenv>=0.11.1 (from pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-16T22:09:13.0648575Z   Downloading nodeenv-1.9.1-py2.py3-none-any.whl.metadata (21 kB)
+2025-02-16T22:09:13.1082467Z Collecting virtualenv>=20.10.0 (from pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-16T22:09:13.1212022Z   Downloading virtualenv-20.29.2-py3-none-any.whl.metadata (4.5 kB)
+2025-02-16T22:09:13.1462816Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-16T22:09:13.1590615Z   Downloading distlib-0.3.9-py2.py3-none-any.whl.metadata (5.2 kB)
+2025-02-16T22:09:13.1824814Z Collecting filelock<4,>=3.12.2 (from virtualenv>=20.10.0->pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-16T22:09:13.1950543Z   Downloading filelock-3.17.0-py3-none-any.whl.metadata (2.9 kB)
+2025-02-16T22:09:13.2179868Z Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.10.0->pre-commit==3.4.0->-r tt/requirements.txt (line 33))
+2025-02-16T22:09:13.2306154Z   Downloading platformdirs-4.3.6-py3-none-any.whl.metadata (11 kB)
+2025-02-16T22:09:13.2537266Z Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+2025-02-16T22:09:13.2740217Z Downloading cairocffi-1.6.0-py3-none-any.whl (75 kB)
+2025-02-16T22:09:13.2992430Z Downloading CairoSVG-2.7.0-py3-none-any.whl (43 kB)
+2025-02-16T22:09:13.3150294Z Downloading certifi-2023.5.7-py3-none-any.whl (156 kB)
+2025-02-16T22:09:13.3416988Z Downloading cffi-1.15.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (462 kB)
+2025-02-16T22:09:13.3716310Z Downloading charset_normalizer-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (197 kB)
+2025-02-16T22:09:13.3877438Z Downloading chevron-0.14.0-py3-none-any.whl (11 kB)
+2025-02-16T22:09:13.4026738Z Downloading click-8.1.3-py3-none-any.whl (96 kB)
+2025-02-16T22:09:13.4180805Z Downloading cssselect2-0.7.0-py3-none-any.whl (15 kB)
+2025-02-16T22:09:13.4335259Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2025-02-16T22:09:13.4495571Z Downloading gdstk-0.9.49-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (881 kB)
+2025-02-16T22:09:13.4658088Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 881.1/881.1 kB 48.1 MB/s eta 0:00:00
+2025-02-16T22:09:13.4796570Z Downloading gitdb-4.0.10-py3-none-any.whl (62 kB)
+2025-02-16T22:09:13.4947110Z Downloading GitPython-3.1.40-py3-none-any.whl (190 kB)
+2025-02-16T22:09:13.5107196Z Downloading idna-3.4-py3-none-any.whl (61 kB)
+2025-02-16T22:09:13.5269219Z Downloading importlib_resources-5.12.0-py3-none-any.whl (36 kB)
+2025-02-16T22:09:13.5443959Z Downloading mistune-3.0.1-py3-none-any.whl (47 kB)
+2025-02-16T22:09:13.5628673Z Downloading numpy-1.24.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+2025-02-16T22:09:13.6652644Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.3/17.3 MB 171.4 MB/s eta 0:00:00
+2025-02-16T22:09:13.6833213Z Downloading Pillow-9.5.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.4 MB)
+2025-02-16T22:09:13.7038230Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 177.2 MB/s eta 0:00:00
+2025-02-16T22:09:13.7167911Z Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+2025-02-16T22:09:13.7335777Z Downloading python_frontmatter-1.0.0-py3-none-any.whl (9.0 kB)
+2025-02-16T22:09:13.7488707Z Downloading pytz-2023.3-py2.py3-none-any.whl (502 kB)
+2025-02-16T22:09:13.7674276Z Downloading PyYAML-6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (757 kB)
+2025-02-16T22:09:13.7761226Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.9/757.9 kB 97.3 MB/s eta 0:00:00
+2025-02-16T22:09:13.7888530Z Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+2025-02-16T22:09:13.8049970Z Downloading smmap-5.0.0-py3-none-any.whl (24 kB)
+2025-02-16T22:09:13.8240931Z Downloading stripe-5.4.0-py2.py3-none-any.whl (255 kB)
+2025-02-16T22:09:13.8406868Z Downloading tinycss2-1.2.1-py3-none-any.whl (21 kB)
+2025-02-16T22:09:13.8557943Z Downloading urllib3-2.0.3-py3-none-any.whl (123 kB)
+2025-02-16T22:09:13.8735161Z Downloading wasmtime-9.0.0-py3-none-manylinux1_x86_64.whl (6.6 MB)
+2025-02-16T22:09:13.9180829Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 153.2 MB/s eta 0:00:00
+2025-02-16T22:09:13.9308529Z Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+2025-02-16T22:09:13.9464793Z Downloading yowasp_runtime-1.22-py3-none-any.whl (5.2 kB)
+2025-02-16T22:09:13.9630592Z Downloading yowasp_yosys-0.30.0.0.post538-py3-none-any.whl (6.8 MB)
+2025-02-16T22:09:14.0100766Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 146.5 MB/s eta 0:00:00
+2025-02-16T22:09:14.0230168Z Downloading zipp-3.15.0-py3-none-any.whl (6.8 kB)
+2025-02-16T22:09:14.0402137Z Downloading pre_commit-3.4.0-py2.py3-none-any.whl (203 kB)
+2025-02-16T22:09:14.0567181Z Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+2025-02-16T22:09:14.0714959Z Downloading identify-2.6.7-py2.py3-none-any.whl (99 kB)
+2025-02-16T22:09:14.0863495Z Downloading nodeenv-1.9.1-py2.py3-none-any.whl (22 kB)
+2025-02-16T22:09:14.1011727Z Downloading virtualenv-20.29.2-py3-none-any.whl (4.3 MB)
+2025-02-16T22:09:14.1257588Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 183.8 MB/s eta 0:00:00
+2025-02-16T22:09:14.1384206Z Downloading distlib-0.3.9-py2.py3-none-any.whl (468 kB)
+2025-02-16T22:09:14.1557329Z Downloading filelock-3.17.0-py3-none-any.whl (16 kB)
+2025-02-16T22:09:14.1703999Z Downloading platformdirs-4.3.6-py3-none-any.whl (18 kB)
+2025-02-16T22:09:14.2981623Z Installing collected packages: webencodings, pytz, distlib, chevron, appdirs, zipp, wasmtime, urllib3, tinycss2, smmap, PyYAML, pycparser, platformdirs, Pillow, numpy, nodeenv, mistune, importlib-resources, idna, identify, filelock, defusedxml, click, charset-normalizer, cfgv, certifi, yowasp-runtime, virtualenv, requests, python-frontmatter, gitdb, gdstk, cssselect2, cffi, yowasp-yosys, stripe, pre-commit, GitPython, cairocffi, CairoSVG
+2025-02-16T22:09:18.0412927Z Successfully installed CairoSVG-2.7.0 GitPython-3.1.40 Pillow-9.5.0 PyYAML-6.0 appdirs-1.4.4 cairocffi-1.6.0 certifi-2023.5.7 cffi-1.15.1 cfgv-3.4.0 charset-normalizer-3.1.0 chevron-0.14.0 click-8.1.3 cssselect2-0.7.0 defusedxml-0.7.1 distlib-0.3.9 filelock-3.17.0 gdstk-0.9.49 gitdb-4.0.10 identify-2.6.7 idna-3.4 importlib-resources-5.12.0 mistune-3.0.1 nodeenv-1.9.1 numpy-1.24.3 platformdirs-4.3.6 pre-commit-3.4.0 pycparser-2.21 python-frontmatter-1.0.0 pytz-2023.3 requests-2.31.0 smmap-5.0.0 stripe-5.4.0 tinycss2-1.2.1 urllib3-2.0.3 virtualenv-20.29.2 wasmtime-9.0.0 webencodings-0.5.1 yowasp-runtime-1.22 yowasp-yosys-0.30.0.0.post538 zipp-3.15.0
+2025-02-16T22:09:18.2644737Z ##[group]Run ./tt/tt_tool.py --create-png 2>&1 || echo "WARNING: Failed to render PNG preview from GDS; error $?"
+2025-02-16T22:09:18.2645397Z [36;1m./tt/tt_tool.py --create-png 2>&1 || echo "WARNING: Failed to render PNG preview from GDS; error $?"[0m
+2025-02-16T22:09:18.2701202Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-02-16T22:09:18.2701513Z env:
+2025-02-16T22:09:18.2701709Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:18.2702041Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:18.2702434Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-16T22:09:18.2702822Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:18.2703370Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:18.2703741Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:18.2704093Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-16T22:09:18.2704408Z   GDS_PATH: gds/tt_um_mattvenn_inverter.gds
+2025-02-16T22:09:18.2704650Z ##[endgroup]
+2025-02-16T22:09:18.8875043Z 2025-02-16 22:09:18,887 - project    - INFO     - Loading GDS data...
+2025-02-16T22:09:18.8880105Z 2025-02-16 22:09:18,887 - project    - INFO     - Rendering SVG without text label layers: gds_render_preview.svg
+2025-02-16T22:09:18.8915876Z 2025-02-16 22:09:18,891 - project    - INFO     - Converting to PNG using rsvg-convert: gds_render_preview.png
+2025-02-16T22:09:19.2314805Z 2025-02-16 22:09:19,231 - project    - INFO     - Compressing PNG further with pngquant to: gds_render.png
+2025-02-16T22:09:19.4366831Z 2025-02-16 22:09:19,436 - project    - INFO     - Final PNG is gds_render.png (9,167 bytes)
+2025-02-16T22:09:19.4792359Z ##[group]Run actions/upload-artifact@v4
+2025-02-16T22:09:19.4792618Z with:
+2025-02-16T22:09:19.4792800Z   name: gds_render
+2025-02-16T22:09:19.4792991Z   path: gds_render.png
+2025-02-16T22:09:19.4793192Z   if-no-files-found: warn
+2025-02-16T22:09:19.4793402Z   compression-level: 6
+2025-02-16T22:09:19.4793596Z   overwrite: false
+2025-02-16T22:09:19.4793788Z   include-hidden-files: false
+2025-02-16T22:09:19.4793998Z env:
+2025-02-16T22:09:19.4794181Z   CACHE_KEY: 66809f1aaab76633238448ba654b76a9
+2025-02-16T22:09:19.4794498Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:19.4794896Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib/pkgconfig
+2025-02-16T22:09:19.4795298Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:19.4795674Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:19.4796013Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.11/x64
+2025-02-16T22:09:19.4796365Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.11/x64/lib
+2025-02-16T22:09:19.4796656Z ##[endgroup]
+2025-02-16T22:09:19.6928231Z With the provided path, there will be 1 file uploaded
+2025-02-16T22:09:19.6933353Z Artifact name is valid!
+2025-02-16T22:09:19.6934669Z Root directory input is valid!
+2025-02-16T22:09:19.7751498Z Beginning upload of artifact content to blob storage
+2025-02-16T22:09:19.8398085Z Uploaded bytes 3674
+2025-02-16T22:09:19.8610249Z Finished uploading artifact content to blob storage!
+2025-02-16T22:09:19.8613519Z SHA256 hash of uploaded artifact zip is cf1b5b0edd55e25abf775869555d1a515dcf0f6df8aabd50a7af9062f31ba4b6
+2025-02-16T22:09:19.8615610Z Finalizing artifact upload
+2025-02-16T22:09:19.9356441Z Artifact gds_render.zip successfully finalized. Artifact ID 2600051617
+2025-02-16T22:09:19.9357467Z Artifact gds_render has been successfully uploaded! Final size is 3674 bytes. Artifact ID is 2600051617
+2025-02-16T22:09:19.9365229Z Artifact download URL: https://github.com/tatzelbrumm/tt06-inverter/actions/runs/13359245558/artifacts/2600051617
+2025-02-16T22:09:19.9503583Z Post job cleanup.
+2025-02-16T22:09:19.9531632Z Post job cleanup.
+2025-02-16T22:09:20.1303578Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/tt06-inverter/tt06-inverter --files-from manifest.txt --use-compress-program zstdmt
+2025-02-16T22:09:20.9412388Z Sent 45113343 of 45113343 (100.0%), 67.9 MBs/sec
+2025-02-16T22:09:21.0017110Z Cache saved with the key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.11-pip-b53d2406990fca66e4d9719ad3f30c32758897e746380b0fb3161134de927dbb
+2025-02-16T22:09:21.0157157Z Post job cleanup.
+2025-02-16T22:09:21.1111373Z [command]/usr/bin/git version
+2025-02-16T22:09:21.1151692Z git version 2.48.1
+2025-02-16T22:09:21.1196780Z Temporarily overriding HOME='/home/runner/work/_temp/e3e4bf6d-58e2-4d82-9e8d-8d6c23114cd5' before making global git config changes
+2025-02-16T22:09:21.1198038Z Adding repository directory to the temporary git global config as a safe directory
+2025-02-16T22:09:21.1204136Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tt06-inverter/tt06-inverter/tt
+2025-02-16T22:09:21.1245201Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-02-16T22:09:21.1280395Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-02-16T22:09:21.1519944Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-02-16T22:09:21.1542022Z http.https://github.com/.extraheader
+2025-02-16T22:09:21.1556368Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-02-16T22:09:21.1588953Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-02-16T22:09:21.1935293Z Post job cleanup.
+2025-02-16T22:09:21.2896557Z [command]/usr/bin/git version
+2025-02-16T22:09:21.2933819Z git version 2.48.1
+2025-02-16T22:09:21.2977754Z Temporarily overriding HOME='/home/runner/work/_temp/11a5a9a4-7b77-4f2c-9e9a-7fa73402cca6' before making global git config changes
+2025-02-16T22:09:21.2979033Z Adding repository directory to the temporary git global config as a safe directory
+2025-02-16T22:09:21.2992144Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tt06-inverter/tt06-inverter
+2025-02-16T22:09:21.3031898Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-02-16T22:09:21.3065651Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-02-16T22:09:21.3298059Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-02-16T22:09:21.3318961Z http.https://github.com/.extraheader
+2025-02-16T22:09:21.3331999Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-02-16T22:09:21.3363899Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-02-16T22:09:21.3707584Z Cleaning up orphan processes
