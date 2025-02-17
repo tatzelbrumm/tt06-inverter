@@ -1,0 +1,11 @@
+<testsuites>
+  <testsuite name="Tiny Tapeout Prechecks">
+    <testcase name="Magic DRC" time="0.38" />
+    <testcase name="KLayout FEOL" time="1.78" />
+    <testcase name="KLayout BEOL" time="1.76" />
+    <testcase name="KLayout offgrid" time="1.56" />
+    <testcase name="KLayout pin label overlapping drawing" time="1.3" />
+    <testcase name="KLayout zero area" time="1.23" />
+    <testcase name="KLayout Checks" time="0.01" />
+  </testsuite>
+</testsuites>
